@@ -22,8 +22,7 @@
 	var svg;
 	var content;
 	var map_data;
-	function redraw_map() {
-		// console.log("redraw_map");
+	function on_zoom() {
 		var trans = d3.event.translate;
 		var scale = d3.event.scale;
 		var target = content;
@@ -65,7 +64,7 @@
 			.translate(cur_trans)
     		.scale(cur_scale)
     		.scaleExtent([Math.min(svg_width/map_width, svg_height/map_height), 1])
-    		.on("zoom", redraw_map);
+    		.on("zoom", on_zoom);
 
 		zoom_container = svg.append("g")
 			.call(zoom)
@@ -75,29 +74,24 @@
 			.attr("transform", "scale("+cur_scale+")")
 			.on("mousemove", update_cursor);
 
-
+		// background
 		content.append("rect")
 			.attr("width", map_width)
 			.attr("height", map_height)
 			.attr("fill", "white");
 
+		// influence image
 		content.append("image")
 			.attr("width", map_width)
 			.attr("height", map_height)
 			.attr("xlink:href", "influence_bitmap_small.png");
 
-		// DATA JOIN
-		// Join new data with old elements, if any.
+		// cities
 		var cities = content.selectAll(".city")
-		.data(data.Cities);
+			.data(data.Cities);
 
-		// UPDATE
-		// Update old elements as needed.
-		cities.attr("class", "city");
-
-		// ENTER
-		// Create new elements as needed.
 		cities.enter().append("polygon")
+			.attr("class", "city")
 			.attr("points", "-7,0 0,-4 7,0 0,4")
 			.attr("stroke", "black")
 			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" /* + " scale(" + Math.min(2, Math.max(1, (d.value/70))) + ")"*/; })
@@ -119,6 +113,20 @@
 			.attr("stroke", "black")
 			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
 */
+		// strongholds
+		var stronholds = content.selectAll(".stronghold")
+			.data(data.Stronholds);
+
+		strongholds.enter().append("circle")
+			.attr("class", "stronghold")
+			.attr("r", 10)
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" + " scale(" + (d.value/70) + ")"; })
+			.attr("stroke", "black")
+			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
+		
+
+		// forests
+
 		// static stuff
 		cursor_text = zoom_container.append("text")
 			.attr("x", 10)
