@@ -7,32 +7,40 @@
 		return tribe_colors[tribe_id];
 	}
 
-	function update_map(data) {
+	var scale = 0.1;
+	var content;
+	function init_map(data) {
+		var svg = d3.select("svg");
+		content = svg.append("g")
+			.attr("x", 0)
+			.attr("y", 0)
+			.attr("transform", "scale("+scale+")");
+		
 		// DATA JOIN
-	var svg = d3.select("svg");
 		// Join new data with old elements, if any.
-		var cities = svg.selectAll(".city")
+		var cities = content.selectAll(".city")
 		.data(data.Cities);
 
 		// UPDATE
 		// Update old elements as needed.
 		cities.attr("class", "city");
 
-		var scale = 0.08;
 		// ENTER
 		// Create new elements as needed.
-		cities.enter().append("circle")
-		//.attr("class", "city")
-		.attr("cx", function(d, i) { return d.x * 4 * scale; })
-		.attr("cy", function(d, i) { return d.y * 1 * scale; })
-		.attr("r", function(d, i) { return d.value/50; })
-		.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
+		
+		cities.enter().append("use")
+			.attr("xlink:href", "#sym-city")
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" + " scale(" + (d.value/50) + ")"; })
+			//.attr("x", function(d, i) { return d.x * 4 * scale; })
+			//.attr("y", function(d, i) { return d.y * 1 * scale; })
+			//.attr("transform", function(d, i) { return "translate(" + (d.x*4*scale) + "," + (d.y*1*scale) + ")"; })
+			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
 
 		// ENTER + UPDATE
 		// Appending to the enter selection expands the update selection to include
 		// entering elements; so, operations on the update selection after appending to
 		// the enter selection will apply to both entering and updating nodes.
-		cities.text(function(d) { return d; });
+		//cities.text(function(d) { return d; });
 
 		// EXIT
 		// Remove old elements as needed.
@@ -46,7 +54,7 @@
 			alert("Failed to load the map data file, reload the page to try again");
 		}
 		else {
-			update_map(data);
+			init_map(data);
 		}
 	});
 })();
