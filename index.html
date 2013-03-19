@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
 <head>
-	<title>TH Map viewer</title>
+	<title>TH Map Browser</title>
 	<link rel="stylesheet" href="mapviewer.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="mapviewer.js"></script>
 </head>
@@ -10,6 +11,10 @@
 	<div id="layout">
 		<div id="header">
 			<h2>TH Map Browser</h2>
+			Too slow ? Use Chrome
+			<div style="float: right;">
+				<span id="snapshot_timestamp"></span>
+			</div>
 		</div>
 		<div id="main">
 			<div id="right">
@@ -22,6 +27,11 @@
 				</div>
 			</div>
 			<div id="left-sidebar">
+				<input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label>
+				<input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label>
+				<input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label>
+				<input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label>
+				<input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label>
 				<input id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
 				<div id="search_results"></div>
 			</div>

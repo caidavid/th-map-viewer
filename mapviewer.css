@@ -2,6 +2,7 @@
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+/* layout */
 #layout, #header, #main, #left-sidebar, #right, #right-sidebar, #content, #map {
 	box-sizing: border-box;
 	moz-box-sizing: border-box;
@@ -22,6 +23,7 @@
 	width: 100%;
 	height: 100%;
 	border: solid 2px #666;
+	font-size: 10pt
 }
 
 #layout        { background: #abc; top: 0; right: 0; bottom: 0; left: 0; }
@@ -30,3 +32,27 @@
 #left-sidebar  { background: #def; top: 0; width: 200px; bottom: 0; left: 0; }
 #right         {                   top: 0; right: 0; bottom: 0; left: 200px; }
 #content       { background: #dcb; top: 0; width: 100%; bottom: 0; left: 0; }
+
+
+/* search */
+.city_search_result {
+	cursor: pointer;
+}
+
+/* svg */
+.forest, .city, .stronghold, .barbarian, .troop {
+	cursor: pointer;
+}
+
+.small_level_text {
+	font-size: 8pt;
+}
+
+.svg_static_text {
+	fill: #ff0;
+}
+
+.svg_static_text_outline {
+	fill: #000;
+	fill-opacity: 1.0;
+}

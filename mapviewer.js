@@ -8,7 +8,7 @@
 			});
 	};
 
-	var tribe_colors = []
+	var tribe_colors = [ "#fff" ]
 	function get_tribe_color(tribe_id) {
 		if (!tribe_colors[tribe_id]) {
 			tribe_colors[tribe_id] = "#" + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16) ; 
@@ -24,14 +24,12 @@
 	var content;
 	var map_data;
 
-	function on_zoom() {
-		//var trans = d3.event.translate;
-		//var scale = d3.event.scale;
+	function on_zoom(force_transition) {
 		var trans = zoom.translate();
 		var scale = zoom.scale();
 		var target = content;
-		if (scale != cur_scale)
-			target = content.transition().ease("quad");
+		if (force_transition || scale != cur_scale)
+			target = content.transition();
 
 		target.attr("transform", "translate(" + trans + ")" + " scale(" + scale + ")");
 
@@ -43,16 +41,40 @@
 		var pos = d3.mouse(this);
 		var x = pos[0] / 4;
 		var y = pos[1];
-		var text = x.toFixed() + " " + y.toFixed();
+		var text = Math.floor(x) + " " + Math.floor(y)	;
 		cursor_text.text(text);
 	}
 
-	function get_player_name(player_id) {
-		return map_data.Players.indexOf(function(d) { return d.playerId == player_id})
+	function get_city(group_id) {
+		return _(map_data.Cities).find(function(d) { return d.groupId == group_id });
 	}
 
-	function format_city(city) {
-		return sformat("{1} / {2} / {3} / {4}", city.name, city.level, get_player_name(city.playerId), "");
+	function get_player(player_id) {
+		return _(map_data.Players).find(function(d) { return d.playerId == player_id });
+	}
+
+	function get_tribe(tribe_id) {
+		return _(map_data.Tribes).find(function(d) { return d.tribeId == tribe_id });
+	}
+
+	function show_city_info(city) {
+		var text = sformat("City: {1} / Level {2} / Player: {3}{4}", city.name, city.level, get_player(city.playerId).name, city.tribeId != 0 && " (" + get_tribe(city.tribeId).name + ")" || "");
+		info_text.text(text);
+	}
+
+	function show_troop_info(troop) {
+		var city = get_city(troop.groupId)
+		var text = sformat("Troop: {1} ({2}) / Player: {3}{4}", city.name, troop.troopId, get_player(city.playerId).name, city.tribeId != 0 && " (" + get_tribe(city.tribeId).name + ")" || "");
+		info_text.text(text);
+	}
+
+	function show_stronghold_info(sh) {
+		var text = sformat("Stronghold: {1} / Level {2} / {3}", sh.name, sh.level, sh.tribeId != 0 && get_tribe(sh.tribeId).name || "Unoccupied");
+		info_text.text(text);
+	}
+
+	function clear_info() {
+		info_text.text("");
 	}
 
 	var search_input
@@ -66,23 +88,27 @@
 		
 		if(q && q.length > 0) {
 			q = q.toLowerCase();
-			match_cities = map_data.Cities.filter(function(c) { return c.name.toLowerCase().indexOf(q) != -1; });
+			match_cities = map_data.Cities.filter(function(c) { return c.name.toLowerCase().indexOf(q) != -1; }).sort();
 			match_players = map_data.Players.filter(function(c) { return c.name.toLowerCase().indexOf(q) != -1; });
 			match_tribes = map_data.Tribes.filter(function(c) { return c.name.toLowerCase().indexOf(q) != -1; });
 			match_strongholds = map_data.Strongholds.filter(function(c) { return c.name.toLowerCase().indexOf(q) != -1; });
 		}
 
+		function sort_function(x, y) { return x.name < y.name ? -1 : 1; }
+
 		search_results_cities = search_results.selectAll(".city_search_result").data(match_cities);
 		search_results_cities.exit().remove();
 		search_results_cities.enter().append("div");
 		search_results_cities
+			.sort(sort_function)
 			.attr("class", "city_search_result")
-			.text(function(d) { return "City: " + d.name; });
+			.text(function(d) { return "City: " + d.name; })
 
 		search_results_players = search_results.selectAll(".player_search_result").data(match_players);
 		search_results_players.exit().remove();
 		search_results_players.enter().append("div");
 		search_results_players
+			.sort(sort_function)
 			.attr("class", "player_search_result")
 			.text(function(d) { return "Player: " + d.name; });
 
@@ -90,6 +116,7 @@
 		search_results_tribes.exit().remove();
 		search_results_tribes.enter().append("div");
 		search_results_tribes
+			.sort(sort_function)
 			.attr("class", "tribe_search_result")
 			.text(function(d) { return "Tribe: " + d.name; });
 
@@ -97,20 +124,29 @@
 		search_results_strongholds.exit().remove();
 		search_results_strongholds.enter().append("div");
 		search_results_strongholds
+			.sort(sort_function)
 			.attr("class", "stronghold_search_result")
 			.text(function(d) { return "Stronghold: " + d.name; });
 
-		search_results.on("click", function() { 
-			var obj = d3.select(d3.event.target).data()[0];
-			console.log(obj);
-			var svg_width = parseInt(svg.style("width"));
-			var svg_height = parseInt(svg.style("height"));
-			zoom.scale(get_min_zoom_scale());
-			on_zoom();
-			zoom.translate([-obj.x * 4 + svg_width / 2, -obj.y + svg_height / 2])
-			zoom.scale(1);
-			on_zoom();
-		})
+			
+		search_results
+			.on("click", function() { 
+				var obj = d3.select(d3.event.target).data()[0];
+				if (obj.x || obj.y)
+					center_map_tile(obj.x, obj.y, 1);
+			})
+	}
+
+	function center_map_tile(x, y, scale) {
+		scale = scale || zoom.scale();
+
+		var svg_width = parseInt(svg.style("width"));
+		var svg_height = parseInt(svg.style("height"));
+
+		zoom.scale(scale);
+		zoom.translate([(-x * 4) * scale + svg_width / 2, (-y) * scale + svg_height / 2])
+
+		on_zoom(true);
 	}
 
 	function get_min_zoom_scale() {
@@ -157,6 +193,7 @@
 
 		// influence image
 		content.append("image")
+			.attr("class", "influence")
 			.attr("width", map_width)
 			.attr("height", map_height)
 			.attr("xlink:href", "influence_bitmap_small.png");
@@ -169,70 +206,156 @@
 			.attr("class", "city")
 
 		c.append("polygon")
-			.attr("points", "-7,0 0,-4 7,0 0,4")
+			.attr("points", "-7,0 0,-4 7,0 0,4") // this is faster than a symbol/use pattern
 			.attr("stroke", "black")
 			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" /* + " scale(" + Math.min(2, Math.max(1, (d.value/70))) + ")"*/; })
 			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
-			.on("mouseover", function(d) { info_text.text(format_city(d)); })
-			.on("mouseout", function(d) { info_text.text("") })
 
 		c.append("text")
 			.text(function(d) { return d.name; })
-			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1+20) + ")" /* + " scale(" + Math.min(2, Math.max(1, (d.value/70))) + ")"*/; })
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1+20) + ")"; })
 			.attr("text-anchor", "middle")
-/*
-		cities.enter().append("use")
-			.attr("xlink:href", "#sym-city")
-			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" + " scale(" + (d.value/70) + ")"; })
-			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
-*/
-/*
-		cities.enter().append("circle")
-			// .attr("cx", function(d, i) { return d.x * 4; })
-			// .attr("cy", function(d, i) { return d.y * 1; })
-			.attr("r", 10)
-			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")" + " scale(" + (d.value/70) + ")"; })
-			.attr("stroke", "black")
-			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
-*/
+
 		// strongholds
 		var strongholds = content.selectAll(".stronghold")
 			.data(data.Strongholds);
 
-		strongholds.enter().append("circle")
+		c = strongholds.enter().append("g")
 			.attr("class", "stronghold")
+
+		c.append("circle")
 			.attr("r", function(d) { return d.level * 2; } )
 			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")"  })
 			.attr("stroke", "black")
 			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
 		
+		c.append("text")
+			.text(function(d) { return d.name; })
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1+20+d.level*2) + ")"; })
+			.attr("text-anchor", "middle")
+
 		// forests
 		var forests = content.selectAll(".forest")
 			.data(data.Forests);
 
-		forests.enter().append("circle")
+		c = forests.enter().append("g")
 			.attr("class", "forest")
+
+		c.append("circle")
 			.attr("r", 4 )
 			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")"  })
 			.attr("stroke", "black")
 			.attr("fill", "green")
 
-		// static stuff
-		cursor_text = zoom_container.append("text")
-			.attr("x", 10)
-			.attr("y", 20)
-			.attr("fill", "black")
+		c.append("text")
+			.text(function(d) { return d.level; })
+			.attr("class", "small_level_text")
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1+15) + ")"; })
+			.attr("text-anchor", "right")
 
-		info_text = zoom_container.append("text")
-			.attr("x", 10)
-			.attr("y", 40)
-			.attr("fill", "black")
+		// barbarians
+		var barbarians = content.selectAll(".barbarian")
+			.data(data.Barbarians);
+
+		c = barbarians.enter().append("g")
+			.attr("class", "barbarian")
+
+		c.append("circle")
+			.attr("r", 4 )
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")"  })
+			.attr("stroke", "black")
+			.attr("fill", "blue")
+
+		c.append("text")
+			.text(function(d) { return d.level; })
+			.attr("class", "small_level_text")
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1+15) + ")"; })
+			.attr("text-anchor", "right")
+
+		// troops
+		var troops = content.selectAll(".troop")
+			.data(data.Troops);
+
+		c = troops.enter().append("g")
+			.attr("class", "troop")
+
+		c.append("circle")
+			.attr("r", 4 )
+			.attr("transform", function(d, i) { return "translate(" + (d.x*4) + "," + (d.y*1) + ")"  })
+			.attr("stroke", "black")
+			.attr("fill", function(d, i) { return get_tribe_color(d.tribeId); })
+
+		// static text
+		function static_text(container, x, y, w) {
+			var g = container.append("g");
+			for(yi = -w; yi <= w; ++yi) {
+				for(xi = -w; xi <= w; ++xi) {
+					if(xi == 0 && yi == 0) continue;
+					g.append("text")
+						.attr("class", "svg_static_text_outline")
+						.attr("x", x + xi)
+						.attr("y", y + yi);
+				}
+			}
+
+			g.append("text")
+				.attr("class", "svg_static_text")
+				.attr("x", x)
+				.attr("y", y)
+
+			return g.selectAll("text");
+		}
+
+		cursor_text = static_text(zoom_container, 10, 20, 1);
+		info_text = static_text(zoom_container, 10, 40, 1);
+
+		// events
+		function common_events(c) {
+			c.on("click", function(d) { center_map_tile(d.x, d.y); })
+				.on("dblclick", function(d) { center_map_tile(d.x, d.y, 1); })
+				.on("mouseout", function(d) { clear_info() })		
+		}
+
+		cities.on("mouseover", function(d) { show_city_info(d); })
+		strongholds.on("mouseover", function(d) { show_stronghold_info(d); })
+		troops.on("mouseover", function(d) { show_troop_info(d); })
+
+		common_events(cities);
+		common_events(strongholds);
+		common_events(troops);
+		common_events(forests);
+		common_events(barbarians);
 
 		// search
 		search_input = d3.select("#search");
 		search_input.on("input", do_search);
 
 		search_results = d3.select("#search_results");
+
+		// filters
+		function update_visibility(selector, checkbox) {
+			content.selectAll(selector).attr("visibility", checkbox.checked ? "visible" : "hidden")
+		}
+
+		d3.select("#filter_forests")
+			.on("change", function() { update_visibility(".forest", d3.event.target); })
+		d3.select("#filter_strongholds")
+			.on("change", function() { update_visibility(".stronghold", d3.event.target); })
+		d3.select("#filter_troops")
+			.on("change", function() { update_visibility(".troop", d3.event.target); })
+		d3.select("#filter_barbarians")
+			.on("change", function() { update_visibility(".barbarian", d3.event.target); })
+		d3.select("#filter_influence")
+			.on("change", function() { update_visibility(".influence", d3.event.target); })
+
+		update_visibility(".forest", d3.select("#filter_forests")[0][0]);
+		update_visibility(".stronghold", d3.select("#filter_strongholds")[0][0]);
+		update_visibility(".troop", d3.select("#filter_troops")[0][0]);
+		update_visibility(".barbarian", d3.select("#filter_barbarians")[0][0]);
+		update_visibility(".influence", d3.select("#filter_influence")[0][0]);
+
+		// other stuff
+		d3.select("#snapshot_timestamp").text("Using data from " + new Date(map_data.SnapshotBegin));
 	}
 
 	d3.json("map.json", function(error, data) {
