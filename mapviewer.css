@@ -35,7 +35,7 @@
 
 
 /* search */
-.city_search_result {
+.city_search_result, .stronghold_search_result {
 	cursor: pointer;
 }
 

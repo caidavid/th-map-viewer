@@ -6,6 +6,19 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="mapviewer.js"></script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38848286-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </head>
 <body>
 	<div id="layout">
@@ -19,19 +32,17 @@
 		<div id="main">
 			<div id="right">
 				<div id="content">
-					<svg id="map">
-						<symbol id="sym-city" overflow="visible" stroke="black">
-							<polygon points="-10,0 0,-5 10,0 0,5" />
-						</symbol>
-					</svg>
+					<svg id="map"></svg>
 				</div>
 			</div>
 			<div id="left-sidebar">
-				<input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label>
-				<input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label>
-				<input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label>
-				<input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label>
-				<input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label>
+				<span style="white-space: nowrap"><input id="filter_cities" type="checkbox" checked><label for="filter_cities">Cities</label></span>
+				<span style="white-space: nowrap"><input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label></span>
+				<span style="white-space: nowrap"><input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label></span>
+				<span style="white-space: nowrap"><input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label></span>
+				<span style="white-space: nowrap"><input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label></span>
+				<span style="white-space: nowrap"><input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label></span>
+				
 				<input id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
 				<div id="search_results"></div>
 			</div>

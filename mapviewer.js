@@ -337,17 +337,14 @@
 			content.selectAll(selector).attr("visibility", checkbox.checked ? "visible" : "hidden")
 		}
 
-		d3.select("#filter_forests")
-			.on("change", function() { update_visibility(".forest", d3.event.target); })
-		d3.select("#filter_strongholds")
-			.on("change", function() { update_visibility(".stronghold", d3.event.target); })
-		d3.select("#filter_troops")
-			.on("change", function() { update_visibility(".troop", d3.event.target); })
-		d3.select("#filter_barbarians")
-			.on("change", function() { update_visibility(".barbarian", d3.event.target); })
-		d3.select("#filter_influence")
-			.on("change", function() { update_visibility(".influence", d3.event.target); })
-
+		d3.select("#filter_cities").on("change", function() { update_visibility(".city", d3.event.target); })
+		d3.select("#filter_forests").on("change", function() { update_visibility(".forest", d3.event.target); })
+		d3.select("#filter_strongholds").on("change", function() { update_visibility(".stronghold", d3.event.target); })
+		d3.select("#filter_troops").on("change", function() { update_visibility(".troop", d3.event.target); })
+		d3.select("#filter_barbarians").on("change", function() { update_visibility(".barbarian", d3.event.target); })
+		d3.select("#filter_influence").on("change", function() { update_visibility(".influence", d3.event.target); })
+		
+		update_visibility(".city", d3.select("#filter_cities")[0][0]);
 		update_visibility(".forest", d3.select("#filter_forests")[0][0]);
 		update_visibility(".stronghold", d3.select("#filter_strongholds")[0][0]);
 		update_visibility(".troop", d3.select("#filter_troops")[0][0]);
