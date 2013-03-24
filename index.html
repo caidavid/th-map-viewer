@@ -7,7 +7,6 @@
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="mapviewer.js"></script>
 	<script type="text/javascript">
-
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-38848286-1']);
 	  _gaq.push(['_trackPageview']);
@@ -17,7 +16,6 @@
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-
 	</script>
 </head>
 <body>
@@ -32,7 +30,7 @@
 		<div id="main">
 			<div id="right">
 				<div id="content">
-					<canvas id="map"></canvas>
+					<canvas tabindex="2" id="map"></canvas>
 					<span id="cursor_text"></span>
 					<span id="info_text"></span>
 				</div>
@@ -45,7 +43,7 @@
 				<span style="white-space: nowrap"><input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label></span>
 				<span style="white-space: nowrap"><input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label></span>
 				
-				<input id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
+				<input tabindex="1" id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
 				<div id="search_results"></div>
 			</div>
 		</div>

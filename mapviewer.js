@@ -9,10 +9,13 @@
 	};
 
 	function get_random_color(list, id) {
-		if (!list[id]) {
+		var c = list[id];
+		if (c) {
+			return c;
+		}
+		else {
 			return list[id] = ("#" + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16));
 		}
-		return list[id];
 	}
 
 	var tribe_colors = { 0: "#fff" }
@@ -100,25 +103,26 @@
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
-		canvas_ctx.translate(trans[0], trans[1]);
+		canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
 		canvas_ctx.scale(scale, scale);
 
 		// update viewport extents
 		var margin_x = 100, margin_y = 100;
 		xmin = (-trans[0] - margin_x) / scale; xmax = (-trans[0] + canvas_width + margin_x) / scale;
 		ymin = (-trans[1] - margin_y) / scale; ymax = (-trans[1] + canvas_height + margin_y) / scale;
-
-		update_cursor_text();
 	}
 
 	function is_inside_viewport(x, y) {
 		return x > xmin && x < xmax && y > ymin && y < ymax;
 	}
 
+	var mouse_raw;
 	var mouse_x = 0, mouse_y = 0;
+	var last_frame_time = 0;
 	function update_cursor_text() {
-		var text = Math.max(0, Math.min(tiles_width, Math.floor(mouse_x / 4))) + " " + Math.max(0, Math.min(tiles_height, Math.floor(mouse_y)));
-		cursor_text.text(text + " " + Math.round(cur_scale * 100) + "%");
+		var x = Math.max(0, Math.min(tiles_width, Math.floor(mouse_x / 4)));
+		var y = Math.max(0, Math.min(tiles_height, Math.floor(mouse_y)));
+		cursor_text.text(sformat("{1} {2} {3}% {4} ms", x, y, Math.round(cur_scale * 100), last_frame_time.toFixed(0)));
 	}
 
 	var frame_objects = {
@@ -169,15 +173,18 @@
 			}
 		}
 	}
-	
+
+	var mouseover_timer;	
 	function on_canvas_mousemove() {
 		// update mouse coords
 		var pos = d3.mouse(this);
+		mouse_raw = pos
 		mouse_x = (pos[0] - cur_trans[0]) / cur_scale;
 		mouse_y = (pos[1] - cur_trans[1]) / cur_scale;
 		update_cursor_text();
 
-		// show mouseover object info
+		clearTimeout(mouseover_timer);
+
 		var obj = get_object_by_location(mouse_x, mouse_y);
 		canvas.style("cursor", obj ? "pointer" : "auto")
 		if (obj) {
@@ -198,15 +205,23 @@
 			}
 			info_text.text(text);
 		}
+		else if (filters.influence) {
+			mouseover_timer = setTimeout(update_mouseover_influence, 30);
+		}
 		else {
-			var img_data = canvas_ctx.getImageData(pos[0], pos[1], 1, 1).data;
-			var tribeid = get_tribe_by_color(img_data[0], img_data[1], img_data[2]);
-			if (tribeid) {
-				info_text.text(get_tribe(tribeid).name);
-			}
-			else {
-				info_text.text("");
-			}
+			info_text.text("");
+		}
+	}
+
+	function update_mouseover_influence() {
+		// show mouseover object info
+		var img_data = canvas_ctx.getImageData(mouse_raw[0], mouse_raw[1], 1, 1).data;
+		var tribeid = get_tribe_by_color(img_data[0], img_data[1], img_data[2]);
+		if (tribeid) {
+			info_text.text(get_tribe(tribeid).name);
+		}
+		else {
+			info_text.text("");
 		}
 	}
 
@@ -263,6 +278,8 @@
 	}
 
 	function on_canvas_click() {
+		canvas.node().focus();
+
 		var obj = get_object_by_location(mouse_x, mouse_y);
 		
 		if (obj) {
@@ -400,19 +417,16 @@
 	}
 
 	function resize_canvas() {
-		canvas.attr("width", content.style("width"));
-		canvas.attr("height", content.style("height"));
-		canvas_width = parseInt(canvas.style("width"));
-		canvas_height = parseInt(canvas.style("height"));
+		var w = parseInt(content.style("width")) - 0;
+		var h = parseInt(content.style("height")) - 0;
+		canvas.attr("width", w);
+		canvas.attr("height", h);
+		canvas.style("width", w + "px");
+		canvas.style("height", h + "px");
+		canvas_width = w;
+		canvas_height = h;
 	}
 
-	function init_map(data) {
-		map_data = data;
-
-		d3.select("#snapshot_timestamp").text("Using data from " + new Date(map_data.SnapshotBegin));
-
-		draw();
-	}
 	function init_tribe_colors(data) {
 		for (var i = 0; i < data.length; ++i) {
 			var tcol = data[i];
@@ -422,17 +436,32 @@
 		draw();
 	}
 
-	var do_search_timeout;
-	function init() {
+	function init_map(data) {
+		map_data = data;
+
+		// static info
+		d3.select("#snapshot_timestamp").text("Using data from " + new Date(map_data.SnapshotBegin));
+
 		// search
 		search_input = d3.select("#search");
 		search_input.on("input", function() {
 			clearTimeout(do_search_timeout)
 			do_search_timeout = setTimeout(do_search, 50);
 		});
+		search_input.node().focus();
 
 		search_results = d3.select("#search_results");
 
+		// canvas events
+		canvas.on("mousemove", on_canvas_mousemove);
+		canvas.on("click", on_canvas_click);
+
+		// first draw
+		draw();
+	}
+
+	var do_search_timeout;
+	function init() {
 		// filters
 		function update_visibility(selector, checkbox) {
 			filters[selector] = checkbox.checked;
@@ -456,6 +485,8 @@
 		// info texts
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
+
+		cursor_text.text("Loading..");
 
 		// load resources
 		d3.json("tribe_colors.json", function(error, data) {
@@ -489,7 +520,7 @@
 		resize_canvas();
 
 		// init zoom
-		cur_scale = prev_scale = get_min_zoom_scale();
+		cur_scale = get_min_zoom_scale();
 
 		zoom = d3.behavior.zoom()
 			.translate(cur_trans)
@@ -498,6 +529,61 @@
 			.on("zoom", on_zoom);
 		
 		canvas.call(zoom);
+		
+		canvas.on("keydown", function() {
+			var step = 100;
+			var x = cur_trans[0], y = cur_trans[1];
+			console.log(d3.event);
+			switch (d3.event.keyCode) {
+				// +
+				case 187:
+					var pos = false;
+					var k = Math.log(cur_scale) / Math.LN2;
+					var scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					set_zoom(cur_trans, scale);
+					draw();
+					break;
+
+				// -
+				case 189:
+					var pos = true;
+					var k = Math.log(cur_scale) / Math.LN2;
+					var scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					set_zoom(cur_trans, scale);
+					draw();
+					break;
+
+
+				// DOM_VK_LEFT	0x25 (37)	Left arrow.
+				case 37:
+					x += step * cur_scale;
+					set_zoom([x, y], cur_scale);
+					draw();
+					break;
+				
+				// DOM_VK_UP	0x26 (38)	Up arrow.
+				case 38:
+					y += step * cur_scale;
+					set_zoom([x, y], cur_scale);
+					draw();
+					break;
+				
+				// DOM_VK_RIGHT	0x27 (39)	Right arrow.
+				case 39:
+					x -= step * cur_scale;
+					set_zoom([x, y], cur_scale);
+					draw();
+					break;
+				
+				// DOM_VK_DOWN	0x28 (40)	Down arrow.
+				case 40:
+					y -= step * cur_scale;
+					set_zoom([x, y], cur_scale);
+					draw();
+					break;
+			}
+		});
+		
 		on_zoom();
 
 		d3.select(window).on("resize", function() {
@@ -511,10 +597,6 @@
 
 			on_zoom();
 		})
-
-		// canvas events
-		canvas.on("mousemove", on_canvas_mousemove);
-		canvas.on("click", on_canvas_click);
 	}
 
 	var min_small_text_scale = 0.5;
@@ -616,21 +698,23 @@
 		canvas_ctx.lineWidth = 8;
 		canvas_ctx.stroke();
 
-		// circunference borders
-		canvas_ctx.strokeStyle = stroke;
-		canvas_ctx.lineWidth = 2;
+		if (cur_scale > min_normal_text_scale) {
+			// circunference borders
+			canvas_ctx.strokeStyle = stroke;
+			canvas_ctx.lineWidth = 2;
 
-		canvas_ctx.moveTo(x, y);
-		canvas_ctx.beginPath();
-		canvas_ctx.arc(x, y, rad + width, 0, 2 * Math.PI)
-		canvas_ctx.closePath();
-		canvas_ctx.stroke();
+			canvas_ctx.moveTo(x, y);
+			canvas_ctx.beginPath();
+			canvas_ctx.arc(x, y, rad + width, 0, 2 * Math.PI)
+			canvas_ctx.closePath();
+			canvas_ctx.stroke();
 
-		canvas_ctx.moveTo(x, y);
-		canvas_ctx.beginPath();
-		canvas_ctx.arc(x, y, rad - width, 0, 2 * Math.PI)
-		canvas_ctx.closePath();
-		canvas_ctx.stroke();
+			canvas_ctx.moveTo(x, y);
+			canvas_ctx.beginPath();
+			canvas_ctx.arc(x, y, rad - width, 0, 2 * Math.PI)
+			canvas_ctx.closePath();
+			canvas_ctx.stroke();
+		}
 	}
 
 	var draw_text_timeout;
@@ -639,17 +723,19 @@
 		if (!map_data) {
 			return;
 		}
+
 		var start_time = window.performance.now();
 
-		frame_objects.forests = [];
-		frame_objects.troops = [];
-		frame_objects.barbarians = [];
-		frame_objects.cities = [];
-		frame_objects.strongholds = [];
+		frame_objects.forests.length = 0;
+		frame_objects.troops.length = 0;
+		frame_objects.barbarians.length = 0;
+		frame_objects.cities.length = 0;
+		frame_objects.strongholds.length = 0;
 
 		// clear canvas
 		canvas_ctx.clearRect(-cur_trans[0] / cur_scale, -cur_trans[1] / cur_scale, canvas_width / cur_scale, canvas_height / cur_scale);
-
+		canvas_ctx.lineCap = "butt";
+		canvas_ctx.lineJoin = "miter";
 
 		// influence image
 		if (filters.influence) {
@@ -670,10 +756,14 @@
 					canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI)
 					canvas_ctx.closePath();
 
-					canvas_ctx.strokeStyle = "black";
 					canvas_ctx.fillStyle = "green";
 					canvas_ctx.fill();
-					canvas_ctx.stroke();
+
+					if (cur_scale > min_small_text_scale) {
+						canvas_ctx.lineWidth = 1;
+						canvas_ctx.strokeStyle = "black";
+						canvas_ctx.stroke();
+					}
 				}
 			}
 		}
@@ -692,10 +782,14 @@
 					canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI)
 					canvas_ctx.closePath();
 
-					canvas_ctx.strokeStyle = "black";
 					canvas_ctx.fillStyle = "blue";
 					canvas_ctx.fill();
-					canvas_ctx.stroke();
+
+					if (cur_scale > min_small_text_scale) {
+						canvas_ctx.lineWidth = 1;
+						canvas_ctx.strokeStyle = "black";
+						canvas_ctx.stroke();
+					}
 				}
 			}
 		}
@@ -714,10 +808,14 @@
 					canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI)
 					canvas_ctx.closePath();
 
-					canvas_ctx.strokeStyle = "black";
 					canvas_ctx.fillStyle = get_tribe_color(troop.tribeId);;
 					canvas_ctx.fill();
-					canvas_ctx.stroke();
+	
+					if (cur_scale > min_small_text_scale) {
+						canvas_ctx.lineWidth = 1;
+						canvas_ctx.strokeStyle = "black";
+						canvas_ctx.stroke();
+					}
 				}
 			}
 		}
@@ -730,62 +828,85 @@
 				var y = city.y;
 
 				if (is_inside_viewport(x, y)) {
-					var cw = 8;
-					var ch = 4;
-
 					frame_objects.cities.push(city);
-
-					// fill
-					canvas_ctx.beginPath();
-					canvas_ctx.moveTo(x - cw, y + 0);
-					canvas_ctx.lineTo(x + 0,  y - ch);
-					canvas_ctx.lineTo(x + cw, y + 0);
-					canvas_ctx.lineTo(x + 0,  y + ch);
-					canvas_ctx.closePath();
-					
-					canvas_ctx.fillStyle = get_tribe_color(city.tribeId);
-					canvas_ctx.fill();
-
-					// selection border
-					if (is_selected(city)) {
-						var cw_sb = cw + 6;
-						var ch_sb = ch + 3;
+				
+					if (cur_scale < min_normal_text_scale) {
+						var cw = 7;
+						var ch = 4;
+						canvas_ctx.fillStyle = get_tribe_color(city.tribeId);
+						//canvas_ctx.fillRect(x - cw, y - ch, cw * 2, ch * 2);
 						canvas_ctx.beginPath();
-						canvas_ctx.moveTo(x - cw_sb, y + 0);
-						canvas_ctx.lineTo(x + 0,  y - ch_sb);
-						canvas_ctx.lineTo(x + cw_sb, y + 0);
-						canvas_ctx.lineTo(x + 0,  y + ch_sb);
+						canvas_ctx.rect(x - cw, y - ch, cw * 2, ch * 2);
 						canvas_ctx.closePath();
-						canvas_ctx.strokeStyle = "cyan";
-						canvas_ctx.lineWidth = 3;
+						canvas_ctx.fill();
+
+						// selection border
+						if (is_selected(city)) {
+							canvas_ctx.strokeStyle = "cyan";
+							canvas_ctx.lineWidth = 3;
+							canvas_ctx.strokeRect(x - (cw + 1), y - (ch + 1), (cw + 1) * 2, (ch + 1) * 2);
+						}
+						else {
+							canvas_ctx.lineWidth = 1;
+							canvas_ctx.strokeStyle = "black";
+							canvas_ctx.stroke();//strokeRect(x - (cw + 1), y - (ch + 1), (cw + 1) * 2, (ch + 1) * 2);
+						}
+					}
+					else {
+						var cw = 8;
+						var ch = 4;
+
+						// fill
+						canvas_ctx.beginPath();
+						canvas_ctx.moveTo(x - cw, y + 0);
+						canvas_ctx.lineTo(x + 0,  y - ch);
+						canvas_ctx.lineTo(x + cw, y + 0);
+						canvas_ctx.lineTo(x + 0,  y + ch);
+						canvas_ctx.closePath();
+						canvas_ctx.fillStyle = get_tribe_color(city.tribeId);
+						canvas_ctx.fill();
+
+						// selection border
+						if (is_selected(city)) {
+							var cw_sb = cw + 6;
+							var ch_sb = ch + 3;
+							canvas_ctx.beginPath();
+							canvas_ctx.moveTo(x - cw_sb, y + 0);
+							canvas_ctx.lineTo(x + 0,  y - ch_sb);
+							canvas_ctx.lineTo(x + cw_sb, y + 0);
+							canvas_ctx.lineTo(x + 0,  y + ch_sb);
+							canvas_ctx.closePath();
+							canvas_ctx.strokeStyle = "cyan";
+							canvas_ctx.lineWidth = 3;
+							canvas_ctx.stroke();
+						}
+
+						// player color border
+						var cw_pb = cw;
+						var ch_pb = ch;
+						canvas_ctx.lineWidth = 2;
+						canvas_ctx.strokeStyle = get_player_color(city.playerId);
+						canvas_ctx.beginPath();
+						canvas_ctx.moveTo(x - cw_pb, y + 0);
+						canvas_ctx.lineTo(x + 0,  y - ch_pb);
+						canvas_ctx.lineTo(x + cw_pb, y + 0);
+						canvas_ctx.lineTo(x + 0,  y + ch_pb);
+						canvas_ctx.closePath();
+						canvas_ctx.stroke();
+
+						// black border
+						var cw_bb = cw + 1;
+						var ch_bb = ch + 0.5;
+						canvas_ctx.lineWidth = 1.25;
+						canvas_ctx.strokeStyle = "black";
+						canvas_ctx.beginPath();
+						canvas_ctx.moveTo(x - cw_bb, y + 0);
+						canvas_ctx.lineTo(x + 0,  y - ch_bb);
+						canvas_ctx.lineTo(x + cw_bb, y + 0);
+						canvas_ctx.lineTo(x + 0,  y + ch_bb);
+						canvas_ctx.closePath();
 						canvas_ctx.stroke();
 					}
-
-					// player color border
-					var cw_pb = cw;
-					var ch_pb = ch;
-					canvas_ctx.beginPath();
-					canvas_ctx.moveTo(x - cw_pb, y + 0);
-					canvas_ctx.lineTo(x + 0,  y - ch_pb);
-					canvas_ctx.lineTo(x + cw_pb, y + 0);
-					canvas_ctx.lineTo(x + 0,  y + ch_pb);
-					canvas_ctx.closePath();
-					canvas_ctx.strokeStyle = get_player_color(city.playerId);
-					canvas_ctx.lineWidth = 2;
-					canvas_ctx.stroke();
-
-					// black border
-					var cw_bb = cw + 1;
-					var ch_bb = ch + 0.5;
-					canvas_ctx.beginPath();
-					canvas_ctx.moveTo(x - cw_bb, y + 0);
-					canvas_ctx.lineTo(x + 0,  y - ch_bb);
-					canvas_ctx.lineTo(x + cw_bb, y + 0);
-					canvas_ctx.lineTo(x + 0,  y + ch_bb);
-					canvas_ctx.closePath();
-					canvas_ctx.strokeStyle = "black";
-					canvas_ctx.lineWidth = 1.25;
-					canvas_ctx.stroke();
 				}
 			}
 		}
@@ -808,9 +929,11 @@
 					canvas_ctx.fillStyle = get_tribe_color(sh.tribeId);
 					canvas_ctx.fill();
 
-					canvas_ctx.lineWidth = 1;
-					canvas_ctx.strokeStyle = "black";
-					canvas_ctx.stroke();
+					if (cur_scale > min_small_text_scale) {
+						canvas_ctx.lineWidth = 1;
+						canvas_ctx.strokeStyle = "black";
+						canvas_ctx.stroke();
+					}
 
 					draw_circumference(x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId))
 				}
@@ -822,10 +945,6 @@
 		var r = get_selection_radius();
 		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", "cyan");
 
-
-		var frame_time = window.performance.now() - start_time;
-		// console.log(frame_time + "ms (" + (1000.0/frame_time) + " fps)");
-
 		if (cur_scale > min_normal_text_scale) {
 			draw_text();
 		}
@@ -834,6 +953,9 @@
 			draw_text_timeout = setTimeout(draw_text, 10);
 		}
 
+		var frame_time = window.performance.now() - start_time;
+		last_frame_time = frame_time;
+		update_cursor_text();
 		/*
 		if(frame_time > 50) {
 	 		if(scale > min_small_text_scale) {
