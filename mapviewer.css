@@ -4,12 +4,13 @@
 
 /* layout */
 #layout, #header, #main, #left-sidebar, #right, #right-sidebar, #content, #map {
-	box-sizing: border-box;
-	moz-box-sizing: border-box;
-	webkit-box-sizing: border-box;
+	-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
     position: absolute;
     overflow: hidden;
     padding: 2px;
+
 }
 
 #content, #map {
@@ -26,19 +27,30 @@
 	font-size: 10pt
 }
 
-
 #map {
 }
 
 #layout        { background: #abc; top: 0; right: 0; bottom: 0; left: 0; }
 #header        { background: #bcd; top: 0; right: 0; height: 100px; left: 0; }
 #main          {                   top: 100px; right: 0; bottom: 0; left: 0; }
-#left-sidebar  { background: #def; top: 0; width: 200px; bottom: 0; left: 0; }
+#left-sidebar  { background: #d0e0f0; top: 0; width: 200px; bottom: 0; left: 0; }
 #right         {                   top: 0; right: 0; bottom: 0; left: 200px; }
 #content       {                   top: 0; width: 100%; bottom: 0; left: 0; }
 
+/* search */
+#search_results {
+	overflow: auto;
+	width: calc(100% - 4px);
+	width: -calc(100% - 4px);
+	height: calc(100% - 104px);
+	height: -webkit-calc(100% - 104px);
+}
 
-/***/
+.search_result {
+	cursor: pointer;
+}
+
+/* canvas */
 #cursor_text, #info_text {
 	position: absolute;
 	left: 10px;
