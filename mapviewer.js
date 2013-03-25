@@ -1,4 +1,6 @@
 (function() {
+	var base_url = "http://thutils.info/slaren1/";
+
 	function sformat(str) {
 		var args = arguments;
 		return str.replace(/{(\d+)}/g, function(match, number) {
@@ -6,7 +8,7 @@
 				? args[number]
 				: match;
 		});
-	};
+	}
 
 	function get_random_color(list, id) {
 		var c = list[id];
@@ -511,12 +513,12 @@
 		// info texts
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
-
 		cursor_text.text("Loading..");
 
 		// load resources
-		d3.json("tribe_colors.json", function(error, data) {
+		d3.json(base_url + "tribe_colors.json", function(error, data) {
 			if(error) {
+				cursor_text.text("Failed");
 				alert("Failed to load the map colors file, reload the page to try again");
 			}
 			else {
@@ -524,8 +526,9 @@
 			}
 		});
 
-		d3.json("map.json", function(error, data) {
+		d3.json(base_url + "map.json", function(error, data) {
 			if(error) {
+				cursor_text.text("Failed");
 				alert("Failed to load the map data file, reload the page to try again");
 			}
 			else {
@@ -535,7 +538,7 @@
 
 		influence_image = new Image();
 		influence_image.onload = function() { draw(); };
-		influence_image.src = "influence_bitmap_small.png";
+		influence_image.src = base_url + "influence_bitmap_small.png";
 
 		// init canvas
 		content = d3.select("#content");
