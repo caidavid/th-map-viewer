@@ -971,11 +971,7 @@
 			}
 		}
 
-		// draw selection
-		var pos = get_selection_center();
-		var r = get_selection_radius();
-		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", "cyan");
-
+		// draw text
 		if (cur_scale > min_normal_text_scale) {
 			draw_text();
 		}
@@ -984,6 +980,12 @@
 			draw_text_timeout = setTimeout(draw_text, 10);
 		}
 
+		// draw selection
+		var pos = get_selection_center();
+		var r = get_selection_radius();
+		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", "cyan");
+
+		// update frame time
 		var frame_time = window.performance.now() - start_time;
 		last_frame_time = frame_time;
 		update_cursor_text();
