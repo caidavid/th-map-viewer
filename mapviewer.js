@@ -565,8 +565,8 @@
 		canvas.call(zoom);
 
 		canvas.on("keydown", function() {
-			var step = 100;
 			var x = cur_trans[0] / cur_scale, y = cur_trans[1] / cur_scale;
+			var step = 100 / cur_scale;
 			var scale = cur_scale;
 			switch (d3.event.keyCode) {
 				// DOM_VK_ADD	0x6B (107)	"+" on the numeric keypad.
@@ -634,9 +634,10 @@
 	var min_small_text_scale = 0.5;
 	var min_normal_text_scale = 0.4;
 	var min_large_text_scale = 0.3;
-	var font_big = "bold 10pt Arial";
-	var font_normal = "10pt Arial";
-	var font_small = "8pt Arial";
+	var font_family = '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif';
+	var font_big = "bold 10pt " + font_family;
+	var font_normal = "10pt " + font_family;
+	var font_small = "8pt " + font_family;
 
 	function draw_outlined_text(text, x, y, w, outline, fill) {
 		canvas_ctx.fillStyle = outline;
