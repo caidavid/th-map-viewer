@@ -283,6 +283,9 @@
 		if (obj) {
 			set_selection(obj[1]);
 			center_map_tile(obj[1].x, obj[1].y);
+			if (obj[1].name) {
+				update_url(obj[1].name);
+			}
 		}
 		else {
 			draw();
@@ -334,6 +337,8 @@
 	}
 
 	function select_object(obj) {
+		update_url(obj.name);
+
 		set_selection(filter_object(obj));
 		center_map_selection();
 	}
@@ -360,7 +365,6 @@
 			if (num_results == 1 || exact) {
 				var obj = exact || match_cities[0] || match_players[0] || match_tribes[0] || match_strongholds[0];
 				select_object(obj);
-				update_url();
 			}
 
 			// check if the user entered coordinates
@@ -370,7 +374,7 @@
 				var x = match[1], y = match[2];
 				if (x >= 0 && x <= tiles_width && y >= 0 && y <= tiles_height) {
 					center_map_tile(x, y);
-					update_url();
+					update_url(q);
 				}
 			}
 		}
@@ -562,47 +566,54 @@
 
 		canvas.on("keydown", function() {
 			var step = 100;
-			var x = cur_trans[0], y = cur_trans[1];
+			var x = cur_trans[0] / cur_scale, y = cur_trans[1] / cur_scale;
 			var scale = cur_scale;
 			switch (d3.event.keyCode) {
+				// DOM_VK_ADD	0x6B (107)	"+" on the numeric keypad.
+				// DOM_VK_PLUS	0xAB (171)	Plus ("+") key. Requires Gecko 15.0
 				// +
+				case 107:
+				case 171:
 				case 187:
 					var pos = false;
 					var k = Math.log(cur_scale) / Math.LN2;
-					var scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
 					break;
 
+				// DOM_VK_SUBTRACT	0x6D (109)	"-" on the numeric keypad.
+				// DOM_VK_HYPHEN_MINUS	0xAD (173)	Hyphen-US/docs/Minus ("-") key.
 				// -
+				case 109:
+				case 173:
 				case 189:
 					var pos = true;
 					var k = Math.log(cur_scale) / Math.LN2;
-					var scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
 					break;
 
 				// DOM_VK_LEFT	0x25 (37)	Left arrow.
 				case 37:
-					x += step * cur_scale;
-					set_zoom([x, y], cur_scale);
-					draw();
+					x += step;
 					break;
 
 				// DOM_VK_UP	0x26 (38)	Up arrow.
 				case 38:
-					y += step * cur_scale;
+					y += step;
 					break;
 
 				// DOM_VK_RIGHT	0x27 (39)	Right arrow.
 				case 39:
-					x -= step * cur_scale;
+					x -= step;
 					break;
 
 				// DOM_VK_DOWN	0x28 (40)	Down arrow.
 				case 40:
-					y -= step * cur_scale;
+					y -= step;
 					break;
 			}
 
-			transition_zoom([x, y], scale);
+			scale = Math.min(1, Math.max(get_min_zoom_scale(), scale));
+			transition_zoom([x * scale, y * scale], scale);
 		});
 
 		on_zoom();
@@ -991,8 +1002,8 @@
 	}
 
 	var prev_ser_state;
-	function update_url() {
-		prev_ser_state = serialize_state();
+	function update_url(state) {
+		prev_ser_state = state || serialize_state();
 		window.location.hash = encodeURIComponent(prev_ser_state);
 	};
 
