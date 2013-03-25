@@ -1,5 +1,5 @@
 (function() {
-	var base_url = "http://thutils.info/slaren1/";
+	var base_url = "";
 
 	function sformat(str) {
 		var args = arguments;
@@ -370,6 +370,7 @@
 				var x = match[1], y = match[2];
 				if (x >= 0 && x <= tiles_width && y >= 0 && y <= tiles_height) {
 					center_map_tile(x, y);
+					update_url();
 				}
 			}
 		}
