@@ -126,6 +126,31 @@
 		cursor_text.text(sformat("{1} {2} {3}% {4} ms", x, y, Math.round(cur_scale * 100), last_frame_time.toFixed(0)));
 	}
 
+	function update_snapshot_timestamp() {
+		var date = new Date(map_data.SnapshotEnd);
+		var age = (new Date().getTime() - date.getTime());
+		var update_str;
+		if (age < 60*1000) {
+			var t = Math.floor(age / 1000);
+			update_str = t + " second" + (t == 1 ? "" : "s") + " ago";
+			setTimeout(update_snapshot_timestamp, 1000 - age % 1000);
+		}
+		else if (age < 3600*1000) {
+			var t = Math.floor(age / 60000);
+			update_str = t + " minute" + (t == 1 ? "" : "s") + " ago";
+			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
+		}
+		else if (age < 12*3600*1000) {
+			var t = Math.floor(age / 3600000);
+			update_str = t + " hour" + (t == 1 ? "" : "s") + " ago";
+			setTimeout(update_snapshot_timestamp, 3600000 - age % 3600000);
+		}
+		else {
+			update_str = date.toLocaleString();
+		}
+		d3.select("#snapshot_timestamp").text("Last updated: " + update_str);
+	}	
+
 	var frame_objects = {
 		forests: [],
 		troops: [],
@@ -178,7 +203,6 @@
 		update_cursor_text();
 
 		// show mouseover object info
-		clearTimeout(mouseover_timer);
 		var obj = get_object_by_location(mouse_x, mouse_y);
 		canvas.style("cursor", obj ? "pointer" : "auto")
 		if (obj) {
@@ -200,7 +224,9 @@
 			info_text.text(text);
 		}
 		else if (filters.influence) {
-			mouseover_timer = setTimeout(update_mouseover_influence, 30);
+			if (!mouseover_timer) {
+				mouseover_timer = setTimeout(update_mouseover_influence, 100);
+			}
 		}
 		else {
 			info_text.text("");
@@ -208,6 +234,7 @@
 	}
 
 	function update_mouseover_influence() {
+		mouseover_timer = null;
 		var img_data = canvas_ctx.getImageData(mouse_raw[0], mouse_raw[1], 1, 1).data;
 		var tribeid = get_tribe_by_color(img_data[0], img_data[1], img_data[2]);
 		if (tribeid) {
@@ -232,7 +259,7 @@
 	}
 
 	function add_selection(obj) {
-		selected_objects.push(obj);
+		selected_objects = selected_objects.concat(obj);
 		update_selection();
 	}
 
@@ -336,11 +363,28 @@
 		}
 	}
 
-	function select_object(obj) {
-		update_url(obj.name);
+	function select_object(obj, append) {
+		var obj = filter_object(obj);
+		
+		if (append) {
+			add_selection(obj)
+		}
+		else {
+			update_url(obj.name);
+			set_selection(obj);
+		}
 
-		set_selection(filter_object(obj));
 		center_map_selection();
+	}
+
+	function set_selected_result(node) {
+		d3.select(".selected_search_result").classed("selected_search_result", false);
+		d3.select(node).classed("selected_search_result", true);
+	}
+
+	function search_result_click(obj) {
+		set_selected_result(this);
+		select_object(obj, d3.event.ctrlKey);
 	}
 
 	function do_search(q) {
@@ -358,66 +402,67 @@
 			match_players = map_data.Players.filter(filter_fn);
 			match_tribes = map_data.Tribes.filter(filter_fn);
 			match_strongholds = map_data.Strongholds.filter(filter_fn);
-
-			// if there is only one result or an exact result, jump to it
-			var num_results = match_cities.length + match_players.length + match_tribes.length + match_strongholds.length;
-			var exact = _(match_cities).find(exact_filter_fn) || _(match_players).find(exact_filter_fn) || _(match_tribes).find(exact_filter_fn) || _(match_strongholds).find(exact_filter_fn);
-			if (num_results == 1 || exact) {
-				var obj = exact || match_cities[0] || match_players[0] || match_tribes[0] || match_strongholds[0];
-				select_object(obj);
-			}
-
-			// check if the user entered coordinates
-			var coords_regexp = /^\s*(\d+)[\s,]+(\d+)\s*$/;
-			var match = coords_regexp.exec(q);
-			if (match) {
-				var x = match[1], y = match[2];
-				if (x >= 0 && x <= tiles_width && y >= 0 && y <= tiles_height) {
-					center_map_tile(x, y);
-					update_url(q);
-				}
-			}
 		}
 
 		// cities
-		search_results_cities = search_results.selectAll(".city_search_result").data(match_cities);
+		var search_results_cities = search_results.selectAll(".city_search_result").data(match_cities);
 		search_results_cities.exit().remove();
 		search_results_cities.enter().append("div");
 		search_results_cities
 			.sort(object_name_sort_comparer)
 			.attr("class", "search_result city_search_result")
 			.text(function(d) { return "City: " + d.name; })
-			.on("click", select_object);
+			.on("click", search_result_click);
 
 		// players
-		search_results_players = search_results.selectAll(".player_search_result").data(match_players);
+		var search_results_players = search_results.selectAll(".player_search_result").data(match_players);
 		search_results_players.exit().remove();
 		search_results_players.enter().append("div");
 		search_results_players
 			.sort(object_name_sort_comparer)
 			.attr("class", "search_result player_search_result")
 			.text(function(d) { return "Player: " + d.name; })
-			.on("click", select_object);
+			.on("click", search_result_click);
 
 		// tribes
-		search_results_tribes = search_results.selectAll(".tribe_search_result").data(match_tribes);
+		var search_results_tribes = search_results.selectAll(".tribe_search_result").data(match_tribes);
 		search_results_tribes.exit().remove();
 		search_results_tribes.enter().append("div");
 		search_results_tribes
 			.sort(object_name_sort_comparer)
 			.attr("class", "search_result tribe_search_result")
 			.text(function(d) { return "Tribe: " + d.name; })
-			.on("click", select_object);
+			.on("click", search_result_click);
 
 		// strongholds
-		search_results_strongholds = search_results.selectAll(".stronghold_search_result").data(match_strongholds);
+		var search_results_strongholds = search_results.selectAll(".stronghold_search_result").data(match_strongholds);
 		search_results_strongholds.exit().remove();
 		search_results_strongholds.enter().append("div");
 		search_results_strongholds
 			.sort(object_name_sort_comparer)
 			.attr("class", "search_result stronghold_search_result")
 			.text(function(d) { return "Stronghold: " + d.name; })
-			.on("click", select_object);
+			.on("click", search_result_click);
+
+		// if there is only one result or an exact result, jump to it
+		var num_results = match_cities.length + match_players.length + match_tribes.length + match_strongholds.length;
+		var exact = _(match_cities).find(exact_filter_fn) || _(match_players).find(exact_filter_fn) || _(match_tribes).find(exact_filter_fn) || _(match_strongholds).find(exact_filter_fn);
+		if (num_results == 1 || exact) {
+			var obj = exact || match_cities[0] || match_players[0] || match_tribes[0] || match_strongholds[0];
+			set_selected_result(d3.selectAll(".search_result").filter(function(d) { return d == obj; }).node());
+			select_object(obj);
+		}
+
+		// check if the user entered coordinates
+		var coords_regexp = /^\s*(\d+)[\s,]+(\d+)\s*$/;
+		var match = coords_regexp.exec(q);
+		if (match) {
+			var x = match[1], y = match[2];
+			if (x >= 0 && x <= tiles_width && y >= 0 && y <= tiles_height) {
+				center_map_tile(x, y);
+				update_url(q);
+			}
+		}
 	}
 
 	function center_map_tile(x, y, scale) {
@@ -465,7 +510,7 @@
 		map_data = data;
 
 		// static info
-		d3.select("#snapshot_timestamp").text("Using data from " + new Date(map_data.SnapshotBegin));
+		update_snapshot_timestamp();
 
 		// search
 		search_input = d3.select("#search");

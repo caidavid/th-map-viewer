@@ -22,9 +22,8 @@
 <body>
 	<div id="layout">
 		<div id="header">
-			<h2>TH Map Browser</h2>
-			Too slow ? Use Chrome
-			<div style="float: right;">
+			<h1>Tribal Hero Map Browser</h1>
+			<div style="position: absolute; bottom: 2px; right: 2px; text-align: right">
 				<span id="snapshot_timestamp"></span>
 			</div>
 		</div>
@@ -37,15 +36,25 @@
 				</div>
 			</div>
 			<div id="left-sidebar">
-				<span style="white-space: nowrap"><input id="filter_cities" type="checkbox" checked><label for="filter_cities">Cities</label></span>
-				<span style="white-space: nowrap"><input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label></span>
-				<span style="white-space: nowrap"><input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label></span>
-				<span style="white-space: nowrap"><input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label></span>
-				<span style="white-space: nowrap"><input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label></span>
-				<span style="white-space: nowrap"><input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label></span>
-				
-				<input tabindex="1" id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
-				<div id="search_results"></div>
+				<div style="height: 100%">
+					<div id="filters">
+						<span style="white-space: nowrap"><input id="filter_cities" type="checkbox" checked><label for="filter_cities">Cities</label></span>
+						<span style="white-space: nowrap"><input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label></span>
+						<span style="white-space: nowrap"><input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label></span>
+						<span style="white-space: nowrap"><input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label></span>
+						<span style="white-space: nowrap"><input id="filter_strongholds" type="checkbox" checked><label for="filter_strongholds">Strongholds</label></span>
+						<span style="white-space: nowrap"><input id="filter_influence" type="checkbox" checked><label for="filter_influence">Influence background</label></span>
+					</div>
+					<input tabindex="1" id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
+					<div id="search_results"></div>
+				</div>
+				<div id="left-sidebar-bottom-text">
+						<a href="http://www.tribalhero.com/">Tribal Hero</a>
+						-
+						<a href="http://www.tribalrank.com/">Ranks</a>
+						-
+						<a href="mailto:ddevesa@gmail.com">Contact</a>
+				</div>
 			</div>
 		</div>
 	</div>
