@@ -4,8 +4,16 @@ body {
 }
 
 * {
-	    padding: 1px;
+    padding: 1px;
+}
 
+a {
+	text-decoration: underline;
+	color: blue;
+}
+a:visited {
+	text-decoration: underline;
+	color: blue;
 }
 
 /* layout */
@@ -83,14 +91,6 @@ body {
 	text-align: center;
 	bottom: 0px;
 	border-top: solid 1px #aaaaaa;
-}
-
-a {
-	text-decoration: none;
-	color: blue;
-}
-a:visited {
-	color: blue;
 }
 
 /* canvas */

@@ -143,11 +143,16 @@
 		else if (age < 12*3600*1000) {
 			var t = Math.floor(age / 3600000);
 			update_str = t + " hour" + (t == 1 ? "" : "s") + " ago";
-			setTimeout(update_snapshot_timestamp, 3600000 - age % 3600000);
+			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
 		}
 		else {
 			update_str = date.toLocaleString();
 		}
+
+		if (age > (3600*1.25*1000)) {
+			load_resources(true);
+		}
+
 		d3.select("#snapshot_timestamp").text("Last updated: " + update_str);
 	}	
 
@@ -308,7 +313,11 @@
 		var obj = get_object_by_location(mouse_x, mouse_y);
 
 		if (obj) {
-			set_selection(obj[1]);
+			var sel_obj = obj[1];
+			if (sel_obj.playerId) {
+				sel_obj = get_player(sel_obj.playerId);
+			}
+			select_object(sel_obj);
 			center_map_tile(obj[1].x, obj[1].y);
 			if (obj[1].name) {
 				update_url(obj[1].name);
@@ -364,17 +373,15 @@
 	}
 
 	function select_object(obj, append) {
-		var obj = filter_object(obj);
+		var sel_objs = filter_object(obj);
 		
 		if (append) {
-			add_selection(obj)
+			add_selection(sel_objs)
 		}
 		else {
 			update_url(obj.name);
-			set_selection(obj);
+			set_selection(sel_objs);
 		}
-
-		center_map_selection();
 	}
 
 	function set_selected_result(node) {
@@ -385,6 +392,7 @@
 	function search_result_click(obj) {
 		set_selected_result(this);
 		select_object(obj, d3.event.ctrlKey);
+		center_map_selection();
 	}
 
 	function do_search(q) {
@@ -451,6 +459,7 @@
 			var obj = exact || match_cities[0] || match_players[0] || match_tribes[0] || match_strongholds[0];
 			set_selected_result(d3.selectAll(".search_result").filter(function(d) { return d == obj; }).node());
 			select_object(obj);
+			center_map_selection();
 		}
 
 		// check if the user entered coordinates
@@ -506,35 +515,41 @@
 		draw();
 	}
 
+	var first_map_update = true;
+
 	function init_map(data) {
 		map_data = data;
 
 		// static info
 		update_snapshot_timestamp();
 
-		// search
-		search_input = d3.select("#search");
-		search_input.on("input", function() {
-			clearTimeout(do_search_timeout)
-			do_search_timeout = setTimeout(function() {
-				do_search(search_input.property("value"))
-			}, 50);
-		});
+		if (first_map_update) {
+			// search
+			search_input = d3.select("#search");
+			search_input.on("input", function() {
+				clearTimeout(do_search_timeout)
+				do_search_timeout = setTimeout(function() {
+					do_search(search_input.property("value"))
+				}, 50);
+			});
 
-		search_input.node().focus();
-		search_input.node().select();
+			search_input.node().focus();
+			search_input.node().select();
 
-		search_results = d3.select("#search_results");
+			search_results = d3.select("#search_results");
 
-		// canvas events
-		canvas.on("mousemove", on_canvas_mousemove);
-		canvas.on("click", on_canvas_click);
+			// canvas events
+			canvas.on("mousemove", on_canvas_mousemove);
+			canvas.on("click", on_canvas_click);
 
-		// load state
-		d3.select(window).on("hashchange", update_from_url);
-		update_from_url();
+			// load state
+			d3.select(window).on("hashchange", update_from_url);
+			update_from_url();
+		}
 
-		// first draw
+		first_map_update = false;
+
+		// draw
 		draw();
 	}
 
@@ -563,32 +578,9 @@
 		// info texts
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
-		cursor_text.text("Loading..");
 
 		// load resources
-		d3.json(base_url + "tribe_colors.json", function(error, data) {
-			if(error) {
-				cursor_text.text("Failed");
-				alert("Failed to load the map colors file, reload the page to try again");
-			}
-			else {
-				init_tribe_colors(data);
-			}
-		});
-
-		d3.json(base_url + "map.json", function(error, data) {
-			if(error) {
-				cursor_text.text("Failed");
-				alert("Failed to load the map data file, reload the page to try again");
-			}
-			else {
-				init_map(data);
-			}
-		});
-
-		influence_image = new Image();
-		influence_image.onload = function() { draw(); };
-		influence_image.src = base_url + "influence_bitmap_small.png";
+		load_resources();
 
 		// init canvas
 		content = d3.select("#content");
@@ -674,6 +666,52 @@
 
 			on_zoom();
 		});
+	}
+
+	var last_load_resources;
+	var min_load_resources_interval = 600*1000;
+	function load_resources(force_reload) {
+		if (last_load_resources) {
+			var age = new Date().getTime() - last_load_resources.getTime();
+			if (age < min_load_resources_interval) {
+				var t = min_load_resources_interval - age % min_load_resources_interval;
+				setTimeout(function() { load_resources(force_reload); }, t);
+				return;
+			}
+		}
+
+		last_load_resources = new Date();
+
+		cursor_text.text("Loading..");
+
+		var query = "";
+		if (force_reload) {
+			query = "?" + (Math.random() * 1000000).toFixed();
+		}
+
+		d3.json(base_url + "tribe_colors.json" + query, function(error, data) {
+			if(error) {
+				cursor_text.text("Failed");
+				alert("Failed to load the map colors file, reload the page to try again");
+			}
+			else {
+				init_tribe_colors(data);
+			}
+		});
+
+		d3.json(base_url + "map.json" + query, function(error, data) {
+			if(error) {
+				cursor_text.text("Failed");
+				alert("Failed to load the map data file, reload the page to try again");
+			}
+			else {
+				init_map(data);
+			}
+		});
+
+		influence_image = new Image();
+		influence_image.onload = function() { draw(); };
+		influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
 
 	var min_small_text_scale = 0.5;
@@ -775,7 +813,8 @@
 		canvas_ctx.lineWidth = 8;
 		canvas_ctx.stroke();
 
-		if (cur_scale > min_normal_text_scale) {
+		/* if (cur_scale > min_normal_text_scale) { */
+		if (true) {
 			// circunference borders
 			canvas_ctx.strokeStyle = stroke;
 			canvas_ctx.lineWidth = 2;
@@ -795,6 +834,8 @@
 	}
 
 	var draw_text_timeout;
+	var city_selection_color = "rgba(100, 149, 237, 1.0)";
+	var selection_color = "rgba(100, 149, 237, 0.5)";
 
 	function draw() {
 		if (!map_data) {
@@ -919,7 +960,7 @@
 
 						// selection border
 						if (is_selected(city)) {
-							canvas_ctx.strokeStyle = "cyan";
+							canvas_ctx.strokeStyle = city_selection_color;
 							canvas_ctx.lineWidth = 3;
 							canvas_ctx.strokeRect(x - (cw + 1), y - (ch + 1), (cw + 1) * 2, (ch + 1) * 2);
 						}
@@ -953,7 +994,7 @@
 							canvas_ctx.lineTo(x + cw_sb, y + 0);
 							canvas_ctx.lineTo(x + 0,  y + ch_sb);
 							canvas_ctx.closePath();
-							canvas_ctx.strokeStyle = "cyan";
+							canvas_ctx.strokeStyle = city_selection_color;
 							canvas_ctx.lineWidth = 3;
 							canvas_ctx.stroke();
 						}
@@ -1029,7 +1070,7 @@
 		// draw selection
 		var pos = get_selection_center();
 		var r = get_selection_radius();
-		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", "cyan");
+		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
 
 		// update frame time
 		var frame_time = window.performance.now() - start_time;
