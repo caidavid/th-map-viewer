@@ -647,8 +647,11 @@
 				case 40:
 					y -= step;
 					break;
-			}
 
+				default:
+					return;
+					break;
+			}
 			scale = Math.min(1, Math.max(get_min_zoom_scale(), scale));
 			transition_zoom([x * scale, y * scale], scale);
 		});
