@@ -258,7 +258,7 @@
 	var selection_radius = 0, selection_center = [];
 
 	function set_selection(obj) {
-		if(obj) {
+		if (obj) {
 			selected_objects = [].concat(obj);
 		}
 		else {
@@ -405,7 +405,7 @@
 		var match_tribes = [];
 		var match_strongholds = [];
 
-		if(q && q.length > 0) {
+		if (q && q.length > 0) {
 			q = q.toLowerCase();
 			var filter_fn = function(c) { return c.name.toLowerCase().indexOf(q) != -1; };
 			var exact_filter_fn = function(c) { return c.name.toLowerCase() == q; };
@@ -683,7 +683,7 @@
 			resize_canvas();
 
 			var min_scale = get_min_zoom_scale()
-			if(zoom.scale() < min_scale || zoom.scale() == zoom.scaleExtent()[0]) {
+			if (zoom.scale() < min_scale || zoom.scale() == zoom.scaleExtent()[0]) {
 				zoom.scale(min_scale);
 			}
 			zoom.scaleExtent([min_scale, 1]);
@@ -721,9 +721,8 @@
 		}
 
 		d3.json(base_url + "tribe_colors.json" + query, function(error, data) {
-			if(error) {
-				cursor_text.text("Failed");
-				alert("Failed to load the map colors file, reload the page to try again");
+			if (error) {
+				cursor_text.text("Failed to load tribe colors");
 			}
 			else {
 				init_tribe_colors(data);
@@ -731,7 +730,7 @@
 		});
 
 		d3.json(base_url + "map.json" + query, function(error, data) {
-			if(error) {
+			if (error && !map_data) {
 				cursor_text.text("Failed");
 				alert("Failed to load the map data file, reload the page to try again");
 			}
@@ -740,9 +739,12 @@
 			}
 		});
 
-		influence_image = new Image();
-		influence_image.onload = function() { draw(); };
-		influence_image.src = base_url + "influence_bitmap_small.png" + query;
+		var load_influence_image = new Image();
+		load_influence_image.onload = function() {
+			influence_image = load_influence_image;
+			draw();
+		};
+		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
 
 	var min_small_text_scale = 0.5;
@@ -887,7 +889,7 @@
 		canvas_ctx.lineJoin = "miter";
 
 		// influence image
-		if (filters.influence) {
+		if (filters.influence && influence_image) {
 			canvas_ctx.drawImage(influence_image, 0, 0, map_width, map_height);
 		}
 
