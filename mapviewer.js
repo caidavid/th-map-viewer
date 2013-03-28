@@ -551,7 +551,7 @@
 
 		first_map_update = false;
 
-		// draw
+		// initial draw
 		draw();
 	}
 

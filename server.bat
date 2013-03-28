@@ -1,1 +1,1 @@
-webfsd -F -L /dev/stdout
+start cmd /c webfsd -F
