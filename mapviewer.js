@@ -102,7 +102,7 @@
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
-		canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
+		canvas_ctx.translate(trans[0], trans[1]);
 		canvas_ctx.scale(scale, scale);
 
 		// update viewport extents
@@ -500,12 +500,10 @@
 	}
 
 	function resize_canvas() {
-		var w = parseInt(content.style("width")) - 0;
-		var h = parseInt(content.style("height")) - 0;
+		var w = parseInt(canvas.style("width"));
+		var h = parseInt(canvas.style("height"));
 		canvas.attr("width", w);
 		canvas.attr("height", h);
-		canvas.style("width", w + "px");
-		canvas.style("height", h + "px");
 		canvas_width = w;
 		canvas_height = h;
 	}
