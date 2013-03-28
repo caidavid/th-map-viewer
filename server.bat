@@ -1,1 +1,1 @@
-python -m SimpleHTTPServer
+webfsd -F -L /dev/stdout
