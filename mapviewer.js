@@ -142,14 +142,19 @@
 		}
 		else if (age < 12*3600*1000) {
 			var t = Math.floor(age / 3600000);
-			update_str = t + " hour" + (t == 1 ? "" : "s") + " ago";
+			var m = Math.floor(age % 3600000 / 60000);
+			update_str = t + " hour" + (t == 1 ? "" : "s");
+			if (m > 0) {
+				update_str += " and " + m + " minute" + (m == 1 ? "" : "s");
+			} 
+			update_str +=  " ago";
 			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
 		}
 		else {
 			update_str = date.toLocaleString();
 		}
 
-		if (age > (3600*1.25*1000)) {
+		if (age > (70*60*1000)) {
 			load_resources(true);
 		}
 
@@ -672,18 +677,25 @@
 	}
 
 	var last_load_resources;
-	var min_load_resources_interval = 600*1000;
+	var load_resources_timeout;
+	var min_load_resources_interval = 300*1000;
 	function load_resources(force_reload) {
 		if (last_load_resources) {
 			var age = new Date().getTime() - last_load_resources.getTime();
 			if (age < min_load_resources_interval) {
-				var t = min_load_resources_interval - age % min_load_resources_interval;
-				setTimeout(function() { load_resources(force_reload); }, t);
+				if (load_resources_timeout) {
+					var t = min_load_resources_interval - age % min_load_resources_interval;
+					load_resources_timeout = setTimeout(function() { load_resources(force_reload); }, t);
+					// increase interval after each attempt
+					min_load_resources_interval *= 1.5;
+				}
 				return;
 			}
 		}
 
 		last_load_resources = new Date();
+		clearTimeout(load_resources_timeout);
+		load_resources_timeout = null;
 
 		cursor_text.text("Loading..");
 
