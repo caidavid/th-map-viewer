@@ -674,7 +674,7 @@
 					break;
 			}
 			scale = Math.min(1, Math.max(get_min_zoom_scale(), scale));
-			transition_zoom([x * scale, y * scale], scale);
+			transition_zoom([x * scale, y * scale], scale, 250);
 		});
 
 		on_zoom();
