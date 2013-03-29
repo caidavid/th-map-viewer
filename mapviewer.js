@@ -124,7 +124,7 @@
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
-		canvas_ctx.translate(trans[0], trans[1]);
+		canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
 		canvas_ctx.scale(scale, scale);
 
 		// update viewport extents
@@ -1008,11 +1008,6 @@
 			canvas_ctx.lineWidth = 3;
 			canvas_ctx.stroke();
 			
-			canvas_ctx.beginPath();
-			canvas_ctx.moveTo(troop.x * 4, troop.y);
-			canvas_ctx.lineTo(troop.prev.x * 4, troop.prev.y);
-			canvas_ctx.closePath();
-
 			var grd2 = canvas_ctx.createLinearGradient(troop.x*4, troop.y, troop.prev.x*4, troop.prev.y);
 			var rgb = get_tribe_color_rgb(troop.tribeId);
 			if (!rgb) console.log(troop.tribeId, get_tribe_color(troop.tribeId))
