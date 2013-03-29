@@ -25,7 +25,10 @@
 			return c;
 		}
 		else {
-			return list[id] = ("#" + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16) + Math.floor(Math.random()*16).toString(16));
+			return list[id] = ("#" 
+				+ Math.floor(Math.random()*(0xff-0x10)+0x10).toString(16) 
+				+ Math.floor(Math.random()*(0xff-0x10)+0x10).toString(16) 
+				+ Math.floor(Math.random()*(0xff-0x10)+0x10).toString(16));
 		}
 	}
 
@@ -36,10 +39,12 @@
 
 	var tribe_colors_rgb = {};
 	function get_tribe_color_rgb(tribe_id) {
-		if (!tribe_colors_rgb[tribe_id]) {
-			tribe_colors_rgb[tribe_id] = hex_to_rgb(get_tribe_color(tribe_id));
+		var c = tribe_colors_rgb[tribe_id]
+		if (!c) {
+			return tribe_colors_rgb[tribe_id] = hex_to_rgb(get_tribe_color(tribe_id));
+		} else {
+			return c;
 		}
-		return tribe_colors_rgb[tribe_id];
 	}
 
 	var color_tribes = {};
@@ -529,6 +534,7 @@
 		for (var i = 0; i < data.length; ++i) {
 			var tcol = data[i];
 			tribe_colors[tcol.tribeId] = tcol.color;
+			tribe_colors_rgb[tcol.tribeId] = hex_to_rgb(tcol.color);
 			color_tribes[tcol.color] = tcol.tribeId;
 		}
 		draw();
@@ -556,6 +562,8 @@
 				cur.prev = prev;
 			}
 		});
+
+		draw();
 	}
 
 	function init_map(data) {
@@ -573,6 +581,8 @@
 		update_snapshot_timestamp();
 
 		if (first_map_update) {
+			first_map_update = false;
+
 			// search
 			search_input = d3.select("#search");
 			search_input.on("input", function() {
@@ -595,8 +605,6 @@
 			d3.select(window).on("hashchange", update_from_url);
 			update_from_url();
 		}
-
-		first_map_update = false;
 
 		if (need_init_prev) {
 			init_prev_map(prev_map_data);
@@ -992,7 +1000,7 @@
 			canvas_ctx.lineTo(troop.prev.x * 4, troop.prev.y);
 			canvas_ctx.closePath();
 			
-			var grd1 = canvas_ctx.createLinearGradient(troop.x*4, troop.y, troop.prev.x*4, troop.prev.y);
+			var grd1 = canvas_ctx.createLinearGradient(troop.x * 4, troop.y, troop.prev.x * 4, troop.prev.y);
 			grd1.addColorStop(0, "rgba(255,255,255,1)");
 			grd1.addColorStop(1, "rgba(255,255,255,0)");
 
@@ -1007,6 +1015,7 @@
 
 			var grd2 = canvas_ctx.createLinearGradient(troop.x*4, troop.y, troop.prev.x*4, troop.prev.y);
 			var rgb = get_tribe_color_rgb(troop.tribeId);
+			if (!rgb) console.log(troop.tribeId, get_tribe_color(troop.tribeId))
 			grd2.addColorStop(0, get_tribe_color(troop.tribeId));
 			grd2.addColorStop(1, "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 0)");
 			canvas_ctx.strokeStyle = grd2;
@@ -1212,8 +1221,3 @@
 
 	d3.select(window).on("load", init);
 })();
-
-
-
-
-
