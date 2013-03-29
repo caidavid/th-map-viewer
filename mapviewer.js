@@ -545,23 +545,25 @@
 	var map_quadtree;
 
 	var prev_map_data;
-	var need_init_prev = false;
+
+	var map_data_apply_prev;
 
 	function init_prev_map(data) {
 		prev_map_data = data;
 
-		if (!map_data) {
-			need_init_prev = true;
+		if (!map_data_apply_prev) {
 			return;
 		}
-		need_init_prev = false;
 
-		_(map_data.Troops).each(function(cur) {
+		_(map_data_apply_prev.Troops).each(function(cur) {
 			var prev = _(prev_map_data.Troops).find(function(pobj) { return pobj.groupId == cur.groupId && pobj.troopId == cur.troopId; } );
 			if (prev) {
 				cur.prev = prev;
 			}
 		});
+
+		map_data_apply_prev = null;
+		prev_map_data = null;
 
 		draw();
 	}
@@ -606,7 +608,9 @@
 			update_from_url();
 		}
 
-		if (need_init_prev) {
+		map_data_apply_prev = map_data;
+
+		if (prev_map_data) {
 			init_prev_map(prev_map_data);
 		}
 
