@@ -60,7 +60,7 @@ a:visited {
 	overflow: hidden;
 	display: table-cell;
 	vertical-align: middle;
-	height: 70px;
+	height: 80px;
 	width: 100%;
 }
 
@@ -69,8 +69,8 @@ a:visited {
 	overflow-x: hidden;
 	width: calc(100% - 3px);
 	width: -webkit-calc(100% - 3px);
-	height: calc(100% - 133px);
-	height: -webkit-calc(100% - 133px);
+	height: calc(100% - 143px);
+	height: -webkit-calc(100% - 143px);
 }
 
 .search_result {
