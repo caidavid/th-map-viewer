@@ -635,6 +635,7 @@
 		d3.select("#filter_forests").on("change", function() { update_filter_visibility("forest", d3.event.target); });
 		d3.select("#filter_strongholds").on("change", function() { update_filter_visibility("stronghold", d3.event.target); });
 		d3.select("#filter_troops").on("change", function() { update_filter_visibility("troop", d3.event.target); });
+		d3.select("#filter_troop_trails").on("change", function() { update_filter_visibility("troop_trail", d3.event.target); });
 		d3.select("#filter_barbarians").on("change", function() { update_filter_visibility("barbarian", d3.event.target); });
 		d3.select("#filter_influence").on("change", function() { update_filter_visibility("influence", d3.event.target); });
 
@@ -652,6 +653,7 @@
 		d3.select("#filter_forests").attr("checked", filters.forest && "checked" || null);
 		d3.select("#filter_strongholds").attr("checked", filters.stronghold && "checked" || null);
 		d3.select("#filter_troops").attr("checked", filters.troop && "checked" || null);
+		d3.select("#filter_troop_trails").attr("checked", filters.troop_trail && "checked" || null);
 		d3.select("#filter_barbarians").attr("checked", filters.barbarian && "checked" || null);
 		d3.select("#filter_influence").attr("checked", filters.influence && "checked" || null);
 
@@ -800,8 +802,7 @@
 
 		d3.json(base_url + "map_prev.json" + query, function(error, data) {
 			if (error && !map_data) {
-				cursor_text.text("Failed");
-				alert("Failed to load the previous map data file");
+				cursor_text.text("Failed to load the previous map data file");
 			}
 			else {
 				init_prev_map(data);
@@ -994,7 +995,7 @@
 			}
 		}
 
-		if (troop.prev)  {
+		if (filters.troop_trail && troop.prev)  {
 			canvas_ctx.beginPath();
 			canvas_ctx.moveTo(troop.x * 4, troop.y);
 			canvas_ctx.lineTo(troop.prev.x * 4, troop.prev.y);
@@ -1005,7 +1006,7 @@
 			grd1.addColorStop(1, "rgba(255,255,255,0)");
 
 			canvas_ctx.strokeStyle = grd1;
-			canvas_ctx.lineWidth = 3;
+			canvas_ctx.lineWidth = 7;
 			canvas_ctx.stroke();
 			
 			var grd2 = canvas_ctx.createLinearGradient(troop.x*4, troop.y, troop.prev.x*4, troop.prev.y);
@@ -1014,7 +1015,7 @@
 			grd2.addColorStop(0, get_tribe_color(troop.tribeId));
 			grd2.addColorStop(1, "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 0)");
 			canvas_ctx.strokeStyle = grd2;
-			canvas_ctx.lineWidth = 2;
+			canvas_ctx.lineWidth = 6.5;
 			canvas_ctx.stroke();
 		}
 
