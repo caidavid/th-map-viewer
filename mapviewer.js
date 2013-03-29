@@ -884,7 +884,13 @@
 		frame_objects.strongholds.length = 0;
 
 		// clear canvas
-		canvas_ctx.clearRect(-cur_trans[0] / cur_scale, -cur_trans[1] / cur_scale, canvas_width / cur_scale, canvas_height / cur_scale);
+		canvas_ctx.save();
+		// canvas_ctx.clearRect(-cur_trans[0] / cur_scale, -cur_trans[1] / cur_scale, canvas_width / cur_scale, canvas_height / cur_scale);
+		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
+		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
+		canvas_ctx.restore();
+
+		// initial state
 		canvas_ctx.lineCap = "butt";
 		canvas_ctx.lineJoin = "miter";
 
