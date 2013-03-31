@@ -124,7 +124,12 @@
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
-		canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
+		if (scale == 1.0) {
+			canvas_ctx.translate(Math.floor(trans[0] + 0.5) + 0.5, Math.floor(trans[1] + 0.5) + 0.5);
+		}
+		else {
+			canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
+		}
 		canvas_ctx.scale(scale, scale);
 
 		// update viewport extents
