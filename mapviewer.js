@@ -1024,21 +1024,15 @@
 		var x = foundation.x * 4;
 		var y = foundation.y;
 
-		canvas_ctx.beginPath();
-		// canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI);
-		var w = 7;
+		var w = 4;
 		var h = 4;
-		canvas_ctx.rect(x - w, y - h, w*2, h*2);
-
-		canvas_ctx.closePath();
-
-		canvas_ctx.fillStyle = "rgba(165, 42, 42, 0.5)";
-		canvas_ctx.fill();
+		canvas_ctx.fillStyle = "firebrick";
+		canvas_ctx.fillRect(x - w, y - h, w * 2, h * 2);
 
 		if (cur_scale > min_small_text_scale) {
-			canvas_ctx.lineWidth = 1.25;
+			canvas_ctx.lineWidth = 1;
 			canvas_ctx.strokeStyle = "black";
-			canvas_ctx.stroke();
+			canvas_ctx.strokeRect(x - w, y - h, w * 2, h * 2);
 		}
 	}
 
@@ -1223,7 +1217,7 @@
 
 		// clear canvas
 		canvas_ctx.clearRect(-cur_trans[0] / cur_scale, -cur_trans[1] / cur_scale, canvas_width / cur_scale, canvas_height / cur_scale);
-		canvas_ctx.lineCap = "butt";
+		canvas_ctx.lineCap = "square";
 		canvas_ctx.lineJoin = "miter";
 
 		// influence image
