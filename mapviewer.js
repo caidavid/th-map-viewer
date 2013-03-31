@@ -175,9 +175,9 @@
 			update_str = date.toLocaleString();
 		}
 
-		if (age > (70*60*1000)) {
-			load_resources(true);
-		}
+		//if (age > (70*60*1000)) {
+		//	load_resources(true);
+		//}
 
 		d3.select("#snapshot_timestamp").text("Last updated: " + update_str);
 	}	
@@ -539,6 +539,31 @@
 		}
 		draw();
 	}
+	
+	var city_locations;
+	
+	function init_city_locations(data) {
+		city_locations = data;
+
+		if (update_foundations()) {
+			draw();
+		}
+	}
+
+	function update_foundations() {
+		if (!city_locations || !map_data)
+			return false;
+
+		for (var i = 0; i < city_locations.length; ++i) {
+			var foundation = city_locations[i];
+			if (!_(map_data.Cities).find(function(obj) { return obj.x == foundation.x && obj.y == foundation.y; })) {
+				foundation.draw = draw_foundation;
+				map_quadtree.add(foundation);
+			}
+		}
+		return true;
+	}
+
 
 	var first_map_update = true;
 
@@ -556,7 +581,7 @@
 		}
 
 		_(map_data_apply_prev.Troops).each(function(cur) {
-			var prev = _(prev_map_data.Troops).find(function(pobj) { return pobj.groupId == cur.groupId && pobj.troopId == cur.troopId; } );
+			var prev = _(prev_map_data.Troops).find(function(pobj) { return pobj.groupId == cur.groupId && pobj.troopId == cur.troopId; });
 			if (prev) {
 				cur.prev = prev;
 			}
@@ -614,6 +639,8 @@
 			init_prev_map(prev_map_data);
 		}
 
+		update_foundations();
+
 		// initial draw
 		draw();
 	}
@@ -642,6 +669,7 @@
 		d3.select("#filter_troop_trails").on("change", function() { update_filter_visibility("troop_trail", d3.event.target); });
 		d3.select("#filter_barbarians").on("change", function() { update_filter_visibility("barbarian", d3.event.target); });
 		d3.select("#filter_influence").on("change", function() { update_filter_visibility("influence", d3.event.target); });
+		d3.select("#filter_foundations").on("change", function() { update_filter_visibility("foundation", d3.event.target); });
 
 		// load filters from localStorage
 		if (window.localStorage && window.localStorage["filters"]) {
@@ -660,6 +688,7 @@
 		d3.select("#filter_troop_trails").attr("checked", filters.troop_trail && "checked" || null);
 		d3.select("#filter_barbarians").attr("checked", filters.barbarian && "checked" || null);
 		d3.select("#filter_influence").attr("checked", filters.influence && "checked" || null);
+		d3.select("#filter_foundations").attr("checked", filters.foundation && "checked" || null);
 
 		// info texts
 		cursor_text = d3.select("#cursor_text");
@@ -791,6 +820,15 @@
 			}
 			else {
 				init_tribe_colors(data);
+			}
+		});
+
+		d3.json(base_url + "city_locations.json", function(error, data) {
+			if (error && !map_data) {
+				cursor_text.text("Failed to load the city locations data file");
+			}
+			else {
+				init_city_locations(data);
 			}
 		});
 
@@ -976,6 +1014,33 @@
 		}
 	}
 
+
+	function draw_foundation(foundation) {
+		if (!filters.foundation)
+			return;
+
+		var x = foundation.x * 4;
+		var y = foundation.y;
+
+		canvas_ctx.beginPath();
+		// canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI);
+		var w = 7;
+		var h = 4;
+		canvas_ctx.rect(x - w, y - h, w*2, h*2);
+
+		canvas_ctx.closePath();
+
+		canvas_ctx.fillStyle = "rgba(165, 42, 42, 0.5)";
+		canvas_ctx.fill();
+
+		if (cur_scale > min_small_text_scale) {
+			canvas_ctx.lineWidth = 1.25;
+			canvas_ctx.strokeStyle = "black";
+			canvas_ctx.stroke();
+		}
+	}
+
+
 	function draw_troop(troop) {
 		if (!filters.troop)
 			return;
@@ -1038,7 +1103,6 @@
 			var cw = 7;
 			var ch = 4;
 			canvas_ctx.fillStyle = get_tribe_color(city.tribeId);
-			//canvas_ctx.fillRect(x - cw, y - ch, cw * 2, ch * 2);
 			canvas_ctx.beginPath();
 			canvas_ctx.rect(x - cw, y - ch, cw * 2, ch * 2);
 			canvas_ctx.closePath();
