@@ -237,7 +237,9 @@
 		var obj = get_object_by_location(mouse_x, mouse_y);
 		canvas.style("cursor", obj ? "pointer" : "auto")
 		if (obj) {
-			var text;
+			clearTimeout(mouseover_timer);
+			mouseover_timer = null;
+			var text = "";
 			switch (obj[0]) {
 				case "troop":
 					text = show_troop_info(obj[1]);
