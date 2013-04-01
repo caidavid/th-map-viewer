@@ -585,17 +585,18 @@
 		if (!city_locations || !map_data)
 			return false;
 
-		// todo: this needs to be made faster
-		/*
+		console.log(new Date())
+		// create a sorted list of cities to be able to search them efficiently
+		var cities_pos = _(map_data.Cities).map(function(city) { return city.x + city.y * tiles_width; }).sort(function(a, b) { return a - b; });
+
 		var available_foundations = city_locations.filter(function(foundation) {
 			foundation.draw = draw_foundation;
-			return !_(map_data.Cities).find(function(city) {
-				return city.x == foundation.x && city.y == foundation.y;
-			})
+			return -1 == _(cities_pos).indexOf(foundation.x + foundation.y * tiles_width, true);
 		});
 
 		_(available_foundations).each(map_quadtree.add);
-		*/
+
+		console.log(new Date())
 
 		/*
 		for (var i = 0; i < city_locations.length; ++i) {
@@ -1092,6 +1093,9 @@
 	var troop_img = new Image();
 	troop_img.src = "nyan2.gif";
 
+	var troop_bow_img = new Image();
+	troop_bow_img.src = "nyanbow.gif";
+
 	function draw_troop(troop) {
 		if (!filters.troop)
 			return;
@@ -1116,8 +1120,10 @@
 			var yo = y - h/2;
 			canvas_ctx.save();
 			canvas_ctx.translate(x, y);
-			//canvas_ctx.scale(1, -1);
-			canvas_ctx.rotate(-angle + Math.PI*1.5);
+			if (troop.prev) {
+				canvas_ctx.rotate(-angle - Math.PI * 2.5);
+				canvas_ctx.scale(angle > Math.PI ? -1 : 1, angle < 0 ? 1 : -1);
+			}
 			canvas_ctx.translate(-(x), -(y));
 
 			canvas_ctx.drawImage(troop_img, xo, yo, w, h);
@@ -1155,11 +1161,10 @@
 			
 			var grd2 = canvas_ctx.createLinearGradient(troop.x*4, troop.y, troop.prev.x*4, troop.prev.y);
 			var rgb = get_tribe_color_rgb(troop.tribeId);
-			if (!rgb) console.log(troop.tribeId, get_tribe_color(troop.tribeId))
 			grd2.addColorStop(0, get_tribe_color(troop.tribeId));
 			grd2.addColorStop(1, "rgba(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ", 0)");
-			canvas_ctx.strokeStyle = grd2;
 			canvas_ctx.lineWidth = 6.5;
+			canvas_ctx.strokeStyle = grd2;
 			canvas_ctx.stroke();
 		}
 
