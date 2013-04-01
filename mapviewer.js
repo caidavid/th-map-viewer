@@ -114,6 +114,14 @@
 			});
 	}
 
+	function transform_point(x, y) {
+		var tx = (x - cur_trans[0]) / cur_scale;
+		var ty = (y - cur_trans[1]) / cur_scale;
+		// april 01
+		ty = map_height - ty;
+		return [tx, ty];
+	}
+
 	function set_zoom(trans, scale) {
 		cur_trans = trans;
 		cur_scale = scale;
@@ -124,18 +132,30 @@
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
+
+
 		if (scale == 1.0) {
 			canvas_ctx.translate(Math.floor(trans[0] + 0.5) + 0.5, Math.floor(trans[1] + 0.5) + 0.5);
 		}
 		else {
 			canvas_ctx.translate(trans[0] + 0.5, trans[1] + 0.5);
 		}
+
 		canvas_ctx.scale(scale, scale);
 
+		// april 01
+		canvas_ctx.scale(1, -1);
+		canvas_ctx.translate(0, -map_height);
+
 		// update viewport extents
-		var margin_x = 50*4, margin_y = 50;
-		xmin = (-trans[0] - margin_x) / scale / 4; xmax = (-trans[0] + canvas_width + margin_x) / scale / 4;
-		ymin = (-trans[1] - margin_y) / scale; ymax = (-trans[1] + canvas_height + margin_y) / scale;
+		var margin_x = 100, margin_y = 50;
+
+		var min = transform_point(-margin_x, -margin_y);
+		var max = transform_point(canvas_width + margin_x, canvas_height + margin_y);
+
+		// neccesary with mirroring transforms
+	 	xmin = Math.min(min[0], max[0]) / 4; ymin = Math.min(min[1], max[1]);
+	 	xmax = Math.max(min[0], max[0]) / 4; ymax = Math.max(min[1], max[1]);
 	}
 
 	function is_inside_viewport(x, y) {
@@ -233,9 +253,10 @@
 	function on_canvas_mousemove() {
 		// update mouse coords
 		var pos = d3.mouse(this);
-		mouse_raw = pos
-		mouse_x = (pos[0] - cur_trans[0]) / cur_scale;
-		mouse_y = (pos[1] - cur_trans[1]) / cur_scale;
+		var tpos = transform_point(pos[0], pos[1]);
+		mouse_raw = pos;
+		mouse_x = tpos[0];
+		mouse_y = tpos[1];
 		update_cursor_text();
 
 		// show mouseover object info
@@ -510,8 +531,12 @@
 	function center_map_tile(x, y, scale) {
 		scale = scale || cur_scale;
 
+		// april 01
+		y = map_height - y;
+
 		var trans = [(-x * 4) * scale + canvas_width / 2, (-y) * scale + canvas_height / 2];
 		var scale = scale;
+
 
 		transition_zoom(trans, scale, 1000);
 	}
@@ -1203,7 +1228,7 @@
 		draw_circumference(x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
 	}
 
-	function is_quadtree_inside_viewport(x1, y1, x2, y2) {
+	function is_quadtree_outside_viewport(x1, y1, x2, y2) {
 		return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
 	}
 
@@ -1221,7 +1246,12 @@
 		frame_objects.strongholds.length = 0;
 
 		// clear canvas
-		canvas_ctx.clearRect(-cur_trans[0] / cur_scale, -cur_trans[1] / cur_scale, canvas_width / cur_scale, canvas_height / cur_scale);
+		canvas_ctx.save();
+		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
+		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
+		canvas_ctx.restore();
+
+		// initial state
 		canvas_ctx.lineCap = "square";
 		canvas_ctx.lineJoin = "miter";
 
@@ -1235,7 +1265,7 @@
 			if (obj && is_inside_viewport(obj.x, obj.y)) {
 				obj.draw(obj);
 			}
-			return is_quadtree_inside_viewport(x1, y1, x2, y2);
+			return is_quadtree_outside_viewport(x1, y1, x2, y2);
 		});
 
 		// draw text
