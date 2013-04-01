@@ -578,7 +578,6 @@
 		if (!city_locations || !map_data)
 			return false;
 
-		console.log(new Date())
 		// create a sorted list of cities to be able to search them efficiently
 		var cities_pos = _(map_data.Cities).map(function(city) { return city.x + city.y * tiles_width; }).sort(function(a, b) { return a - b; });
 
@@ -588,18 +587,6 @@
 		});
 
 		_(available_foundations).each(map_quadtree.add);
-
-		console.log(new Date())
-
-		/*
-		for (var i = 0; i < city_locations.length; ++i) {
-			var foundation = city_locations[i];
-			if (!_(map_data.Cities).find(function(obj) { return obj.x == foundation.x && obj.y == foundation.y; })) {
-				foundation.draw = draw_foundation;
-				map_quadtree.add(foundation);
-			}
-		}
-		*/
 
 		return true;
 	}
@@ -1307,6 +1294,7 @@
 			canvas_ctx.drawImage(influence_image, 0, 0, map_width, map_height);
 		}
 
+		// objects
 		map_quadtree.visit(function(node, x1, y1, x2, y2) {
 			var obj = node.point;
 			if (obj && is_inside_viewport(obj.x, obj.y)) {
