@@ -93,47 +93,57 @@
 	}
 
 	function transition_zoom(trans, scale, duration) {
+		d3.timer.flush();
+
 		var t1 = cur_trans.slice();
 		var s1 = cur_scale;
 
 		var t2 = trans.slice();
 		var s2 = scale;
 
+		console.log(new Date(), "i", t1, s1)
 		d3.transition()
+			.delay(0)
 			.duration(duration)
-			.ease(/*"quad-out"*/"none")
+			.ease("linear")
 			.tween("zoom", function() {
 				itrans = d3.interpolate(t1, t2);
 				iscale = d3.interpolate(s1, s2);
 				return function(t) {
 					var trans = itrans(t);
 					var scale = iscale(t);
+					console.log("t", trans, scale);
 					set_zoom(trans, scale);
 					draw();
 				}
-			});
+			})
+			.each("end", function() {
+				console.log("e");
+				set_zoom(cur_trans, cur_scale);
+			})
+		d3.timer.flush();
 	}
 
 	function transform_point(x, y) {
 		var tx = (x - cur_trans[0]) / cur_scale;
 		var ty = (y - cur_trans[1]) / cur_scale;
-		// april 01
-		// ty = map_height - ty;
 		return [tx, ty];
 	}
 
-	function set_zoom(trans, scale) {
+	function set_zoom(trans, scale, skip) {
 		cur_trans = trans;
 		cur_scale = scale;
 
-		// zoom.translate(trans);
-		// zoom.scale(scale);
+		if (!skip) {
+			zoom.translate(trans);
+			zoom.scale(scale);
+		}
 
 		// set canvas transformation
 		canvas_ctx.restore();
 		canvas_ctx.save();
 
-
+		// snap to grid at 100% zoom
 		if (scale == 1.0) {
 			canvas_ctx.translate(Math.floor(trans[0] + 0.5) + 0.5, Math.floor(trans[1] + 0.5) + 0.5);
 		}
@@ -736,6 +746,7 @@
 
 		// init zoom
 		cur_scale = get_min_zoom_scale();
+		cur_trans = [-map_width / 2 * cur_scale + canvas_width / 2, -map_height / 2 * cur_scale + canvas_height / 2];
 
 		zoom = d3.behavior.zoom()
 			.translate(cur_trans)
@@ -746,9 +757,11 @@
 		canvas.call(zoom);
 
 		canvas.on("keydown", function() {
-			var x = cur_trans[0] / cur_scale, y = cur_trans[1] / cur_scale;
-			var step = 100 / cur_scale;
 			var scale = cur_scale;
+			var x_center = (2 * cur_trans[0] - canvas_width) / (2 * scale);
+			var y_center = (2 * cur_trans[1] - canvas_height) / (2 * scale);
+			var step = 500;
+
 			switch (d3.event.keyCode) {
 				// DOM_VK_ADD	0x6B (107)	"+" on the numeric keypad.
 				// DOM_VK_PLUS	0xAB (171)	Plus ("+") key. Requires Gecko 15.0
@@ -756,9 +769,8 @@
 				case 107:
 				case 171:
 				case 187:
-					var pos = false;
-					var k = Math.log(cur_scale) / Math.LN2;
-					scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					var k = Math.log(scale) / Math.LN2;
+					scale = Math.pow(2, Math.floor(k) + 1);
 					break;
 
 				// DOM_VK_SUBTRACT	0x6D (109)	"-" on the numeric keypad.
@@ -767,37 +779,40 @@
 				case 109:
 				case 173:
 				case 189:
-					var pos = true;
-					var k = Math.log(cur_scale) / Math.LN2;
-					scale = Math.pow(2, pos ? Math.ceil(k) - 1 : Math.floor(k) + 1);
+					var k = Math.log(scale) / Math.LN2;
+					scale = Math.pow(2, Math.ceil(k) - 1);
 					break;
 
 				// DOM_VK_LEFT	0x25 (37)	Left arrow.
 				case 37:
-					x += step;
+					x_center += step;
 					break;
 
 				// DOM_VK_UP	0x26 (38)	Up arrow.
 				case 38:
-					y += step;
+					y_center += step;
 					break;
 
 				// DOM_VK_RIGHT	0x27 (39)	Right arrow.
 				case 39:
-					x -= step;
+					x_center -= step;
 					break;
 
 				// DOM_VK_DOWN	0x28 (40)	Down arrow.
 				case 40:
-					y -= step;
+					y_center -= step;
 					break;
 
 				default:
 					return;
 					break;
 			}
+
 			scale = Math.min(1, Math.max(get_min_zoom_scale(), scale));
-			transition_zoom([x * scale, y * scale], scale, 250);
+			transition_zoom([
+				(x_center * scale + canvas_width/2),
+				(y_center * scale + canvas_height/2)
+				], scale, 500);
 		});
 
 		on_zoom();
