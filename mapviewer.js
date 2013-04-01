@@ -118,7 +118,7 @@
 		var tx = (x - cur_trans[0]) / cur_scale;
 		var ty = (y - cur_trans[1]) / cur_scale;
 		// april 01
-		ty = map_height - ty;
+		// ty = map_height - ty;
 		return [tx, ty];
 	}
 
@@ -144,8 +144,8 @@
 		canvas_ctx.scale(scale, scale);
 
 		// april 01
-		canvas_ctx.scale(1, -1);
-		canvas_ctx.translate(0, -map_height);
+		// canvas_ctx.scale(1, -1);
+		// canvas_ctx.translate(0, -map_height);
 
 		// update viewport extents
 		var margin_x = 100, margin_y = 50;
@@ -532,11 +532,10 @@
 		scale = scale || cur_scale;
 
 		// april 01
-		y = map_height - y;
+		// y = map_height - y;
 
 		var trans = [(-x * 4) * scale + canvas_width / 2, (-y) * scale + canvas_height / 2];
 		var scale = scale;
-
 
 		transition_zoom(trans, scale, 1000);
 	}
@@ -586,6 +585,19 @@
 		if (!city_locations || !map_data)
 			return false;
 
+		// todo: this needs to be made faster
+		/*
+		var available_foundations = city_locations.filter(function(foundation) {
+			foundation.draw = draw_foundation;
+			return !_(map_data.Cities).find(function(city) {
+				return city.x == foundation.x && city.y == foundation.y;
+			})
+		});
+
+		_(available_foundations).each(map_quadtree.add);
+		*/
+
+		/*
 		for (var i = 0; i < city_locations.length; ++i) {
 			var foundation = city_locations[i];
 			if (!_(map_data.Cities).find(function(obj) { return obj.x == foundation.x && obj.y == foundation.y; })) {
@@ -593,6 +605,8 @@
 				map_quadtree.add(foundation);
 			}
 		}
+		*/
+
 		return true;
 	}
 
@@ -734,8 +748,10 @@
 		canvas = d3.select("canvas");
 		canvas_ctx = canvas.node().getContext("2d");
 		canvas_ctx.save();
-
 		resize_canvas();
+
+		// font
+		init_fonts(canvas.style("font-family"));
 
 		// init zoom
 		cur_scale = get_min_zoom_scale();
@@ -894,10 +910,16 @@
 	var min_small_text_scale = 0.5;
 	var min_normal_text_scale = 0.4;
 	var min_large_text_scale = 0.3;
-	var font_family = '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif';
-	var font_big = "bold 10pt " + font_family;
-	var font_normal = "10pt " + font_family;
-	var font_small = "8pt " + font_family;
+
+	var font_big;
+	var font_normal;
+	var font_small;
+
+	function init_fonts(font_family) {
+		font_big = "bold 10pt " + font_family;
+		font_normal = "10pt " + font_family;
+		font_small = "8pt " + font_family;
+	}
 
 	function draw_outlined_text(text, x, y, w, outline, fill) {
 		canvas_ctx.fillStyle = outline;
@@ -1066,15 +1088,41 @@
 		}
 	}
 
+	
+	var troop_img = new Image();
+	troop_img.src = "nyan2.gif";
 
 	function draw_troop(troop) {
 		if (!filters.troop)
 			return;
 
 		frame_objects.troops.push(troop);
+	
 		function draw_troop_snapshot(troop, fill) {
 			var x = troop.x * 4;
 			var y = troop.y;
+
+			var angle = 0;
+			if (troop.prev) {
+				var xp = troop.prev.x * 4;
+				var yp = troop.prev.y;
+
+				angle = Math.atan2(xp - x, yp - y);
+			}
+
+			var w = 301/4;
+			var h = 119/4;
+			var xo = x - w/2;
+			var yo = y - h/2;
+			canvas_ctx.save();
+			canvas_ctx.translate(x, y);
+			//canvas_ctx.scale(1, -1);
+			canvas_ctx.rotate(-angle + Math.PI*1.5);
+			canvas_ctx.translate(-(x), -(y));
+
+			canvas_ctx.drawImage(troop_img, xo, yo, w, h);
+			canvas_ctx.restore();
+			/*
 
 			canvas_ctx.beginPath();
 			canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI);
@@ -1088,6 +1136,7 @@
 				canvas_ctx.strokeStyle = "black";
 				canvas_ctx.stroke();
 			}
+			*/
 		}
 
 		if (filters.troop_trail && troop.prev)  {
