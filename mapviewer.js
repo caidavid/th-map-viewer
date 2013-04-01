@@ -101,7 +101,7 @@
 
 		d3.transition()
 			.duration(duration)
-			.ease("quad-out")
+			.ease(/*"quad-out"*/"none")
 			.tween("zoom", function() {
 				itrans = d3.interpolate(t1, t2);
 				iscale = d3.interpolate(s1, s2);
@@ -126,8 +126,8 @@
 		cur_trans = trans;
 		cur_scale = scale;
 
-		zoom.translate(trans);
-		zoom.scale(scale);
+		// zoom.translate(trans);
+		// zoom.scale(scale);
 
 		// set canvas transformation
 		canvas_ctx.restore();
@@ -142,10 +142,6 @@
 		}
 
 		canvas_ctx.scale(scale, scale);
-
-		// april 01
-		// canvas_ctx.scale(1, -1);
-		// canvas_ctx.translate(0, -map_height);
 
 		// update viewport extents
 		var margin_x = 100, margin_y = 50;
@@ -530,9 +526,6 @@
 
 	function center_map_tile(x, y, scale) {
 		scale = scale || cur_scale;
-
-		// april 01
-		// y = map_height - y;
 
 		var trans = [(-x * 4) * scale + canvas_width / 2, (-y) * scale + canvas_height / 2];
 		var scale = scale;
