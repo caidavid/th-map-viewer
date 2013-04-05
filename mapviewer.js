@@ -101,7 +101,6 @@
 		var t2 = trans.slice();
 		var s2 = scale;
 
-		console.log(new Date(), "i", t1, s1)
 		d3.transition()
 			.delay(0)
 			.duration(duration)
@@ -112,13 +111,11 @@
 				return function(t) {
 					var trans = itrans(t);
 					var scale = iscale(t);
-					console.log("t", trans, scale);
 					set_zoom(trans, scale);
 					draw();
 				}
 			})
 			.each("end", function() {
-				console.log("e");
 				set_zoom(cur_trans, cur_scale);
 			})
 		d3.timer.flush();
@@ -812,7 +809,7 @@
 			transition_zoom([
 				(x_center * scale + canvas_width/2),
 				(y_center * scale + canvas_height/2)
-				], scale, 500);
+				], scale, 250);
 		});
 
 		on_zoom();
@@ -1101,6 +1098,7 @@
 			var x = troop.x * 4;
 			var y = troop.y;
 
+			/*
 			var angle = 0;
 			if (troop.prev) {
 				var xp = troop.prev.x * 4;
@@ -1123,7 +1121,7 @@
 
 			canvas_ctx.drawImage(troop_img, xo, yo, w, h);
 			canvas_ctx.restore();
-			/*
+			*/
 
 			canvas_ctx.beginPath();
 			canvas_ctx.arc(x, y, 4, 0, 2 * Math.PI);
@@ -1137,7 +1135,6 @@
 				canvas_ctx.strokeStyle = "black";
 				canvas_ctx.stroke();
 			}
-			*/
 		}
 
 		if (filters.troop_trail && troop.prev)  {

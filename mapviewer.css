@@ -1,6 +1,5 @@
 body {
-	/* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif; */
-	font-family: "Comic Sans MS", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif;
 	font-size: 10pt;
 }
 
@@ -70,8 +69,8 @@ a:visited {
 	overflow-x: hidden;
 	width: calc(100% - 3px);
 	width: -webkit-calc(100% - 3px);
-	height: calc(100% - 143px);
-	height: -webkit-calc(100% - 143px);
+	height: calc(100% - 160px);
+	height: -webkit-calc(100% - 160px);
 }
 
 .search_result {
