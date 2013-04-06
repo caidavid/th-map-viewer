@@ -104,7 +104,7 @@
 		d3.transition()
 			.delay(0)
 			.duration(duration)
-			.ease("linear")
+			.ease("quad-out")
 			.tween("zoom", function() {
 				itrans = d3.interpolate(t1, t2);
 				iscale = d3.interpolate(s1, s2);
