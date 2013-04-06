@@ -95,7 +95,7 @@ a:visited {
 }
 
 /* canvas */
-#cursor_text, #info_text {
+#cursor_text, #info_text, #info_text_2 {
 	position: absolute;
 	left: 10px;
 	color: yellow;
@@ -116,5 +116,9 @@ a:visited {
 }
 
 #info_text {
-	top: 20px;
+	top: 25px;
+}
+
+#info_text_2 {
+	top: 45px;
 }
