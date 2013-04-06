@@ -71,7 +71,7 @@
 	var canvas;
 	var canvas_ctx;
 	var content;
-	var info_text, cursor_text;
+	var info_text, info_text_2, cursor_text;
 
 	var canvas_width;
 	var canvas_height;
@@ -175,6 +175,21 @@
 		cursor_text.text(sformat("{1} {2} {3}% {4} ms", x, y, Math.round(cur_scale * 100), last_frame_time.toFixed(0)));
 	}
 
+	function get_game_distance(x1, y1, x2, y2) {
+		return Math.abs(x1 - x2) + Math.abs(y1 - y2) / 2;
+	}
+
+	function update_dist_text(obj) {
+		if (!obj || get_selection().length == 0) {
+			info_text_2.text("");
+			return;
+		}
+
+		var target = _(get_selection()).min(function(sel) { return get_game_distance(obj.x, obj.y, sel.x, sel.y); });
+		var dist = Math.floor(get_game_distance(obj.x, obj.y, target.x, target.y));
+		info_text_2.text(sformat("{1} tiles from {2}", dist, target.name));
+	}
+
 	function update_snapshot_timestamp() {
 		var date = new Date(map_data.SnapshotEnd);
 		var age = (new Date().getTime() - date.getTime());
@@ -265,6 +280,7 @@
 		// show mouseover object info
 		var obj = get_object_by_location(mouse_x, mouse_y);
 		canvas.style("cursor", obj ? "pointer" : "auto")
+		update_dist_text(obj && obj[1]);
 		if (obj) {
 			clearTimeout(mouseover_timer);
 			mouseover_timer = null;
@@ -325,6 +341,14 @@
 		update_selection();
 	}
 
+	function get_selection() {
+		return selected_objects;
+	}
+
+	function is_selected(obj) {
+		return selected_objects.indexOf(obj) != -1;
+	}
+
 	function update_selection() {
 		selection_center = calc_selection_center();
 		selection_radius = calc_selection_radius();
@@ -360,10 +384,6 @@
 		return Math.sqrt(_(dists_sq).max());
 	}
 
-	function is_selected(obj) {
-		return selected_objects.indexOf(obj) != -1;
-	}
-
 	function on_canvas_click() {
 		canvas.node().focus();
 
@@ -371,7 +391,7 @@
 
 		if (obj) {
 			var sel_obj = obj[1];
-			if (sel_obj.playerId) {
+			if (sel_obj.playerId && d3.event.shiftKey) {
 				sel_obj = get_player(sel_obj.playerId);
 			}
 			select_object(sel_obj);
@@ -727,6 +747,7 @@
 		// info texts
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
+		info_text_2 = d3.select("#info_text_2");
 
 		// load resources
 		load_resources();
