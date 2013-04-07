@@ -113,7 +113,7 @@
 					var trans = itrans(t);
 					var scale = iscale(t);
 					set_zoom(trans, scale);
-					draw(t == 1 && "transition end");
+					draw(t == 1 && "transition end", t != 1 && "transition");
 				}
 			})
 			.each("end", function() {
@@ -687,6 +687,18 @@
 		// static info
 		update_snapshot_timestamp();
 
+		map_data_apply_prev = map_data;
+
+		if (prev_map_data) {
+			init_prev_map(prev_map_data);
+		}
+
+		update_foundations();
+
+		// initial draw
+		draw("init_map");
+
+		// first time stuff
 		if (first_map_update) {
 			first_map_update = false;
 
@@ -708,21 +720,15 @@
 			canvas.on("mousemove", on_canvas_mousemove);
 			canvas.on("click", on_canvas_click);
 
-			// load state
+			// hash url state
 			d3.select(window).on("hashchange", update_from_url);
-			update_from_url();
+			if (!update_from_url()) {
+				var q = search_input.property("value");
+				if (q && q.length > 0) {
+					do_search(q);
+				}
+			}
 		}
-
-		map_data_apply_prev = map_data;
-
-		if (prev_map_data) {
-			init_prev_map(prev_map_data);
-		}
-
-		update_foundations();
-
-		// initial draw
-		draw("init_map");
 	}
 
 	var filters = {
@@ -948,9 +954,14 @@
 		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
 
+	/*
 	var min_small_text_scale = 0.5;
 	var min_normal_text_scale = 0.4;
 	var min_large_text_scale = 0.3;
+	*/
+	var min_small_text_scale = 0;
+	var min_normal_text_scale = 0;
+	var min_large_text_scale = 0;
 
 	var font_big;
 	var font_normal;
@@ -1316,10 +1327,6 @@
 	}
 
 	function draw_map(canvas_ctx, xmin, ymin, xmax, ymax) {
-		if (!map_data) {
-			return;
-		}
-
 		var start_time = window.performance.now();
 
 		function is_quad_outside_viewport(x1, y1, x2, y2) {
@@ -1379,7 +1386,11 @@
 
 	var draw_timeout;
 	var update_buffer_timeout;
-	function draw(force_update) {
+	function draw(force_update, force_from_buffer) {
+		if (!map_data) {
+			return;
+		}
+
 		// clear canvas
 		canvas_ctx.save();
 		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -1387,7 +1398,7 @@
 		canvas_ctx.restore();
 
 
-		if (cur_scale > min_small_text_scale) {
+		if (cur_scale > 0.9 || (!force_from_buffer && cur_scale > 0.6)) {
 			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
 			update_buffer_timeout = null;
 			clearTimeout(update_buffer_timeout);
@@ -1395,46 +1406,41 @@
 		}
 		else {
 			if (!buffer) {
-				update_buffer("first update");
+				update_buffer(force_update + ": first update");
 			}
 			else if (force_update || update_buffer_timeout) {
 				clearTimeout(update_buffer_timeout);
 				update_buffer_timeout = setTimeout(function() {
 					update_buffer(force_update + ": force_update timeout");
 					update_buffer_timeout = null;
-				}, 1000)
+				}, 1010)
 			}
 
 			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
 			update_cursor_text();
 			
 			clearTimeout(draw_timeout);
-			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 500);
+			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 1000);
 		}
 	}
 
 	function update_buffer(reason) {
-		// console.log(new Date(), "updating buffer", reason)
+		// console.log(new Date(), reason)
 		render_to_buffer();
 	}
 
 	// buffering
-	function create_canvas(width, height) {
-		var buffer = document.createElement("canvas");
-		buffer.width = width;
-		buffer.height = height;
-		return buffer;
-	}
-
-	var buffer = create_canvas(1, 1);
-	var buffer_ctx = buffer.getContext("2d");
+	var buffer;
+	var buffer_ctx;
 	function render_to_buffer() {
-		var scale = Math.min(0.5, cur_scale);
+		if (!buffer) {
+			buffer = document.createElement("canvas");
+			buffer_ctx = buffer.getContext("2d");
+		}
+		var scale = Math.max(0.1, Math.min(0.5, cur_scale));
 		buffer.width = map_width * scale;
 		buffer.height = map_height * scale;
 	 	buffer_ctx.scale(scale, scale);
-
-
 		draw_map(buffer_ctx, 0, 0, map_width, map_height);
 	}
 
@@ -1450,7 +1456,7 @@
 		do_search(data);
 	}
 
-	var prev_ser_state;
+	var prev_ser_state = "";
 	function update_url(state) {
 		prev_ser_state = state || serialize_state();
 		window.location.hash = encodeURIComponent(prev_ser_state);
@@ -1461,7 +1467,9 @@
 		if (data != prev_ser_state) {
 			prev_ser_state = data;
 			deserialize_state(data);
+			return true;
 		}
+		return false;
 	}
 
 	d3.select(window).on("load", init);
