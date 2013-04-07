@@ -745,7 +745,7 @@
 			if (window.localStorage && JSON) {
 				window.localStorage["filters"] = JSON.stringify(filters);
 			}
-			draw(true);
+			draw("filter");
 		}
 
 		d3.select("#filter_cities").on("change", function() { update_filter_visibility("city", d3.event.target); });
@@ -949,20 +949,17 @@
 		var load_influence_image = new Image();
 		load_influence_image.onload = function() {
 			influence_image = load_influence_image;
-			draw("load_influence_image");
+			if (filters.influence) {
+				draw("load_influence_image");
+			}
 		};
 		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
 
-	/*
 	var min_small_text_scale = 0.5;
 	var min_normal_text_scale = 0.4;
 	var min_large_text_scale = 0.3;
-	*/
-	var min_small_text_scale = 0;
-	var min_normal_text_scale = 0;
-	var min_large_text_scale = 0;
-
+	
 	var font_big;
 	var font_normal;
 	var font_small;
@@ -1405,13 +1402,14 @@
 			clearTimeout(draw_timeout);
 		}
 		else {
-			if (!buffer) {
+			if (!buffer || force_update == "filter") {
 				update_buffer(force_update + ": first update");
 			}
 			else if (force_update || update_buffer_timeout) {
 				clearTimeout(update_buffer_timeout);
 				update_buffer_timeout = setTimeout(function() {
 					update_buffer(force_update + ": force_update timeout");
+					canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
 					update_buffer_timeout = null;
 				}, 1010)
 			}
@@ -1425,7 +1423,7 @@
 	}
 
 	function update_buffer(reason) {
-		// console.log(new Date(), reason)
+		console.log(new Date(), reason)
 		render_to_buffer();
 	}
 
@@ -1437,7 +1435,7 @@
 			buffer = document.createElement("canvas");
 			buffer_ctx = buffer.getContext("2d");
 		}
-		var scale = Math.max(0.1, Math.min(0.5, cur_scale));
+		var scale = Math.min(0.5, cur_scale);
 		buffer.width = map_width * scale;
 		buffer.height = map_height * scale;
 	 	buffer_ctx.scale(scale, scale);
