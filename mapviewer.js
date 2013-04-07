@@ -1387,7 +1387,7 @@
 		canvas_ctx.restore();
 
 
-		if (cur_scale > 1) {
+		if (cur_scale > min_small_text_scale) {
 			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
 			update_buffer_timeout = null;
 			clearTimeout(update_buffer_timeout);
@@ -1414,7 +1414,7 @@
 	}
 
 	function update_buffer(reason) {
-		console.log(new Date(), "updating buffer", reason)
+		// console.log(new Date(), "updating buffer", reason)
 		render_to_buffer();
 	}
 
