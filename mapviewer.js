@@ -71,7 +71,7 @@
 	var canvas;
 	var canvas_ctx;
 	var content;
-	var info_text, info_text_2, cursor_text;
+	var info_text, info_text_2, cursor_text, changes_text;
 
 	var canvas_width;
 	var canvas_height;
@@ -413,8 +413,8 @@
 		return _(map_data.Players).find(function(d) { return d.playerId == player_id });
 	}
 
-	function get_tribe(tribe_id) {
-		return _(map_data.Tribes).find(function(d) { return d.tribeId == tribe_id });
+	function get_tribe(tribe_id, data) {
+		return _(data || map_data.Tribes).find(function(d) { return d.tribeId == tribe_id });
 	}
 
 	function show_city_info(city) {
@@ -634,12 +634,30 @@
 			return;
 		}
 
+		// find previous troop instances
 		_(map_data_apply_prev.Troops).each(function(cur) {
 			var prev = _(prev_map_data.Troops).find(function(pobj) { return pobj.groupId == cur.groupId && pobj.troopId == cur.troopId; });
 			if (prev) {
 				cur.prev = prev;
 			}
 		});
+
+		// find stronghold ownership changes
+		var changed_strongholds = [];
+		_(map_data_apply_prev.Strongholds).each(function(cur) {
+			var prev = _(prev_map_data.Strongholds).find(function(pobj) { return pobj.id == cur.id; });
+			if (prev && prev.tribeId != cur.tribeId) {
+				changed_strongholds.push([prev, cur]);
+			}
+		});
+
+		// format and display changes
+		var changes_str = _(changed_strongholds).map(function(shch) {
+			var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "(Unoccupied)";
+			var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
+			return (sformat("{1} ({2}) {3} =&gt; {4}", shch[0].name, shch[0].level, prev_tribe, cur_tribe));
+		}).join("<br>");
+		changes_text.html(changes_str);
 
 		map_data_apply_prev = null;
 		prev_map_data = null;
@@ -748,6 +766,7 @@
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
 		info_text_2 = d3.select("#info_text_2");
+		changes_text = d3.select("#changes_text");
 
 		// load resources
 		load_resources();
@@ -1101,13 +1120,6 @@
 			canvas_ctx.strokeRect(x - w, y - h, w * 2, h * 2);
 		}
 	}
-
-	
-	var troop_img = new Image();
-	troop_img.src = "nyan2.gif";
-
-	var troop_bow_img = new Image();
-	troop_bow_img.src = "nyanbow.gif";
 
 	function draw_troop(troop) {
 		if (!filters.troop)
