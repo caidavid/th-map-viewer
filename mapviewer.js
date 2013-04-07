@@ -92,6 +92,7 @@
 		}
 	}
 
+	var transition_end_timeout;
 	function transition_zoom(trans, scale, duration) {
 		d3.timer.flush();
 
@@ -112,11 +113,16 @@
 					var trans = itrans(t);
 					var scale = iscale(t);
 					set_zoom(trans, scale);
-					draw();
+					draw(t == 1 && "transition end");
 				}
 			})
 			.each("end", function() {
+				/*
 				set_zoom(cur_trans, cur_scale);
+				//draw(true);
+				clearTimeout(transition_end_timeout)
+				transition_end_timeout = setTimeout(function() { draw(true); }, 1000);
+				*/
 			})
 		d3.timer.flush();
 	}
@@ -159,10 +165,6 @@
 		// neccesary with mirroring transforms
 	 	xmin = Math.min(min[0], max[0]) / 4; ymin = Math.min(min[1], max[1]);
 	 	xmax = Math.max(min[0], max[0]) / 4; ymax = Math.max(min[1], max[1]);
-	}
-
-	function is_inside_viewport(x, y) {
-		return x >= xmin && x < xmax && y >= ymin && y < ymax;
 	}
 
 	var mouse_raw;
@@ -588,7 +590,7 @@
 			tribe_colors_rgb[tcol.tribeId] = hex_to_rgb(tcol.color);
 			color_tribes[tcol.color] = tcol.tribeId;
 		}
-		draw();
+		draw("init_tribe_colors");
 	}
 	
 	var city_locations;
@@ -597,7 +599,7 @@
 		city_locations = data;
 
 		if (update_foundations()) {
-			draw();
+			draw("init_city_locations");
 		}
 	}
 
@@ -668,7 +670,7 @@
 		map_data_apply_prev = null;
 		prev_map_data = null;
 
-		draw();
+		draw("init_prev_map");
 	}
 
 	function init_map(data) {
@@ -720,7 +722,7 @@
 		update_foundations();
 
 		// initial draw
-		draw();
+		draw("init_map");
 	}
 
 	var filters = {
@@ -737,7 +739,7 @@
 			if (window.localStorage && JSON) {
 				window.localStorage["filters"] = JSON.stringify(filters);
 			}
-			draw();
+			draw(true);
 		}
 
 		d3.select("#filter_cities").on("change", function() { update_filter_visibility("city", d3.event.target); });
@@ -941,7 +943,7 @@
 		var load_influence_image = new Image();
 		load_influence_image.onload = function() {
 			influence_image = load_influence_image;
-			draw();
+			draw("load_influence_image");
 		};
 		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
@@ -960,7 +962,7 @@
 		font_small = "8pt " + font_family;
 	}
 
-	function draw_outlined_text(text, x, y, w, outline, fill) {
+	function draw_outlined_text(canvas_ctx, text, x, y, w, outline, fill) {
 		canvas_ctx.fillStyle = outline;
 		for (xi = -w; xi <= w; ++xi) {
 			for (yi = -w; yi <= w; ++yi) {
@@ -974,7 +976,7 @@
 		canvas_ctx.fillText(text, x, y);
 	}
 
-	function draw_text() {
+	function draw_text(canvas_ctx) {
 		// cities
 		if (filters.city && cur_scale > min_normal_text_scale) {
 			for (var i = 0; i < frame_objects.cities.length; ++i) {
@@ -997,7 +999,7 @@
 				canvas_ctx.font = font_big;
 				canvas_ctx.fillStyle = "black";
 				canvas_ctx.textAlign = "center";
-				draw_outlined_text(sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
+				draw_outlined_text(canvas_ctx, sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
 			}
 		}
 
@@ -1028,7 +1030,7 @@
 		}
 	}
 
-	function draw_circumference(x, y, rad, width, stroke, fill) {
+	function draw_circumference(canvas_ctx, x, y, rad, width, stroke, fill) {
 		// colored circunference
 		canvas_ctx.moveTo(x, y);
 		canvas_ctx.beginPath();
@@ -1063,7 +1065,7 @@
 	var city_selection_color = "rgba(100, 149, 237, 1.0)";
 	var selection_color = "rgba(100, 149, 237, 0.5)";
 
-	function draw_forest(forest) {
+	function draw_forest(canvas_ctx, forest) {
 		if (!filters.forest)
 			return;
 
@@ -1085,7 +1087,7 @@
 		}
 	}
 
-	function draw_barbarian(barb) {
+	function draw_barbarian(canvas_ctx, barb) {
 		if (!filters.barbarian)
 			return;
 
@@ -1108,7 +1110,7 @@
 	}
 
 
-	function draw_foundation(foundation) {
+	function draw_foundation(canvas_ctx, foundation) {
 		if (!filters.foundation)
 			return;
 
@@ -1127,7 +1129,7 @@
 		}
 	}
 
-	function draw_troop(troop) {
+	function draw_troop(canvas_ctx, troop) {
 		if (!filters.troop)
 			return;
 
@@ -1202,7 +1204,7 @@
 		draw_troop_snapshot(troop, get_tribe_color(troop.tribeId));
 	}
 
-	function draw_city(city) {
+	function draw_city(canvas_ctx, city) {
 		if (!filters.city)
 			return;
 
@@ -1288,7 +1290,7 @@
 		}
 	}
 	
-	function draw_stronghold(sh) {
+	function draw_stronghold(canvas_ctx, sh) {
 		if (!filters.stronghold)
 			return;
 
@@ -1310,31 +1312,30 @@
 			canvas_ctx.stroke();
 		}
 
-		draw_circumference(x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
+		draw_circumference(canvas_ctx, x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
 	}
 
-	function is_quadtree_outside_viewport(x1, y1, x2, y2) {
-		return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
-	}
-
-	function draw() {
+	function draw_map(canvas_ctx, xmin, ymin, xmax, ymax) {
 		if (!map_data) {
 			return;
 		}
 
 		var start_time = window.performance.now();
 
+		function is_quad_outside_viewport(x1, y1, x2, y2) {
+			return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
+		}
+
+		function is_point_inside_viewport(x, y) {
+			return x >= xmin && x < xmax && y >= ymin && y < ymax;
+		}
+
+		// clear frame objects
 		frame_objects.forests.length = 0;
 		frame_objects.troops.length = 0;
 		frame_objects.barbarians.length = 0;
 		frame_objects.cities.length = 0;
 		frame_objects.strongholds.length = 0;
-
-		// clear canvas
-		canvas_ctx.save();
-		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
-		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
-		canvas_ctx.restore();
 
 		// initial state
 		canvas_ctx.lineCap = "square";
@@ -1348,30 +1349,93 @@
 		// objects
 		map_quadtree.visit(function(node, x1, y1, x2, y2) {
 			var obj = node.point;
-			if (obj && is_inside_viewport(obj.x, obj.y)) {
-				obj.draw(obj);
+			if (obj && is_point_inside_viewport(obj.x, obj.y)) {
+				obj.draw(canvas_ctx, obj);
 			}
-			return is_quadtree_outside_viewport(x1, y1, x2, y2);
+			return is_quad_outside_viewport(x1, y1, x2, y2);
 		});
 
-		// draw text
+		// text
 		if (cur_scale > min_normal_text_scale) {
-			draw_text();
+			draw_text(canvas_ctx);
 		}
 		else {
 			clearTimeout(draw_text_timeout);
-			draw_text_timeout = setTimeout(draw_text, 10);
+			draw_text_timeout = setTimeout(function() { draw_text(canvas_ctx); }, 10);
 		}
 
-		// draw selection
-		var pos = get_selection_center();
-		var r = get_selection_radius();
-		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
+		// selection
+		if (get_selection().length > 0) {
+			var pos = get_selection_center();
+			var r = get_selection_radius();
+			draw_circumference(canvas_ctx, pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
+		}
 
 		// update frame time
 		var frame_time = window.performance.now() - start_time;
 		last_frame_time = frame_time;
 		update_cursor_text();
+	}
+
+	var draw_timeout;
+	var update_buffer_timeout;
+	function draw(force_update) {
+		// clear canvas
+		canvas_ctx.save();
+		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
+		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
+		canvas_ctx.restore();
+
+
+		if (cur_scale > 1) {
+			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
+			update_buffer_timeout = null;
+			clearTimeout(update_buffer_timeout);
+			clearTimeout(draw_timeout);
+		}
+		else {
+			if (!buffer) {
+				update_buffer("first update");
+			}
+			else if (force_update || update_buffer_timeout) {
+				clearTimeout(update_buffer_timeout);
+				update_buffer_timeout = setTimeout(function() {
+					update_buffer(force_update + ": force_update timeout");
+					update_buffer_timeout = null;
+				}, 1000)
+			}
+
+			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
+			update_cursor_text();
+			
+			clearTimeout(draw_timeout);
+			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 500);
+		}
+	}
+
+	function update_buffer(reason) {
+		console.log(new Date(), "updating buffer", reason)
+		render_to_buffer();
+	}
+
+	// buffering
+	function create_canvas(width, height) {
+		var buffer = document.createElement("canvas");
+		buffer.width = width;
+		buffer.height = height;
+		return buffer;
+	}
+
+	var buffer = create_canvas(1, 1);
+	var buffer_ctx = buffer.getContext("2d");
+	function render_to_buffer() {
+		var scale = Math.min(0.5, cur_scale);
+		buffer.width = map_width * scale;
+		buffer.height = map_height * scale;
+	 	buffer_ctx.scale(scale, scale);
+
+
+		draw_map(buffer_ctx, 0, 0, map_width, map_height);
 	}
 
 	// state serialization
