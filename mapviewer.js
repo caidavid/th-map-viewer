@@ -959,7 +959,7 @@
 	var min_small_text_scale = 0.5;
 	var min_normal_text_scale = 0.4;
 	var min_large_text_scale = 0.3;
-	
+
 	var font_big;
 	var font_normal;
 	var font_small;
@@ -1394,6 +1394,19 @@
 		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
 		canvas_ctx.restore();
 
+		if (!buffer) {
+			update_buffer(force_update + ": first update");
+		}
+		else if (force_update == "filter") {
+			update_buffer(force_update);
+		}
+		else if (force_update || update_buffer_timeout) {
+			clearTimeout(update_buffer_timeout);
+			update_buffer_timeout = setTimeout(function() {
+				update_buffer(force_update + ": force_update timeout");
+				update_buffer_timeout = null;
+			}, 1500)
+		}
 
 		if (cur_scale > 0.9 || (!force_from_buffer && cur_scale > 0.6)) {
 			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
@@ -1402,18 +1415,6 @@
 			clearTimeout(draw_timeout);
 		}
 		else {
-			if (!buffer || force_update == "filter") {
-				update_buffer(force_update + ": first update");
-			}
-			else if (force_update || update_buffer_timeout) {
-				clearTimeout(update_buffer_timeout);
-				update_buffer_timeout = setTimeout(function() {
-					update_buffer(force_update + ": force_update timeout");
-					canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
-					update_buffer_timeout = null;
-				}, 1010)
-			}
-
 			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
 			update_cursor_text();
 			
