@@ -1398,23 +1398,26 @@
 			update_buffer(force_update + ": first update");
 		}
 		else if (force_update == "filter") {
-			update_buffer(force_update);
-		}
-		else if (force_update || update_buffer_timeout) {
 			clearTimeout(update_buffer_timeout);
-			update_buffer_timeout = setTimeout(function() {
-				update_buffer(force_update + ": force_update timeout");
-				update_buffer_timeout = null;
-			}, 1500)
+			update_buffer_timeout = null;
+			update_buffer(force_update);
 		}
 
 		if (cur_scale > 0.9 || (!force_from_buffer && cur_scale > 0.6)) {
-			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
-			update_buffer_timeout = null;
 			clearTimeout(update_buffer_timeout);
 			clearTimeout(draw_timeout);
+			update_buffer_timeout = null;
+			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
 		}
 		else {
+			if (force_update || update_buffer_timeout) {
+				clearTimeout(update_buffer_timeout);
+				update_buffer_timeout = setTimeout(function() {
+					update_buffer(force_update + ": force_update timeout");
+					update_buffer_timeout = null;
+				}, 1500)
+			}
+
 			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
 			update_cursor_text();
 			
