@@ -475,6 +475,9 @@
 	}
 
 	function do_search(q) {
+		if (!map_data)
+			return;
+		
 		var match_cities = [];
 		var match_players = [];
 		var match_tribes = [];
@@ -703,7 +706,6 @@
 			first_map_update = false;
 
 			// search
-			search_input = d3.select("#search");
 			search_input.on("input", function() {
 				clearTimeout(do_search_timeout)
 				do_search_timeout = setTimeout(function() {
@@ -714,19 +716,14 @@
 			search_input.node().focus();
 			search_input.node().select();
 
-			search_results = d3.select("#search_results");
-
 			// canvas events
 			canvas.on("mousemove", on_canvas_mousemove);
 			canvas.on("click", on_canvas_click);
 
 			// hash url state
-			d3.select(window).on("hashchange", update_from_url);
-			if (!update_from_url()) {
-				var q = search_input.property("value");
-				if (q && q.length > 0) {
-					do_search(q);
-				}
+			var q = search_input.property("value");
+			if (q && q.length > 0) {
+				do_search(q);
 			}
 		}
 	}
@@ -784,6 +781,14 @@
 
 		// load resources
 		load_resources();
+
+		// search elements
+		search_input = d3.select("#search");
+		search_results = d3.select("#search_results");
+
+		// init hash state
+		d3.select(window).on("hashchange", update_from_url);
+		update_from_url();
 
 		// init canvas
 		content = d3.select("#content");
