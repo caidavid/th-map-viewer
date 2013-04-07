@@ -1,0 +1,141 @@
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Tahoma, Arial, "Lucida Grande", sans-serif;
+	font-size: 10pt;
+}
+
+* {
+    padding: 1px;
+}
+
+a {
+	text-decoration: underline;
+	color: blue;
+}
+
+a:visited {
+	text-decoration: underline;
+	color: blue;
+}
+
+/* layout */
+#layout, #header, #main, #left-sidebar, #right, #right-sidebar, #content, #map {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+}
+
+#content, #map {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+}
+
+#content {
+	border: solid 2px #666;
+	font-size: 10pt;
+}
+
+#map {
+}
+
+#layout        { background: #aaaaaa; top: 0; right: 0; bottom: 0; left: 0; }
+#header        { background: orange; top: 0; right: 0; height: 100px; left: 0; }
+#main          {                   top: 100px; right: 0; bottom: 0; left: 0; }
+#left-sidebar  { background: orange; top: 0; width: 200px; bottom: 0; left: 0; }
+#right         {                   top: 0; right: 0; bottom: 0; left: 200px; }
+#content       {                   top: 0; width: 100%; bottom: 0; left: 0; }
+
+#left-sidebar {
+	padding: 0;
+	border-top: solid 2px #666;
+}
+
+/* search */
+#filters {
+	overflow: hidden;
+	display: table-cell;
+	vertical-align: middle;
+	height: 80px;
+	width: 100%;
+}
+
+#search_results {
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: calc(100% - 3px);
+	width: -webkit-calc(100% - 3px);
+	height: calc(100% - 160px);
+	height: -webkit-calc(100% - 160px);
+}
+
+.search_result {
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.selected_search_result {
+	background-color: CornflowerBlue;
+}
+
+#left-sidebar-bottom-text {
+	padding: 0;
+	font-size: 8pt;
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	bottom: 0px;
+	border-top: solid 1px #aaaaaa;
+}
+
+/* canvas */
+#cursor_text, #info_text, #info_text_2, #changes_text {
+	pointer-events: none;
+	position: absolute;
+	left: 10px;
+	color: yellow;
+	text-shadow:
+		-1px -1px 0 #000,
+		 0px -1px 0 #000,
+		+1px -1px 0 #000,
+		-1px  0px 0 #000,
+		 0px  0px 0 #000,
+		+1px  0px 0 #000,
+		-1px +1px 0 #000,
+		 0px +1px 0 #000,
+		+1px +1px 0 #000;
+}
+
+#cursor_text {
+	top: 5px;
+}
+
+#info_text {
+	top: 25px;
+}
+
+#info_text_2 {
+	top: 45px;
+}
+
+#changes_text {
+	overflow: auto;
+	line-height: 20px;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	text-align: right;
+	color: white;
+}
+
+#changes_text div {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
