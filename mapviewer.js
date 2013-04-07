@@ -652,12 +652,18 @@
 		});
 
 		// format and display changes
-		var changes_str = _(changed_strongholds).map(function(shch) {
-			var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "(Unoccupied)";
-			var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
-			return (sformat("{1} ({2}) {3} =&gt; {4}", shch[0].name, shch[0].level, prev_tribe, cur_tribe));
-		}).join("<br>");
-		changes_text.html(changes_str);
+		var c = changes_text.selectAll("div").data(changed_strongholds);
+		c.exit().remove();
+		c.enter().append("div")
+			.sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
+			.html(function(shch) {
+				var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "";
+				var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
+				return sformat("<span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span>",
+					shch[0].name, shch[0].level,
+					get_tribe_color(shch[0].tribeId), prev_tribe, 
+					get_tribe_color(shch[1].tribeId), cur_tribe);
+			});
 
 		map_data_apply_prev = null;
 		prev_map_data = null;
