@@ -92,7 +92,6 @@
 		}
 	}
 
-	var transition_end_timeout;
 	function transition_zoom(trans, scale, duration) {
 		d3.timer.flush();
 
@@ -113,16 +112,11 @@
 					var trans = itrans(t);
 					var scale = iscale(t);
 					set_zoom(trans, scale);
-					draw(t == 1 && "transition end", t != 1 && "transition");
+					draw();
 				}
 			})
 			.each("end", function() {
-				/*
 				set_zoom(cur_trans, cur_scale);
-				//draw(true);
-				clearTimeout(transition_end_timeout)
-				transition_end_timeout = setTimeout(function() { draw(true); }, 1000);
-				*/
 			})
 		d3.timer.flush();
 	}
@@ -165,6 +159,10 @@
 		// neccesary with mirroring transforms
 	 	xmin = Math.min(min[0], max[0]) / 4; ymin = Math.min(min[1], max[1]);
 	 	xmax = Math.max(min[0], max[0]) / 4; ymax = Math.max(min[1], max[1]);
+	}
+
+	function is_inside_viewport(x, y) {
+		return x >= xmin && x < xmax && y >= ymin && y < ymax;
 	}
 
 	var mouse_raw;
@@ -475,9 +473,6 @@
 	}
 
 	function do_search(q) {
-		if (!map_data)
-			return;
-		
 		var match_cities = [];
 		var match_players = [];
 		var match_tribes = [];
@@ -593,7 +588,7 @@
 			tribe_colors_rgb[tcol.tribeId] = hex_to_rgb(tcol.color);
 			color_tribes[tcol.color] = tcol.tribeId;
 		}
-		draw("init_tribe_colors");
+		draw();
 	}
 	
 	var city_locations;
@@ -602,7 +597,7 @@
 		city_locations = data;
 
 		if (update_foundations()) {
-			draw("init_city_locations");
+			draw();
 		}
 	}
 
@@ -673,7 +668,7 @@
 		map_data_apply_prev = null;
 		prev_map_data = null;
 
-		draw("init_prev_map");
+		draw();
 	}
 
 	function init_map(data) {
@@ -690,22 +685,11 @@
 		// static info
 		update_snapshot_timestamp();
 
-		map_data_apply_prev = map_data;
-
-		if (prev_map_data) {
-			init_prev_map(prev_map_data);
-		}
-
-		update_foundations();
-
-		// initial draw
-		draw("init_map");
-
-		// first time stuff
 		if (first_map_update) {
 			first_map_update = false;
 
 			// search
+			search_input = d3.select("#search");
 			search_input.on("input", function() {
 				clearTimeout(do_search_timeout)
 				do_search_timeout = setTimeout(function() {
@@ -716,16 +700,27 @@
 			search_input.node().focus();
 			search_input.node().select();
 
+			search_results = d3.select("#search_results");
+
 			// canvas events
 			canvas.on("mousemove", on_canvas_mousemove);
 			canvas.on("click", on_canvas_click);
 
-			// hash url state
-			var q = search_input.property("value");
-			if (q && q.length > 0) {
-				do_search(q);
-			}
+			// load state
+			d3.select(window).on("hashchange", update_from_url);
+			update_from_url();
 		}
+
+		map_data_apply_prev = map_data;
+
+		if (prev_map_data) {
+			init_prev_map(prev_map_data);
+		}
+
+		update_foundations();
+
+		// initial draw
+		draw();
 	}
 
 	var filters = {
@@ -742,7 +737,7 @@
 			if (window.localStorage && JSON) {
 				window.localStorage["filters"] = JSON.stringify(filters);
 			}
-			draw("filter");
+			draw();
 		}
 
 		d3.select("#filter_cities").on("change", function() { update_filter_visibility("city", d3.event.target); });
@@ -781,14 +776,6 @@
 
 		// load resources
 		load_resources();
-
-		// search elements
-		search_input = d3.select("#search");
-		search_results = d3.select("#search_results");
-
-		// init hash state
-		d3.select(window).on("hashchange", update_from_url);
-		update_from_url();
 
 		// init canvas
 		content = d3.select("#content");
@@ -954,9 +941,7 @@
 		var load_influence_image = new Image();
 		load_influence_image.onload = function() {
 			influence_image = load_influence_image;
-			if (filters.influence) {
-				draw("load_influence_image");
-			}
+			draw();
 		};
 		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
@@ -975,7 +960,7 @@
 		font_small = "8pt " + font_family;
 	}
 
-	function draw_outlined_text(canvas_ctx, text, x, y, w, outline, fill) {
+	function draw_outlined_text(text, x, y, w, outline, fill) {
 		canvas_ctx.fillStyle = outline;
 		for (xi = -w; xi <= w; ++xi) {
 			for (yi = -w; yi <= w; ++yi) {
@@ -989,7 +974,7 @@
 		canvas_ctx.fillText(text, x, y);
 	}
 
-	function draw_text(canvas_ctx) {
+	function draw_text() {
 		// cities
 		if (filters.city && cur_scale > min_normal_text_scale) {
 			for (var i = 0; i < frame_objects.cities.length; ++i) {
@@ -1012,7 +997,7 @@
 				canvas_ctx.font = font_big;
 				canvas_ctx.fillStyle = "black";
 				canvas_ctx.textAlign = "center";
-				draw_outlined_text(canvas_ctx, sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
+				draw_outlined_text(sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
 			}
 		}
 
@@ -1043,7 +1028,7 @@
 		}
 	}
 
-	function draw_circumference(canvas_ctx, x, y, rad, width, stroke, fill) {
+	function draw_circumference(x, y, rad, width, stroke, fill) {
 		// colored circunference
 		canvas_ctx.moveTo(x, y);
 		canvas_ctx.beginPath();
@@ -1078,7 +1063,7 @@
 	var city_selection_color = "rgba(100, 149, 237, 1.0)";
 	var selection_color = "rgba(100, 149, 237, 0.5)";
 
-	function draw_forest(canvas_ctx, forest) {
+	function draw_forest(forest) {
 		if (!filters.forest)
 			return;
 
@@ -1100,7 +1085,7 @@
 		}
 	}
 
-	function draw_barbarian(canvas_ctx, barb) {
+	function draw_barbarian(barb) {
 		if (!filters.barbarian)
 			return;
 
@@ -1123,7 +1108,7 @@
 	}
 
 
-	function draw_foundation(canvas_ctx, foundation) {
+	function draw_foundation(foundation) {
 		if (!filters.foundation)
 			return;
 
@@ -1142,7 +1127,7 @@
 		}
 	}
 
-	function draw_troop(canvas_ctx, troop) {
+	function draw_troop(troop) {
 		if (!filters.troop)
 			return;
 
@@ -1217,7 +1202,7 @@
 		draw_troop_snapshot(troop, get_tribe_color(troop.tribeId));
 	}
 
-	function draw_city(canvas_ctx, city) {
+	function draw_city(city) {
 		if (!filters.city)
 			return;
 
@@ -1303,7 +1288,7 @@
 		}
 	}
 	
-	function draw_stronghold(canvas_ctx, sh) {
+	function draw_stronghold(sh) {
 		if (!filters.stronghold)
 			return;
 
@@ -1325,26 +1310,31 @@
 			canvas_ctx.stroke();
 		}
 
-		draw_circumference(canvas_ctx, x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
+		draw_circumference(x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
 	}
 
-	function draw_map(canvas_ctx, xmin, ymin, xmax, ymax) {
+	function is_quadtree_outside_viewport(x1, y1, x2, y2) {
+		return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
+	}
+
+	function draw() {
+		if (!map_data) {
+			return;
+		}
+
 		var start_time = window.performance.now();
 
-		function is_quad_outside_viewport(x1, y1, x2, y2) {
-			return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
-		}
-
-		function is_point_inside_viewport(x, y) {
-			return x >= xmin && x < xmax && y >= ymin && y < ymax;
-		}
-
-		// clear frame objects
 		frame_objects.forests.length = 0;
 		frame_objects.troops.length = 0;
 		frame_objects.barbarians.length = 0;
 		frame_objects.cities.length = 0;
 		frame_objects.strongholds.length = 0;
+
+		// clear canvas
+		canvas_ctx.save();
+		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
+		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
+		canvas_ctx.restore();
 
 		// initial state
 		canvas_ctx.lineCap = "square";
@@ -1358,97 +1348,30 @@
 		// objects
 		map_quadtree.visit(function(node, x1, y1, x2, y2) {
 			var obj = node.point;
-			if (obj && is_point_inside_viewport(obj.x, obj.y)) {
-				obj.draw(canvas_ctx, obj);
+			if (obj && is_inside_viewport(obj.x, obj.y)) {
+				obj.draw(obj);
 			}
-			return is_quad_outside_viewport(x1, y1, x2, y2);
+			return is_quadtree_outside_viewport(x1, y1, x2, y2);
 		});
 
-		// text
+		// draw text
 		if (cur_scale > min_normal_text_scale) {
-			draw_text(canvas_ctx);
+			draw_text();
 		}
 		else {
 			clearTimeout(draw_text_timeout);
-			draw_text_timeout = setTimeout(function() { draw_text(canvas_ctx); }, 10);
+			draw_text_timeout = setTimeout(draw_text, 10);
 		}
 
-		// selection
-		if (get_selection().length > 0) {
-			var pos = get_selection_center();
-			var r = get_selection_radius();
-			draw_circumference(canvas_ctx, pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
-		}
+		// draw selection
+		var pos = get_selection_center();
+		var r = get_selection_radius();
+		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
 
 		// update frame time
 		var frame_time = window.performance.now() - start_time;
 		last_frame_time = frame_time;
 		update_cursor_text();
-	}
-
-	var draw_timeout;
-	var update_buffer_timeout;
-	function draw(force_update, force_from_buffer) {
-		if (!map_data) {
-			return;
-		}
-
-		// clear canvas
-		canvas_ctx.save();
-		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
-		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
-		canvas_ctx.restore();
-
-		if (!buffer) {
-			update_buffer(force_update + ": first update");
-		}
-		else if (force_update == "filter") {
-			clearTimeout(update_buffer_timeout);
-			update_buffer_timeout = null;
-			update_buffer(force_update);
-		}
-
-		if (cur_scale > 0.9 || (!force_from_buffer && cur_scale > 0.6)) {
-			clearTimeout(update_buffer_timeout);
-			clearTimeout(draw_timeout);
-			update_buffer_timeout = null;
-			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
-		}
-		else {
-			if (force_update || update_buffer_timeout) {
-				clearTimeout(update_buffer_timeout);
-				update_buffer_timeout = setTimeout(function() {
-					update_buffer(force_update + ": force_update timeout");
-					update_buffer_timeout = null;
-				}, 1500)
-			}
-
-			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
-			update_cursor_text();
-			
-			clearTimeout(draw_timeout);
-			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 1000);
-		}
-	}
-
-	function update_buffer(reason) {
-		console.log(new Date(), reason)
-		render_to_buffer();
-	}
-
-	// buffering
-	var buffer;
-	var buffer_ctx;
-	function render_to_buffer() {
-		if (!buffer) {
-			buffer = document.createElement("canvas");
-			buffer_ctx = buffer.getContext("2d");
-		}
-		var scale = Math.min(0.5, cur_scale);
-		buffer.width = map_width * scale;
-		buffer.height = map_height * scale;
-	 	buffer_ctx.scale(scale, scale);
-		draw_map(buffer_ctx, 0, 0, map_width, map_height);
 	}
 
 	// state serialization
@@ -1463,7 +1386,7 @@
 		do_search(data);
 	}
 
-	var prev_ser_state = "";
+	var prev_ser_state;
 	function update_url(state) {
 		prev_ser_state = state || serialize_state();
 		window.location.hash = encodeURIComponent(prev_ser_state);
@@ -1474,9 +1397,7 @@
 		if (data != prev_ser_state) {
 			prev_ser_state = data;
 			deserialize_state(data);
-			return true;
 		}
-		return false;
 	}
 
 	d3.select(window).on("load", init);
