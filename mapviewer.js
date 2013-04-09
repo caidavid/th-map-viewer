@@ -1425,6 +1425,9 @@
 		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
 		canvas_ctx.restore();
 
+		draw_map(canvas_ctx, xmin, ymin, xmax, ymax);
+
+		/*
 		if (!buffer) {
 			update_buffer(force_update + ": first update");
 		}
@@ -1455,6 +1458,7 @@
 			clearTimeout(draw_timeout);
 			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 1000);
 		}
+		*/
 	}
 
 	function update_buffer(reason) {
