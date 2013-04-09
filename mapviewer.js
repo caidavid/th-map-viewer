@@ -190,32 +190,42 @@
 		info_text_2.text(sformat("{1} tiles from {2}", dist, target.name));
 	}
 
-	function update_snapshot_timestamp() {
-		var date = new Date(map_data.SnapshotEnd);
-		var age = (new Date().getTime() - date.getTime());
-		var update_str;
+	function format_date(date, now) {
+		now = now || new Date();
+		var age = (now.getTime() - date.getTime());
+		var date_str;
 		if (age < 60*1000) {
 			var t = Math.floor(age / 1000);
-			update_str = t + " second" + (t == 1 ? "" : "s") + " ago";
-			setTimeout(update_snapshot_timestamp, 1000 - age % 1000);
+			date_str = t + " second" + (t == 1 ? "" : "s") + " ago";
 		}
 		else if (age < 3600*1000) {
 			var t = Math.floor(age / 60000);
-			update_str = t + " minute" + (t == 1 ? "" : "s") + " ago";
-			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
+			date_str = t + " minute" + (t == 1 ? "" : "s") + " ago";
 		}
-		else if (age < 12*3600*1000) {
+		else if (age <= 24*3600*1000) {
 			var t = Math.floor(age / 3600000);
 			var m = Math.floor(age % 3600000 / 60000);
-			update_str = t + " hour" + (t == 1 ? "" : "s");
+			date_str = t + " hour" + (t == 1 ? "" : "s");
 			if (m > 0) {
-				update_str += " and " + m + " minute" + (m == 1 ? "" : "s");
+				date_str += " and " + m + " minute" + (m == 1 ? "" : "s");
 			} 
-			update_str +=  " ago";
-			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
+			date_str +=  " ago";
 		}
 		else {
-			update_str = date.toLocaleString();
+			date_str = date.toLocaleString();
+		}
+		return date_str;
+	}
+
+	function update_snapshot_timestamp() {
+		var date = new Date(map_data.SnapshotEnd);
+		var age = (new Date().getTime() - date.getTime());
+		var update_str = format_date(date);
+		if (age < 60*1000) {
+			setTimeout(update_snapshot_timestamp, 1000 - age % 1000);
+		}
+		else {
+			setTimeout(update_snapshot_timestamp, 60000 - age % 60000);
 		}
 
 		//if (age > (70*60*1000)) {
@@ -647,6 +657,7 @@
 		_(map_data_apply_prev.Strongholds).each(function(cur) {
 			var prev = _(prev_map_data.Strongholds).find(function(pobj) { return pobj.id == cur.id; });
 			if (prev && prev.tribeId != cur.tribeId) {
+				prev.date = new Date(prev.time);
 				changed_strongholds.push([prev, cur]);
 			}
 		});
@@ -655,15 +666,18 @@
 		var c = changes_text.selectAll("div").data(changed_strongholds);
 		c.exit().remove();
 		c.enter().append("div")
-			.sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
+			// .sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
+			.sort(function(a, b) { return b[0].date - a[0].date; })
 			.html(function(shch) {
 				var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "";
 				var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
-				return sformat("<span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span>",
+				return sformat("<span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span><span style='display:inline-block;width:80px'>{7}</span>",
 					shch[0].name, shch[0].level,
 					get_tribe_color(shch[0].tribeId), prev_tribe, 
-					get_tribe_color(shch[1].tribeId), cur_tribe);
-			});
+					get_tribe_color(shch[1].tribeId), cur_tribe,
+					format_date(shch[0].date, new Date(map_data_apply_prev.SnapshotBegin)));
+			})
+			.attr("title", function(shch) { return format_date(shch[0].date) } )
 
 		map_data_apply_prev = null;
 		prev_map_data = null;
