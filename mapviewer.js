@@ -653,7 +653,17 @@
 		});
 
 		// find stronghold ownership changes
+		var cur_strongholds = map_data_apply_prev.Strongholds.slice();
 		var changed_strongholds = [];
+		_(prev_map_data.Strongholds).each(function(prev) {
+			var cur = _(cur_strongholds).find(function(pobj) { return pobj.id == prev.id; });
+			/* if (prev && prev.tribeId != cur.tribeId) */ {
+				prev.date = new Date(prev.time);
+				changed_strongholds.push([prev, cur]);
+				cur_strongholds[_(cur_strongholds).indexOf(cur)] = prev;
+			}
+		});
+		/*
 		_(map_data_apply_prev.Strongholds).each(function(cur) {
 			var prev = _(prev_map_data.Strongholds).find(function(pobj) { return pobj.id == cur.id; });
 			if (prev && prev.tribeId != cur.tribeId) {
@@ -661,6 +671,7 @@
 				changed_strongholds.push([prev, cur]);
 			}
 		});
+		*/
 
 		// format and display changes
 		var c = changes_text.selectAll("div").data(changed_strongholds);
@@ -668,6 +679,7 @@
 		c.enter().append("div")
 			// .sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
 			.sort(function(a, b) { return b[0].date - a[0].date; })
+			//.sort(function(a, b) { return b[0].id  - a[0].id; })
 			.html(function(shch) {
 				var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "";
 				var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
