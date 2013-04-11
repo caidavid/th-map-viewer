@@ -1,11 +1,11 @@
 [
   {
     "tribeId": 100038,
-    "color": "#a700bb"
+    "color": "#e43a09"
   },
   {
     "tribeId": 100328,
-    "color": "#4f24e6"
+    "color": "#fbe476"
   },
   {
     "tribeId": 100205,
@@ -17,7 +17,7 @@
   },
   {
     "tribeId": 1000076,
-    "color": "#193d8c"
+    "color": "#e43147"
   },
   {
     "tribeId": 100167,
@@ -37,11 +37,11 @@
   },
   {
     "tribeId": 1000024,
-    "color": "#5771d6"
+    "color": "#207247"
   },
   {
     "tribeId": 100371,
-    "color": "#7cd26e"
+    "color": "#72aef3"
   },
   {
     "tribeId": 100375,
@@ -57,7 +57,7 @@
   },
   {
     "tribeId": 1000063,
-    "color": "#b66bc3"
+    "color": "#b89a15"
   },
   {
     "tribeId": 100190,
@@ -65,7 +65,7 @@
   },
   {
     "tribeId": 100364,
-    "color": "#db0794"
+    "color": "#50d593"
   },
   {
     "tribeId": 100293,
@@ -73,19 +73,19 @@
   },
   {
     "tribeId": 100351,
-    "color": "#be4d84"
+    "color": "#179ef4"
   },
   {
     "tribeId": 100241,
-    "color": "#1eae1a"
+    "color": "#bf6469"
   },
   {
     "tribeId": 100218,
-    "color": "#8bafab"
+    "color": "#a26ea0"
   },
   {
     "tribeId": 1000066,
-    "color": "#57a779"
+    "color": "#77919e"
   },
   {
     "tribeId": 100272,
@@ -93,23 +93,23 @@
   },
   {
     "tribeId": 100308,
-    "color": "#e63e32"
+    "color": "#8e013d"
   },
   {
     "tribeId": 100372,
-    "color": "#f26d37"
+    "color": "#5e84d7"
   },
   {
     "tribeId": 100245,
-    "color": "#e34209"
+    "color": "#0dc92b"
   },
   {
     "tribeId": 100174,
-    "color": "#81df63"
+    "color": "#27c506"
   },
   {
     "tribeId": 1000029,
-    "color": "#b56899"
+    "color": "#5e20f0"
   },
   {
     "tribeId": 100002,
@@ -121,27 +121,27 @@
   },
   {
     "tribeId": 100327,
-    "color": "#b576f6"
+    "color": "#17ed37"
   },
   {
     "tribeId": 100233,
-    "color": "#47c0f7"
+    "color": "#64c6a6"
   },
   {
     "tribeId": 100266,
-    "color": "#dfe8b1"
+    "color": "#d3cd9a"
   },
   {
     "tribeId": 100478,
-    "color": "#373174"
+    "color": "#143b80"
   },
   {
     "tribeId": 100254,
-    "color": "#cb8c8c"
+    "color": "#0d41c1"
   },
   {
     "tribeId": 100358,
-    "color": "#e0fec9"
+    "color": "#a5a8df"
   },
   {
     "tribeId": 100054,
@@ -149,7 +149,7 @@
   },
   {
     "tribeId": 100279,
-    "color": "#5d9494"
+    "color": "#a7e3ad"
   },
   {
     "tribeId": 100134,
@@ -157,103 +157,103 @@
   },
   {
     "tribeId": 100429,
-    "color": "#3bc2fc"
+    "color": "#b55916"
   },
   {
     "tribeId": 1000051,
-    "color": "#8cf7c3"
+    "color": "#3d420b"
   },
   {
     "tribeId": 100165,
-    "color": "#8a3d6d"
+    "color": "#67efd7"
   },
   {
     "tribeId": 100094,
-    "color": "#206746"
+    "color": "#ed6143"
   },
   {
     "tribeId": 1000019,
-    "color": "#80d438"
+    "color": "#778a80"
   },
   {
     "tribeId": 100138,
-    "color": "#b310e6"
+    "color": "#6912c9"
   },
   {
     "tribeId": 100187,
-    "color": "#800654"
+    "color": "#f6ba33"
   },
   {
     "tribeId": 100180,
-    "color": "#80ba3b"
+    "color": "#a24a48"
   },
   {
     "tribeId": 100432,
-    "color": "#c217b4"
+    "color": "#560087"
   },
   {
     "tribeId": 1000031,
-    "color": "#7b9fdf"
+    "color": "#69801d"
   },
   {
     "tribeId": 100318,
-    "color": "#9958d2"
+    "color": "#25b53c"
   },
   {
     "tribeId": 100314,
-    "color": "#0479b3"
+    "color": "#436093"
   },
   {
     "tribeId": 100153,
-    "color": "#f8b9c7"
+    "color": "#202784"
   },
   {
     "tribeId": 100219,
-    "color": "#3355ab"
+    "color": "#9a6bdc"
   },
   {
     "tribeId": 100136,
-    "color": "#4317c8"
+    "color": "#c125d9"
   },
   {
     "tribeId": 100306,
-    "color": "#2d4ab6"
+    "color": "#3d94b5"
   },
   {
     "tribeId": 100476,
-    "color": "#542dee"
+    "color": "#413c95"
   },
   {
     "tribeId": 100452,
-    "color": "#e2db8d"
+    "color": "#16b028"
   },
   {
     "tribeId": 100442,
-    "color": "#3fba08"
+    "color": "#7a130e"
   },
   {
     "tribeId": 100415,
-    "color": "#c1c9df"
+    "color": "#cce541"
   },
   {
     "tribeId": 100179,
-    "color": "#0f0f9c"
+    "color": "#83fd6e"
   },
   {
     "tribeId": 100192,
-    "color": "#8c850f"
+    "color": "#bac8aa"
   },
   {
     "tribeId": 100224,
-    "color": "#737c5b"
+    "color": "#06342a"
   },
   {
     "tribeId": 100394,
-    "color": "#84b955"
+    "color": "#ec48e9"
   },
   {
     "tribeId": 1000047,
-    "color": "#1e4cb0"
+    "color": "#455b4e"
   },
   {
     "tribeId": 100216,
@@ -261,147 +261,147 @@
   },
   {
     "tribeId": 1000023,
-    "color": "#a83ca3"
+    "color": "#55e025"
   },
   {
     "tribeId": 100325,
-    "color": "#7294cb"
+    "color": "#6d196b"
   },
   {
     "tribeId": 100399,
-    "color": "#fc2772"
+    "color": "#d02744"
   },
   {
     "tribeId": 100256,
-    "color": "#f0b67c"
+    "color": "#860f05"
   },
   {
     "tribeId": 100013,
-    "color": "#44c3bd"
+    "color": "#13c84d"
   },
   {
     "tribeId": 100386,
-    "color": "#aa37ef"
+    "color": "#845341"
   },
   {
     "tribeId": 1000053,
-    "color": "#e62446"
+    "color": "#42176d"
   },
   {
     "tribeId": 100210,
-    "color": "#0eb691"
+    "color": "#6d065c"
   },
   {
     "tribeId": 100244,
-    "color": "#b9b9cd"
+    "color": "#2f365f"
   },
   {
     "tribeId": 100008,
-    "color": "#5bcf73"
+    "color": "#8b54f3"
   },
   {
     "tribeId": 100261,
-    "color": "#98c38e"
+    "color": "#abcf54"
   },
   {
     "tribeId": 100477,
-    "color": "#dc967e"
+    "color": "#d92431"
   },
   {
     "tribeId": 100292,
-    "color": "#644e34"
+    "color": "#e85ecb"
   },
   {
     "tribeId": 100191,
-    "color": "#1311e7"
+    "color": "#d5b1d5"
   },
   {
     "tribeId": 100122,
-    "color": "#2a9acd"
+    "color": "#2a33b8"
   },
   {
     "tribeId": 100235,
-    "color": "#922eb7"
+    "color": "#a4f16b"
   },
   {
     "tribeId": 100162,
-    "color": "#9cd881"
+    "color": "#db67f4"
   },
   {
     "tribeId": 100234,
-    "color": "#653627"
+    "color": "#a80344"
   },
   {
     "tribeId": 100252,
-    "color": "#6a9984"
+    "color": "#e0e6d9"
   },
   {
     "tribeId": 100264,
-    "color": "#11b8da"
+    "color": "#c83ee2"
   },
   {
     "tribeId": 100298,
-    "color": "#fda157"
+    "color": "#0b45d2"
   },
   {
     "tribeId": 100288,
-    "color": "#fe57f1"
+    "color": "#4fda3e"
   },
   {
     "tribeId": 100246,
-    "color": "#ec672d"
+    "color": "#b039a3"
   },
   {
     "tribeId": 100076,
-    "color": "#3f46e7"
+    "color": "#1b9bf3"
   },
   {
     "tribeId": 100081,
-    "color": "#bad213"
+    "color": "#746b65"
   },
   {
     "tribeId": 100156,
-    "color": "#5ee31b"
+    "color": "#9643d1"
   },
   {
     "tribeId": 100437,
-    "color": "#c2268a"
+    "color": "#a28943"
   },
   {
     "tribeId": 100355,
-    "color": "#16bef5"
+    "color": "#f2aeeb"
   },
   {
     "tribeId": 100290,
-    "color": "#f0338d"
+    "color": "#fe02cc"
   },
   {
     "tribeId": 100380,
-    "color": "#6671fb"
+    "color": "#10f73d"
   },
   {
     "tribeId": 100354,
-    "color": "#f85295"
+    "color": "#572020"
   },
   {
     "tribeId": 100104,
-    "color": "#59156f"
+    "color": "#e8ca6b"
   },
   {
     "tribeId": 100253,
-    "color": "#902a42"
+    "color": "#03da58"
   },
   {
     "tribeId": 100250,
-    "color": "#daa4c6"
+    "color": "#79f3b8"
   },
   {
     "tribeId": 1000065,
-    "color": "#8a5d91"
+    "color": "#c7c0cb"
   },
   {
     "tribeId": 100178,
-    "color": "#98aa62"
+    "color": "#013496"
   },
   {
     "tribeId": 100058,
@@ -409,103 +409,103 @@
   },
   {
     "tribeId": 100177,
-    "color": "#140cb5"
+    "color": "#dd4aa3"
   },
   {
     "tribeId": 100356,
-    "color": "#694d91"
+    "color": "#0725b4"
   },
   {
     "tribeId": 100140,
-    "color": "#50e6e1"
+    "color": "#9e1795"
   },
   {
     "tribeId": 100077,
-    "color": "#600d24"
+    "color": "#e550d8"
   },
   {
     "tribeId": 1000025,
-    "color": "#6486f4"
+    "color": "#71a040"
   },
   {
     "tribeId": 1000059,
-    "color": "#3045f3"
+    "color": "#66c27a"
   },
   {
     "tribeId": 100160,
-    "color": "#5261bd"
+    "color": "#d28ba0"
   },
   {
     "tribeId": 100171,
-    "color": "#a3cdb8"
+    "color": "#f89267"
   },
   {
     "tribeId": 100036,
-    "color": "#d7e681"
+    "color": "#792994"
   },
   {
     "tribeId": 100366,
-    "color": "#c28b60"
+    "color": "#8a2bed"
   },
   {
     "tribeId": 100295,
-    "color": "#635887"
+    "color": "#1ffdcd"
   },
   {
     "tribeId": 100275,
-    "color": "#2a5265"
+    "color": "#3531ad"
   },
   {
     "tribeId": 100400,
-    "color": "#468f04"
+    "color": "#9950fa"
   },
   {
     "tribeId": 100222,
-    "color": "#04082d"
+    "color": "#6a49b2"
   },
   {
     "tribeId": 100066,
-    "color": "#8c2f1d"
+    "color": "#d51c89"
   },
   {
     "tribeId": 100024,
-    "color": "#1d761e"
+    "color": "#7f0753"
   },
   {
     "tribeId": 100350,
-    "color": "#d15918"
+    "color": "#7761fc"
   },
   {
     "tribeId": 1000041,
-    "color": "#9d4649"
+    "color": "#502da7"
   },
   {
     "tribeId": 100278,
-    "color": "#a46f3e"
+    "color": "#f5e4b6"
   },
   {
     "tribeId": 100406,
-    "color": "#fb9066"
+    "color": "#3b8dfa"
   },
   {
     "tribeId": 100062,
-    "color": "#0f8d5b"
+    "color": "#2014eb"
   },
   {
     "tribeId": 1000075,
-    "color": "#81fbb4"
+    "color": "#a6c652"
   },
   {
     "tribeId": 1000054,
-    "color": "#9c3934"
+    "color": "#0a3c6f"
   },
   {
     "tribeId": 100349,
-    "color": "#8fe9b4"
+    "color": "#91cc72"
   },
   {
     "tribeId": 100363,
-    "color": "#ee4e58"
+    "color": "#7f6841"
   },
   {
     "tribeId": 100123,
@@ -513,15 +513,15 @@
   },
   {
     "tribeId": 100073,
-    "color": "#8f179d"
+    "color": "#ed2376"
   },
   {
     "tribeId": 100240,
-    "color": "#9bb970"
+    "color": "#dcf921"
   },
   {
     "tribeId": 100142,
-    "color": "#63ef31"
+    "color": "#4012c9"
   },
   {
     "tribeId": 100304,
@@ -529,446 +529,446 @@
   },
   {
     "tribeId": 100347,
-    "color": "#48c512"
+    "color": "#f0cdd0"
   },
   {
     "tribeId": 100017,
-    "color": "#3e85e1"
+    "color": "#253e4b"
   },
   {
     "tribeId": 100112,
-    "color": "#264afd"
+    "color": "#f65dc2"
   },
   {
     "tribeId": 1000014,
-    "color": "#9df37a"
+    "color": "#fe4a35"
   },
   {
     "tribeId": 100259,
-    "color": "#d00a32"
+    "color": "#c62e55"
   },
   {
     "tribeId": 100427,
-    "color": "#67803c"
+    "color": "#3774ca"
   },
   {
     "tribeId": 100135,
-    "color": "#e8426f"
+    "color": "#e3e494"
   },
   {
     "tribeId": 100125,
-    "color": "#62adf7"
+    "color": "#89d0c3"
   },
   {
     "tribeId": 100060,
-    "color": "#ef1458"
+    "color": "#6608c0"
   },
   {
     "tribeId": 100316,
-    "color": "#9f5fd5"
+    "color": "#3f5d93"
   },
   {
     "tribeId": 100168,
-    "color": "#f4ab9c"
+    "color": "#d9de01"
   },
   {
     "tribeId": 100087,
-    "color": "#2a3836"
+    "color": "#21b4f7"
   },
   {
     "tribeId": 100004,
-    "color": "#a25db3"
+    "color": "#81e4fc"
   },
   {
     "tribeId": 100031,
-    "color": "#52689e"
+    "color": "#239a6e"
   },
   {
     "tribeId": 100258,
-    "color": "#b65159"
+    "color": "#af7f1d"
   },
   {
     "tribeId": 100346,
-    "color": "#ddbd0c"
+    "color": "#0c27f4"
   },
   {
     "tribeId": 100396,
-    "color": "#6a3439"
+    "color": "#21a584"
   },
   {
     "tribeId": 100342,
-    "color": "#3479ad"
+    "color": "#565c2d"
   },
   {
     "tribeId": 100132,
-    "color": "#c1e518"
+    "color": "#3567fc"
   },
   {
     "tribeId": 100211,
-    "color": "#1a4e71"
+    "color": "#0cbe36"
   },
   {
     "tribeId": 100052,
-    "color": "#8885e9"
+    "color": "#8ab600"
   },
   {
     "tribeId": 100487,
-    "color": "#28a848"
+    "color": "#2f256b"
   },
   {
     "tribeId": 100018,
-    "color": "#dca6d1"
+    "color": "#33a478"
   },
   {
     "tribeId": 100080,
-    "color": "#fbc323"
+    "color": "#5db58f"
   },
   {
     "tribeId": 100044,
-    "color": "#8896d9"
+    "color": "#ccc04a"
   },
   {
     "tribeId": 100370,
-    "color": "#cfab5b"
+    "color": "#25d850"
   },
   {
     "tribeId": 100383,
-    "color": "#9d1155"
+    "color": "#a659e0"
   },
   {
     "tribeId": 100281,
-    "color": "#4c352b"
+    "color": "#cb1eb7"
   },
   {
     "tribeId": 100078,
-    "color": "#9cbf31"
+    "color": "#0e8281"
   },
   {
     "tribeId": 100009,
-    "color": "#ee6752"
+    "color": "#d3eb4d"
   },
   {
     "tribeId": 1000020,
-    "color": "#1e880e"
+    "color": "#f97425"
   },
   {
     "tribeId": 100046,
-    "color": "#41c8e1"
+    "color": "#c598e2"
   },
   {
     "tribeId": 100286,
-    "color": "#b48da8"
+    "color": "#6e805a"
   },
   {
     "tribeId": 100221,
-    "color": "#100117"
+    "color": "#b1d881"
   },
   {
     "tribeId": 100200,
-    "color": "#3a6e6f"
+    "color": "#7bc2ee"
   },
   {
     "tribeId": 100384,
-    "color": "#15abe2"
+    "color": "#f3889b"
   },
   {
     "tribeId": 1000056,
-    "color": "#d3f03a"
+    "color": "#e20f8e"
   },
   {
     "tribeId": 100032,
-    "color": "#bb7b3d"
+    "color": "#ab6565"
   },
   {
     "tribeId": 100248,
-    "color": "#1b3b50"
+    "color": "#55bd97"
   },
   {
     "tribeId": 100227,
-    "color": "#be8ae7"
+    "color": "#4720a1"
   },
   {
     "tribeId": 100289,
-    "color": "#17ec3f"
+    "color": "#e85fb7"
   },
   {
     "tribeId": 100373,
-    "color": "#7edd3b"
+    "color": "#2b6240"
   },
   {
     "tribeId": 100014,
-    "color": "#1446cc"
+    "color": "#6a0628"
   },
   {
     "tribeId": 100064,
-    "color": "#f61b1d"
+    "color": "#66b658"
   },
   {
     "tribeId": 100409,
-    "color": "#b28c10"
+    "color": "#f5f380"
   },
   {
     "tribeId": 1000058,
-    "color": "#3e12c6"
+    "color": "#5e4f5b"
   },
   {
     "tribeId": 100193,
-    "color": "#ba8613"
+    "color": "#c71af8"
   },
   {
     "tribeId": 100063,
-    "color": "#4e1b75"
+    "color": "#e5efdb"
   },
   {
     "tribeId": 100348,
-    "color": "#18610d"
+    "color": "#be4d0f"
   },
   {
     "tribeId": 100368,
-    "color": "#d0258d"
+    "color": "#bf70d9"
   },
   {
     "tribeId": 100117,
-    "color": "#91f403"
+    "color": "#4b2660"
   },
   {
     "tribeId": 100095,
-    "color": "#bff813"
+    "color": "#b7c878"
   },
   {
     "tribeId": 100128,
-    "color": "#d7ba8f"
+    "color": "#c8505f"
   },
   {
     "tribeId": 100184,
-    "color": "#330164"
+    "color": "#ad8982"
   },
   {
     "tribeId": 100488,
-    "color": "#15dbd5"
+    "color": "#737c58"
   },
   {
     "tribeId": 100340,
-    "color": "#1c08ed"
+    "color": "#36b570"
   },
   {
     "tribeId": 1000036,
-    "color": "#2cdc29"
+    "color": "#e3f66d"
   },
   {
     "tribeId": 100106,
-    "color": "#890304"
+    "color": "#3c7f06"
   },
   {
     "tribeId": 100451,
-    "color": "#d3c7d1"
+    "color": "#a8026e"
   },
   {
     "tribeId": 100172,
-    "color": "#c8657b"
+    "color": "#da6b14"
   },
   {
     "tribeId": 1000073,
-    "color": "#2e4220"
+    "color": "#31a995"
   },
   {
     "tribeId": 100379,
-    "color": "#3f6525"
+    "color": "#4d1a90"
   },
   {
     "tribeId": 100239,
-    "color": "#1af293"
+    "color": "#f73d2b"
   },
   {
     "tribeId": 100291,
-    "color": "#fb6656"
+    "color": "#0794fe"
   },
   {
     "tribeId": 100035,
-    "color": "#368785"
+    "color": "#fa1a8f"
   },
   {
     "tribeId": 1000069,
-    "color": "#ae383e"
+    "color": "#767273"
   },
   {
     "tribeId": 100455,
-    "color": "#9ffa59"
+    "color": "#838897"
   },
   {
     "tribeId": 100139,
-    "color": "#1ea448"
+    "color": "#9dda78"
   },
   {
     "tribeId": 100336,
-    "color": "#6307f1"
+    "color": "#6b0fa6"
   },
   {
     "tribeId": 100411,
-    "color": "#fdea30"
+    "color": "#590fc5"
   },
   {
     "tribeId": 100242,
-    "color": "#400e54"
+    "color": "#09ece3"
   },
   {
     "tribeId": 100148,
-    "color": "#1405bd"
+    "color": "#4b7cde"
   },
   {
     "tribeId": 100145,
-    "color": "#44d576"
+    "color": "#eb2561"
   },
   {
     "tribeId": 100466,
-    "color": "#b00215"
+    "color": "#c63e77"
   },
   {
     "tribeId": 100334,
-    "color": "#5a2f76"
+    "color": "#45dc62"
   },
   {
     "tribeId": 100322,
-    "color": "#d1527b"
+    "color": "#6e4164"
   },
   {
     "tribeId": 100057,
-    "color": "#7d258f"
+    "color": "#75318f"
   },
   {
     "tribeId": 100051,
-    "color": "#92286a"
+    "color": "#fa57e2"
   },
   {
     "tribeId": 100482,
-    "color": "#220f9d"
+    "color": "#7c92ce"
   },
   {
     "tribeId": 100268,
-    "color": "#d7da5d"
+    "color": "#1ce00b"
   },
   {
     "tribeId": 1000078,
-    "color": "#321b07"
+    "color": "#e89d2e"
   },
   {
     "tribeId": 100204,
-    "color": "#62bb57"
+    "color": "#65fca6"
   },
   {
     "tribeId": 100317,
-    "color": "#022281"
+    "color": "#1aaf9d"
   },
   {
     "tribeId": 100407,
-    "color": "#c76962"
+    "color": "#b0894c"
   },
   {
     "tribeId": 100282,
-    "color": "#c7eef7"
+    "color": "#11bc4a"
   },
   {
     "tribeId": 100486,
-    "color": "#43c374"
+    "color": "#2058fd"
   },
   {
     "tribeId": 100301,
-    "color": "#d191b4"
+    "color": "#16fccd"
   },
   {
     "tribeId": 100362,
-    "color": "#7680c4"
+    "color": "#41e3dc"
   },
   {
     "tribeId": 100311,
-    "color": "#a0ace5"
+    "color": "#350e95"
   },
   {
     "tribeId": 100126,
-    "color": "#e9f0f4"
+    "color": "#00cee8"
   },
   {
     "tribeId": 100357,
-    "color": "#1f6bf9"
+    "color": "#0fce43"
   },
   {
     "tribeId": 1000060,
-    "color": "#187de6"
+    "color": "#55dc9f"
   },
   {
     "tribeId": 100161,
-    "color": "#0ef773"
+    "color": "#49dfde"
   },
   {
     "tribeId": 100294,
-    "color": "#1ecf2f"
+    "color": "#ba5390"
   },
   {
     "tribeId": 100446,
-    "color": "#f8b5bb"
+    "color": "#c6c4a6"
   },
   {
     "tribeId": 100393,
-    "color": "#2cca39"
+    "color": "#42e89a"
   },
   {
     "tribeId": 100209,
-    "color": "#71de4b"
+    "color": "#985b39"
   },
   {
     "tribeId": 1000062,
-    "color": "#290649"
+    "color": "#d006e2"
   },
   {
     "tribeId": 1000055,
-    "color": "#a8bb99"
+    "color": "#3da7b9"
   },
   {
     "tribeId": 100223,
-    "color": "#41c10e"
+    "color": "#502fed"
   },
   {
     "tribeId": 1000026,
-    "color": "#711730"
+    "color": "#1019df"
   },
   {
     "tribeId": 100214,
-    "color": "#8ba7fc"
+    "color": "#b3a0ba"
   },
   {
     "tribeId": 100196,
-    "color": "#68af71"
+    "color": "#08bbde"
   },
   {
     "tribeId": 100232,
-    "color": "#1135cb"
+    "color": "#a9d578"
   },
   {
     "tribeId": 100181,
-    "color": "#00b2c0"
+    "color": "#1e5ba8"
   },
   {
     "tribeId": 100439,
-    "color": "#847cc9"
+    "color": "#3c791f"
   },
   {
     "tribeId": 100391,
-    "color": "#0973e1"
+    "color": "#35f125"
   },
   {
     "tribeId": 100436,
-    "color": "#ab7712"
+    "color": "#fa6772"
   },
   {
     "tribeId": 100320,
-    "color": "#a9f565"
+    "color": "#ae3ec8"
   },
   {
     "tribeId": 100472,
-    "color": "#af6fc0"
+    "color": "#601835"
   },
   {
     "tribeId": 100475,
-    "color": "#4dcb35"
+    "color": "#e5f7af"
   }
 ]
