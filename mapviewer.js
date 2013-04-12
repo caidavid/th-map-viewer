@@ -72,6 +72,7 @@
 	var canvas_ctx;
 	var content;
 	var info_text, info_text_2, cursor_text, changes_text;
+	var changes_button;
 
 	var canvas_width;
 	var canvas_height;
@@ -668,33 +669,23 @@
 				cur_strongholds[_(cur_strongholds).indexOf(cur)] = prev;
 			}
 		});
-		/*
-		_(map_data_apply_prev.Strongholds).each(function(cur) {
-			var prev = _(prev_map_data.Strongholds).find(function(pobj) { return pobj.id == cur.id; });
-			if (prev && prev.tribeId != cur.tribeId) {
-				prev.date = new Date(prev.time);
-				changed_strongholds.push([prev, cur]);
-			}
-		});
-		*/
 
 		// format and display changes
 		var c = changes_text.selectAll("div").data(changed_strongholds);
 		c.exit().remove();
 		c.enter().append("div")
-			// .sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
 			.sort(function(a, b) { return b[0].date - a[0].date; })
-			//.sort(function(a, b) { return b[0].id  - a[0].id; })
 			.html(function(shch) {
 				var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "";
 				var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
-				return sformat("<span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span><span style='display:inline-block;width:80px'>{7}</span>",
+				return sformat("<span><span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span><span style='display:inline-block;width:80px'>{7}</span></span>",
 					shch[0].name, shch[0].level,
 					get_tribe_color(shch[0].tribeId), prev_tribe, 
 					get_tribe_color(shch[1].tribeId), cur_tribe,
 					format_date(shch[0].date, new Date(map_data_apply_prev.SnapshotBegin)));
-			})
-			.attr("title", function(shch) { return format_date(shch[0].date) } )
+			});
+
+		update_changes_width();
 
 		map_data_apply_prev = null;
 		prev_map_data = null;
@@ -761,6 +752,45 @@
 	};
 	var do_search_timeout;
 
+	var changes_width;
+	function update_changes_width() {
+		var widths = _(d3.selectAll("#changes_text > div > span")[0]).map(function(d) { return parseInt(d3.select(d).style("width")); });
+		changes_width =  _(widths).max() - 5;
+
+		if (!changes_visible) {
+			changes_text.style("right", -changes_width + "px")
+		}
+	}
+
+	function set_changes_visibility(visible) {
+		if (visible) {
+			changes_text.style("display", "block");
+			changes_text.transition()
+				.duration(750)
+				.ease("quad-out")
+				.style("opacity", 1)
+				.style("right", "5px")
+				.each("end", function() {
+				});
+			changes_button.text(">>");
+		}
+		else {
+			changes_text.transition()
+				.duration(750)
+				.ease("quad-out")
+				.style("opacity", 0)
+				.style("right", -changes_width + "px")
+				.each("end", function() {
+					changes_text.style("display", "none");
+				});
+			changes_button.text("<<");
+		}
+
+		if (window.localStorage) {
+			window.localStorage["show_changes"] = visible;
+		}
+	}
+
 	function init() {
 		// filters
 		function update_filter_visibility(selector, checkbox) {
@@ -803,12 +833,26 @@
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
 		info_text_2 = d3.select("#info_text_2");
-		changes_text = d3.select("#changes_text");
 
-		// load resources
+		// list of changes
+		changes_text = d3.select("#changes_text");
+		changes_button = d3.select("#changes_button");
+		changes_visible = true;
+		if (window.localStorage && window.localStorage["show_changes"]) {
+			changes_visible = window.localStorage["show_changes"] == "true";
+		}
+		changes_text.style("opacity", changes_visible ? 0 : 1);
+		set_changes_visibility(changes_visible);
+
+		changes_button.on("click", function() {
+			changes_visible = !changes_visible;
+			set_changes_visibility(changes_visible);
+		})
+
+		// first load resources
 		load_resources();
 
-		// search elements
+		// init search elements
 		search_input = d3.select("#search");
 		search_results = d3.select("#search_results");
 
