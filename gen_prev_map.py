@@ -41,9 +41,11 @@ dt = datetime.strptime(cur_data["SnapshotBegin"][0:-2]+"UTC", "%Y-%m-%dT%H:%M:%S
 print "Loading troops"
 prev_troops_dt = dt - timedelta(hours = 1)
 prev_troops_filename = "map" + format_date_str(prev_troops_dt) + ".json"
-troops = json_from_file(prev_troops_filename)["Troops"]
-if troops is None:
+troops_data = json_from_file(prev_troops_filename)
+if troops_data is None:
 	troops = []
+else:
+	troops = troops_data["Troops"]
 
 # find previous strongholds
 print "Loading strongholds"
