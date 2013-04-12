@@ -72,6 +72,7 @@
 	var canvas_ctx;
 	var content;
 	var info_text, info_text_2, cursor_text, changes_text;
+	var changes_button;
 
 	var canvas_width;
 	var canvas_height;
@@ -92,6 +93,7 @@
 		}
 	}
 
+	var transition_end_timeout;
 	function transition_zoom(trans, scale, duration) {
 		d3.timer.flush();
 
@@ -112,11 +114,16 @@
 					var trans = itrans(t);
 					var scale = iscale(t);
 					set_zoom(trans, scale);
-					draw();
+					draw(t == 1 && "transition end", t != 1 && "transition");
 				}
 			})
 			.each("end", function() {
+				/*
 				set_zoom(cur_trans, cur_scale);
+				//draw(true);
+				clearTimeout(transition_end_timeout)
+				transition_end_timeout = setTimeout(function() { draw(true); }, 1000);
+				*/
 			})
 		d3.timer.flush();
 	}
@@ -159,10 +166,6 @@
 		// neccesary with mirroring transforms
 	 	xmin = Math.min(min[0], max[0]) / 4; ymin = Math.min(min[1], max[1]);
 	 	xmax = Math.max(min[0], max[0]) / 4; ymax = Math.max(min[1], max[1]);
-	}
-
-	function is_inside_viewport(x, y) {
-		return x >= xmin && x < xmax && y >= ymin && y < ymax;
 	}
 
 	var mouse_raw;
@@ -483,6 +486,9 @@
 	}
 
 	function do_search(q) {
+		if (!map_data)
+			return;
+		
 		var match_cities = [];
 		var match_players = [];
 		var match_tribes = [];
@@ -598,7 +604,7 @@
 			tribe_colors_rgb[tcol.tribeId] = hex_to_rgb(tcol.color);
 			color_tribes[tcol.color] = tcol.tribeId;
 		}
-		draw();
+		draw("init_tribe_colors");
 	}
 	
 	var city_locations;
@@ -607,7 +613,7 @@
 		city_locations = data;
 
 		if (update_foundations()) {
-			draw();
+			draw("init_city_locations");
 		}
 	}
 
@@ -663,38 +669,28 @@
 				cur_strongholds[_(cur_strongholds).indexOf(cur)] = prev;
 			}
 		});
-		/*
-		_(map_data_apply_prev.Strongholds).each(function(cur) {
-			var prev = _(prev_map_data.Strongholds).find(function(pobj) { return pobj.id == cur.id; });
-			if (prev && prev.tribeId != cur.tribeId) {
-				prev.date = new Date(prev.time);
-				changed_strongholds.push([prev, cur]);
-			}
-		});
-		*/
 
 		// format and display changes
 		var c = changes_text.selectAll("div").data(changed_strongholds);
 		c.exit().remove();
 		c.enter().append("div")
-			// .sort(function(a, b) { return a[1].tribeId - b[1].tribeId; })
 			.sort(function(a, b) { return b[0].date - a[0].date; })
-			//.sort(function(a, b) { return b[0].id  - a[0].id; })
 			.html(function(shch) {
 				var prev_tribe = shch[0].tribeId && get_tribe(shch[0].tribeId, prev_map_data.Tribes).name || "";
 				var cur_tribe = shch[1].tribeId && get_tribe(shch[1].tribeId, map_data_apply_prev.Tribes).name || "(Unoccupied)";
-				return sformat("<span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span><span style='display:inline-block;width:80px'>{7}</span>",
+				return sformat("<span><span style='color:gold; font-weight:bold;'>{1} ({2})</span> <span style='background-color:{3}'>{4}</span> =&gt; <span style='background-color:{5}'>{6}</span><span style='display:inline-block;width:80px'>{7}</span></span>",
 					shch[0].name, shch[0].level,
 					get_tribe_color(shch[0].tribeId), prev_tribe, 
 					get_tribe_color(shch[1].tribeId), cur_tribe,
 					format_date(shch[0].date, new Date(map_data_apply_prev.SnapshotBegin)));
-			})
-			.attr("title", function(shch) { return format_date(shch[0].date) } )
+			});
+
+		update_changes_width();
 
 		map_data_apply_prev = null;
 		prev_map_data = null;
 
-		draw();
+		draw("init_prev_map");
 	}
 
 	function init_map(data) {
@@ -711,11 +707,22 @@
 		// static info
 		update_snapshot_timestamp();
 
+		map_data_apply_prev = map_data;
+
+		if (prev_map_data) {
+			init_prev_map(prev_map_data);
+		}
+
+		update_foundations();
+
+		// initial draw
+		draw("init_map");
+
+		// first time stuff
 		if (first_map_update) {
 			first_map_update = false;
 
 			// search
-			search_input = d3.select("#search");
 			search_input.on("input", function() {
 				clearTimeout(do_search_timeout)
 				do_search_timeout = setTimeout(function() {
@@ -726,27 +733,16 @@
 			search_input.node().focus();
 			search_input.node().select();
 
-			search_results = d3.select("#search_results");
-
 			// canvas events
 			canvas.on("mousemove", on_canvas_mousemove);
 			canvas.on("click", on_canvas_click);
 
-			// load state
-			d3.select(window).on("hashchange", update_from_url);
-			update_from_url();
+			// hash url state
+			var q = search_input.property("value");
+			if (q && q.length > 0) {
+				do_search(q);
+			}
 		}
-
-		map_data_apply_prev = map_data;
-
-		if (prev_map_data) {
-			init_prev_map(prev_map_data);
-		}
-
-		update_foundations();
-
-		// initial draw
-		draw();
 	}
 
 	var filters = {
@@ -756,6 +752,45 @@
 	};
 	var do_search_timeout;
 
+	var changes_width;
+	function update_changes_width() {
+		var widths = _(d3.selectAll("#changes_text > div > span")[0]).map(function(d) { return parseInt(d3.select(d).style("width")); });
+		changes_width =  _(widths).max() - 5;
+
+		if (!changes_visible) {
+			changes_text.style("right", -changes_width + "px")
+		}
+	}
+
+	function set_changes_visibility(visible) {
+		if (visible) {
+			changes_text.style("display", "block");
+			changes_text.transition()
+				.duration(750)
+				.ease("quad-out")
+				.style("opacity", 1)
+				.style("right", "5px")
+				.each("end", function() {
+				});
+			changes_button.text(">>");
+		}
+		else {
+			changes_text.transition()
+				.duration(750)
+				.ease("quad-out")
+				.style("opacity", 0)
+				.style("right", -changes_width + "px")
+				.each("end", function() {
+					changes_text.style("display", "none");
+				});
+			changes_button.text("<<");
+		}
+
+		if (window.localStorage) {
+			window.localStorage["show_changes"] = visible;
+		}
+	}
+
 	function init() {
 		// filters
 		function update_filter_visibility(selector, checkbox) {
@@ -763,7 +798,7 @@
 			if (window.localStorage && JSON) {
 				window.localStorage["filters"] = JSON.stringify(filters);
 			}
-			draw();
+			draw("filter");
 		}
 
 		d3.select("#filter_cities").on("change", function() { update_filter_visibility("city", d3.event.target); });
@@ -798,10 +833,32 @@
 		cursor_text = d3.select("#cursor_text");
 		info_text = d3.select("#info_text");
 		info_text_2 = d3.select("#info_text_2");
-		changes_text = d3.select("#changes_text");
 
-		// load resources
+		// list of changes
+		changes_text = d3.select("#changes_text");
+		changes_button = d3.select("#changes_button");
+		changes_visible = true;
+		if (window.localStorage && window.localStorage["show_changes"]) {
+			changes_visible = window.localStorage["show_changes"] == "true";
+		}
+		changes_text.style("opacity", changes_visible ? 0 : 1);
+		set_changes_visibility(changes_visible);
+
+		changes_button.on("click", function() {
+			changes_visible = !changes_visible;
+			set_changes_visibility(changes_visible);
+		})
+
+		// first load resources
 		load_resources();
+
+		// init search elements
+		search_input = d3.select("#search");
+		search_results = d3.select("#search_results");
+
+		// init hash state
+		d3.select(window).on("hashchange", update_from_url);
+		update_from_url();
 
 		// init canvas
 		content = d3.select("#content");
@@ -967,7 +1024,9 @@
 		var load_influence_image = new Image();
 		load_influence_image.onload = function() {
 			influence_image = load_influence_image;
-			draw();
+			if (filters.influence) {
+				draw("load_influence_image");
+			}
 		};
 		load_influence_image.src = base_url + "influence_bitmap_small.png" + query;
 	}
@@ -986,7 +1045,7 @@
 		font_small = "8pt " + font_family;
 	}
 
-	function draw_outlined_text(text, x, y, w, outline, fill) {
+	function draw_outlined_text(canvas_ctx, text, x, y, w, outline, fill) {
 		canvas_ctx.fillStyle = outline;
 		for (xi = -w; xi <= w; ++xi) {
 			for (yi = -w; yi <= w; ++yi) {
@@ -1000,7 +1059,7 @@
 		canvas_ctx.fillText(text, x, y);
 	}
 
-	function draw_text() {
+	function draw_text(canvas_ctx) {
 		// cities
 		if (filters.city && cur_scale > min_normal_text_scale) {
 			for (var i = 0; i < frame_objects.cities.length; ++i) {
@@ -1023,7 +1082,7 @@
 				canvas_ctx.font = font_big;
 				canvas_ctx.fillStyle = "black";
 				canvas_ctx.textAlign = "center";
-				draw_outlined_text(sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
+				draw_outlined_text(canvas_ctx, sh.name, x, y + 30 + sh.level * 5, 1, "black", "gold");
 			}
 		}
 
@@ -1054,7 +1113,7 @@
 		}
 	}
 
-	function draw_circumference(x, y, rad, width, stroke, fill) {
+	function draw_circumference(canvas_ctx, x, y, rad, width, stroke, fill) {
 		// colored circunference
 		canvas_ctx.moveTo(x, y);
 		canvas_ctx.beginPath();
@@ -1089,7 +1148,7 @@
 	var city_selection_color = "rgba(100, 149, 237, 1.0)";
 	var selection_color = "rgba(100, 149, 237, 0.5)";
 
-	function draw_forest(forest) {
+	function draw_forest(canvas_ctx, forest) {
 		if (!filters.forest)
 			return;
 
@@ -1111,7 +1170,7 @@
 		}
 	}
 
-	function draw_barbarian(barb) {
+	function draw_barbarian(canvas_ctx, barb) {
 		if (!filters.barbarian)
 			return;
 
@@ -1134,7 +1193,7 @@
 	}
 
 
-	function draw_foundation(foundation) {
+	function draw_foundation(canvas_ctx, foundation) {
 		if (!filters.foundation)
 			return;
 
@@ -1153,7 +1212,7 @@
 		}
 	}
 
-	function draw_troop(troop) {
+	function draw_troop(canvas_ctx, troop) {
 		if (!filters.troop)
 			return;
 
@@ -1228,7 +1287,7 @@
 		draw_troop_snapshot(troop, get_tribe_color(troop.tribeId));
 	}
 
-	function draw_city(city) {
+	function draw_city(canvas_ctx, city) {
 		if (!filters.city)
 			return;
 
@@ -1314,7 +1373,7 @@
 		}
 	}
 	
-	function draw_stronghold(sh) {
+	function draw_stronghold(canvas_ctx, sh) {
 		if (!filters.stronghold)
 			return;
 
@@ -1336,31 +1395,26 @@
 			canvas_ctx.stroke();
 		}
 
-		draw_circumference(x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
+		draw_circumference(canvas_ctx, x, y, 10 + sh.level * 5, 4, "black", get_tribe_color(sh.tribeId));
 	}
 
-	function is_quadtree_outside_viewport(x1, y1, x2, y2) {
-		return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
-	}
-
-	function draw() {
-		if (!map_data) {
-			return;
-		}
-
+	function draw_map(canvas_ctx, xmin, ymin, xmax, ymax) {
 		var start_time = window.performance.now();
 
+		function is_quad_outside_viewport(x1, y1, x2, y2) {
+			return x1 >= xmax || y1 >= ymax || x2 < xmin || y2 < ymin;
+		}
+
+		function is_point_inside_viewport(x, y) {
+			return x >= xmin && x < xmax && y >= ymin && y < ymax;
+		}
+
+		// clear frame objects
 		frame_objects.forests.length = 0;
 		frame_objects.troops.length = 0;
 		frame_objects.barbarians.length = 0;
 		frame_objects.cities.length = 0;
 		frame_objects.strongholds.length = 0;
-
-		// clear canvas
-		canvas_ctx.save();
-		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
-		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
-		canvas_ctx.restore();
 
 		// initial state
 		canvas_ctx.lineCap = "square";
@@ -1374,30 +1428,101 @@
 		// objects
 		map_quadtree.visit(function(node, x1, y1, x2, y2) {
 			var obj = node.point;
-			if (obj && is_inside_viewport(obj.x, obj.y)) {
-				obj.draw(obj);
+			if (obj && is_point_inside_viewport(obj.x, obj.y)) {
+				obj.draw(canvas_ctx, obj);
 			}
-			return is_quadtree_outside_viewport(x1, y1, x2, y2);
+			return is_quad_outside_viewport(x1, y1, x2, y2);
 		});
 
-		// draw text
+		// text
 		if (cur_scale > min_normal_text_scale) {
-			draw_text();
+			draw_text(canvas_ctx);
 		}
 		else {
 			clearTimeout(draw_text_timeout);
-			draw_text_timeout = setTimeout(draw_text, 10);
+			draw_text_timeout = setTimeout(function() { draw_text(canvas_ctx); }, 10);
 		}
 
-		// draw selection
-		var pos = get_selection_center();
-		var r = get_selection_radius();
-		draw_circumference(pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
+		// selection
+		if (get_selection().length > 0) {
+			var pos = get_selection_center();
+			var r = get_selection_radius();
+			draw_circumference(canvas_ctx, pos[0] * 4, pos[1], r + 100, 4, "black", selection_color);
+		}
 
 		// update frame time
 		var frame_time = window.performance.now() - start_time;
 		last_frame_time = frame_time;
 		update_cursor_text();
+	}
+
+	var draw_timeout;
+	var update_buffer_timeout;
+	function draw(force_update, force_from_buffer) {
+		if (!map_data) {
+			return;
+		}
+
+		// clear canvas
+		canvas_ctx.save();
+		canvas_ctx.setTransform(1, 0, 0, 1, 0, 0);
+		canvas_ctx.clearRect(0, 0, canvas_width, canvas_height);
+		canvas_ctx.restore();
+
+		draw_map(canvas_ctx, xmin, ymin, xmax, ymax);
+
+		/*
+		if (!buffer) {
+			update_buffer(force_update + ": first update");
+		}
+		else if (force_update == "filter") {
+			clearTimeout(update_buffer_timeout);
+			update_buffer_timeout = null;
+			update_buffer(force_update);
+		}
+
+		if (cur_scale > 0.9 || (!force_from_buffer && cur_scale > 0.6)) {
+			clearTimeout(update_buffer_timeout);
+			clearTimeout(draw_timeout);
+			update_buffer_timeout = null;
+			draw_map(canvas_ctx, xmin, ymin, xmax, ymax)
+		}
+		else {
+			if (force_update || update_buffer_timeout) {
+				clearTimeout(update_buffer_timeout);
+				update_buffer_timeout = setTimeout(function() {
+					update_buffer(force_update + ": force_update timeout");
+					update_buffer_timeout = null;
+				}, 1500)
+			}
+
+			canvas_ctx.drawImage(buffer, 0, 0, map_width, map_height);
+			update_cursor_text();
+			
+			clearTimeout(draw_timeout);
+			draw_timeout = setTimeout(function() { draw_map(canvas_ctx, xmin, ymin, xmax, ymax); }, 1000);
+		}
+		*/
+	}
+
+	function update_buffer(reason) {
+		console.log(new Date(), reason)
+		render_to_buffer();
+	}
+
+	// buffering
+	var buffer;
+	var buffer_ctx;
+	function render_to_buffer() {
+		if (!buffer) {
+			buffer = document.createElement("canvas");
+			buffer_ctx = buffer.getContext("2d");
+		}
+		var scale = Math.min(0.5, cur_scale);
+		buffer.width = map_width * scale;
+		buffer.height = map_height * scale;
+	 	buffer_ctx.scale(scale, scale);
+		draw_map(buffer_ctx, 0, 0, map_width, map_height);
 	}
 
 	// state serialization
@@ -1412,7 +1537,7 @@
 		do_search(data);
 	}
 
-	var prev_ser_state;
+	var prev_ser_state = "";
 	function update_url(state) {
 		prev_ser_state = state || serialize_state();
 		window.location.hash = encodeURIComponent(prev_ser_state);
@@ -1423,7 +1548,9 @@
 		if (data != prev_ser_state) {
 			prev_ser_state = data;
 			deserialize_state(data);
+			return true;
 		}
+		return false;
 	}
 
 	d3.select(window).on("load", init);

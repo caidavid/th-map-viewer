@@ -125,17 +125,36 @@ a:visited {
 }
 
 #changes_text {
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 	line-height: 20px;
-	top: 5px;
+	top: 25px;
 	right: 5px;
 	bottom: 5px;
 	text-align: right;
 	color: white;
 }
 
-#changes_text div {
+#changes_text > div {
+	white-space: nowrap;
 	padding: 0;
 	margin: 0;
 	border: 0;
+}
+
+
+#changes_text > div > span {
+	display: inline-block;
+}
+
+#changes_button {
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+	position: absolute;
+	right: 5px;
+	top: 5px;
 }
