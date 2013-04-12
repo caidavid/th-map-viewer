@@ -795,6 +795,14 @@
 		// filters
 		function update_filter_visibility(selector, checkbox) {
 			filters[selector] = checkbox.checked;
+
+			// enable troops when enabling troop trails
+			if (selector == "troop_trail" && checkbox.checked) {
+				d3.select("#filter_troops").node().checked = true;
+				filters["troop"] = true;
+			}
+
+			// save to localstorage
 			if (window.localStorage && JSON) {
 				window.localStorage["filters"] = JSON.stringify(filters);
 			}
@@ -820,14 +828,14 @@
 		}
 
 		// update filter checkboxes
-		d3.select("#filter_cities").attr("checked", filters.city && "checked" || null);
-		d3.select("#filter_forests").attr("checked", filters.forest && "checked" || null);
-		d3.select("#filter_strongholds").attr("checked", filters.stronghold && "checked" || null);
-		d3.select("#filter_troops").attr("checked", filters.troop && "checked" || null);
-		d3.select("#filter_troop_trails").attr("checked", filters.troop_trail && "checked" || null);
-		d3.select("#filter_barbarians").attr("checked", filters.barbarian && "checked" || null);
-		d3.select("#filter_influence").attr("checked", filters.influence && "checked" || null);
-		d3.select("#filter_foundations").attr("checked", filters.foundation && "checked" || null);
+		d3.select("#filter_cities").node().checked = !!filters.city;
+		d3.select("#filter_forests").node().checked = !!filters.forest;
+		d3.select("#filter_strongholds").node().checked = !!filters.stronghold;
+		d3.select("#filter_troops").node().checked = !!filters.troop;
+		d3.select("#filter_troop_trails").node().checked = !!filters.troop_trail;
+		d3.select("#filter_barbarians").node().checked = !!filters.barbarian;
+		d3.select("#filter_influence").node().checked = !!filters.influence;
+		d3.select("#filter_foundations").node().checked = !!filters.foundation;
 
 		// info texts
 		cursor_text = d3.select("#cursor_text");
