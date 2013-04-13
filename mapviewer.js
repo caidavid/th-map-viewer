@@ -766,7 +766,7 @@
 		if (visible) {
 			changes_text.style("display", "block");
 			changes_text.transition()
-				.duration(500)
+				.duration(750)
 				.ease("cubic-out")
 				.style("opacity", 1)
 				.style("right", "5px")
@@ -776,7 +776,7 @@
 		}
 		else {
 			changes_text.transition()
-				.duration(500)
+				.duration(750)
 				.ease("cubic-out")
 				.style("opacity", 0)
 				.style("right", -changes_width + "px")
