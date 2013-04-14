@@ -205,7 +205,7 @@
 			var t = Math.floor(age / 60000);
 			date_str = t + " minute" + (t == 1 ? "" : "s") + " ago";
 		}
-		else if (age <= 24*3600*1000) {
+		else if (age < 25*3600*1000) {
 			var t = Math.floor(age / 3600000);
 			var m = Math.floor(age % 3600000 / 60000);
 			date_str = t + " hour" + (t == 1 ? "" : "s");
