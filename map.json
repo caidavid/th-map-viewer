@@ -1,6 +1,6 @@
 {
-  "SnapshotBegin": "2013-04-15T08:00:01.7549102Z",
-  "SnapshotEnd": "2013-04-15T08:03:36.2981814Z",
+  "SnapshotBegin": "2013-04-15T09:00:02.0918377Z",
+  "SnapshotEnd": "2013-04-15T09:03:35.5580473Z",
   "Cities": [
     {
       "level": 1,
@@ -83,7 +83,7 @@
     {
       "level": 9,
       "playerId": 59816,
-      "value": 52,
+      "value": 53,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -213,7 +213,7 @@
     {
       "level": 12,
       "playerId": 61945,
-      "value": 196,
+      "value": 197,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -448,7 +448,7 @@
       "level": 11,
       "playerId": 61783,
       "value": 175,
-      "alignment": 3.75,
+      "alignment": 4.125,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "WongleBongle",
@@ -461,7 +461,7 @@
       "level": 10,
       "playerId": 61783,
       "value": 97,
-      "alignment": 34.54886,
+      "alignment": 34.92386,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "ZonglePong",
@@ -473,7 +473,7 @@
     {
       "level": 6,
       "playerId": 56011,
-      "value": 49,
+      "value": 50,
       "alignment": 50.0,
       "tribeId": 100048,
       "isNewbie": false,
@@ -513,7 +513,7 @@
       "level": 12,
       "playerId": 60462,
       "value": 345,
-      "alignment": 4.375,
+      "alignment": 4.625,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Metalopolis",
@@ -668,7 +668,7 @@
     {
       "level": 13,
       "playerId": 60991,
-      "value": 130,
+      "value": 132,
       "alignment": 50.0,
       "tribeId": 100328,
       "isNewbie": false,
@@ -1045,7 +1045,7 @@
     {
       "level": 12,
       "playerId": 55646,
-      "value": 94,
+      "value": 95,
       "alignment": 50.0,
       "tribeId": 100048,
       "isNewbie": false,
@@ -1149,7 +1149,7 @@
     {
       "level": 11,
       "playerId": 61765,
-      "value": 121,
+      "value": 122,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -1163,7 +1163,7 @@
       "level": 12,
       "playerId": 60036,
       "value": 125,
-      "alignment": 29.66,
+      "alignment": 29.91,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Samaria",
@@ -1253,8 +1253,8 @@
     {
       "level": 2,
       "playerId": 62267,
-      "value": 7,
-      "alignment": 50.0,
+      "value": 9,
+      "alignment": 49.0375,
       "tribeId": 0,
       "isNewbie": true,
       "name": "Ariptus",
@@ -1306,7 +1306,7 @@
       "level": 11,
       "playerId": 61442,
       "value": 243,
-      "alignment": 33.0,
+      "alignment": 33.05,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "MonCul",
@@ -1396,8 +1396,8 @@
     {
       "level": 13,
       "playerId": 60629,
-      "value": 246,
-      "alignment": 6.375,
+      "value": 247,
+      "alignment": 6.625,
       "tribeId": 1000066,
       "isNewbie": false,
       "name": "Tristam",
@@ -1423,7 +1423,7 @@
       "level": 12,
       "playerId": 60629,
       "value": 223,
-      "alignment": 7.875,
+      "alignment": 8.125,
       "tribeId": 1000066,
       "isNewbie": false,
       "name": "New Tristam",
@@ -1435,7 +1435,7 @@
     {
       "level": 11,
       "playerId": 55086,
-      "value": 127,
+      "value": 128,
       "alignment": 50.0,
       "tribeId": 100048,
       "isNewbie": false,
@@ -1552,7 +1552,7 @@
     {
       "level": 11,
       "playerId": 61344,
-      "value": 166,
+      "value": 168,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -1825,7 +1825,7 @@
     {
       "level": 5,
       "playerId": 60519,
-      "value": 18,
+      "value": 17,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -1891,7 +1891,7 @@
       "level": 12,
       "playerId": 60629,
       "value": 156,
-      "alignment": 35.2386436,
+      "alignment": 35.3636436,
       "tribeId": 1000066,
       "isNewbie": false,
       "name": "New New Tristam",
@@ -2177,7 +2177,7 @@
       "level": 3,
       "playerId": 62264,
       "value": 12,
-      "alignment": 48.93125,
+      "alignment": 49.18125,
       "tribeId": 0,
       "isNewbie": true,
       "name": "Warsaw",
@@ -2268,7 +2268,7 @@
       "level": 12,
       "playerId": 60201,
       "value": 154,
-      "alignment": 54.3,
+      "alignment": 54.05,
       "tribeId": 100327,
       "isNewbie": false,
       "name": "Forbidden City",
@@ -2345,7 +2345,7 @@
     {
       "level": 7,
       "playerId": 58319,
-      "value": 39,
+      "value": 40,
       "alignment": 50.0,
       "tribeId": 100266,
       "isNewbie": false,
@@ -2411,7 +2411,7 @@
       "level": 11,
       "playerId": 61049,
       "value": 210,
-      "alignment": 13.43,
+      "alignment": 13.68,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "South Gustaburg",
@@ -2449,7 +2449,7 @@
     {
       "level": 13,
       "playerId": 60710,
-      "value": 254,
+      "value": 256,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -2475,7 +2475,7 @@
     {
       "level": 14,
       "playerId": 61275,
-      "value": 211,
+      "value": 213,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -2788,7 +2788,7 @@
       "level": 11,
       "playerId": 61442,
       "value": 214,
-      "alignment": 41.3,
+      "alignment": 39.75,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Mes Couilles",
@@ -2800,7 +2800,7 @@
     {
       "level": 7,
       "playerId": 61442,
-      "value": 24,
+      "value": 25,
       "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
@@ -2827,7 +2827,7 @@
       "level": 13,
       "playerId": 59067,
       "value": 241,
-      "alignment": 0.0,
+      "alignment": 0.25,
       "tribeId": 100328,
       "isNewbie": false,
       "name": "Dressrossa",
@@ -2840,7 +2840,7 @@
       "level": 11,
       "playerId": 59067,
       "value": 159,
-      "alignment": 0.259893417,
+      "alignment": 0.5098934,
       "tribeId": 100328,
       "isNewbie": false,
       "name": "Wano",
@@ -2878,7 +2878,7 @@
     {
       "level": 15,
       "playerId": 58319,
-      "value": 320,
+      "value": 321,
       "alignment": 50.0,
       "tribeId": 100266,
       "isNewbie": false,
@@ -2970,7 +2970,7 @@
       "level": 13,
       "playerId": 58797,
       "value": 228,
-      "alignment": 16.0,
+      "alignment": 16.25,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Boomtown",
@@ -3087,7 +3087,7 @@
       "level": 11,
       "playerId": 57097,
       "value": 157,
-      "alignment": 18.36,
+      "alignment": 18.61,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "fisting your dad",
@@ -3581,7 +3581,7 @@
       "level": 11,
       "playerId": 59238,
       "value": 335,
-      "alignment": 10.875,
+      "alignment": 11.125,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Ballsack",
@@ -3971,7 +3971,7 @@
       "level": 13,
       "playerId": 58422,
       "value": 175,
-      "alignment": 66.11606,
+      "alignment": 65.86606,
       "tribeId": 100266,
       "isNewbie": false,
       "name": "Lionhead",
@@ -4127,7 +4127,7 @@
       "level": 15,
       "playerId": 57922,
       "value": 202,
-      "alignment": 68.81,
+      "alignment": 68.56,
       "tribeId": 100165,
       "isNewbie": false,
       "name": "Tarliton",
@@ -4166,7 +4166,7 @@
       "level": 15,
       "playerId": 57922,
       "value": 151,
-      "alignment": 53.03,
+      "alignment": 52.78,
       "tribeId": 100165,
       "isNewbie": false,
       "name": "Raetopia",
@@ -4464,7 +4464,7 @@
     {
       "level": 11,
       "playerId": 61989,
-      "value": 141,
+      "value": 142,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -4490,7 +4490,7 @@
     {
       "level": 8,
       "playerId": 61989,
-      "value": 54,
+      "value": 55,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -4777,7 +4777,7 @@
       "level": 14,
       "playerId": 58355,
       "value": 178,
-      "alignment": 47.05,
+      "alignment": 48.05,
       "tribeId": 100328,
       "isNewbie": false,
       "name": "Bath",
@@ -4855,7 +4855,7 @@
       "level": 13,
       "playerId": 57330,
       "value": 165,
-      "alignment": 3.625,
+      "alignment": 3.75,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Asgarde",
@@ -4959,7 +4959,7 @@
       "level": 11,
       "playerId": 59238,
       "value": 199,
-      "alignment": 27.19,
+      "alignment": 27.44,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Frenulum",
@@ -5348,7 +5348,7 @@
     {
       "level": 15,
       "playerId": 58416,
-      "value": 219,
+      "value": 220,
       "alignment": 50.0,
       "tribeId": 100328,
       "isNewbie": false,
@@ -5414,7 +5414,7 @@
       "level": 14,
       "playerId": 57330,
       "value": 229,
-      "alignment": 2.875,
+      "alignment": 3.125,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Brackley",
@@ -5427,7 +5427,7 @@
       "level": 11,
       "playerId": 57330,
       "value": 65,
-      "alignment": 3.25,
+      "alignment": 3.5,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Forlorn",
@@ -6154,8 +6154,8 @@
     {
       "level": 11,
       "playerId": 57969,
-      "value": 282,
-      "alignment": 11.13,
+      "value": 284,
+      "alignment": 11.38,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "FYRA20 SAETT FYR",
@@ -6168,7 +6168,7 @@
       "level": 11,
       "playerId": 57969,
       "value": 275,
-      "alignment": 13.25,
+      "alignment": 13.5,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "FOUR20 BLAZE IT",
@@ -6338,7 +6338,7 @@
       "playerId": 60376,
       "value": 205,
       "alignment": 50.0,
-      "tribeId": 100134,
+      "tribeId": 0,
       "isNewbie": false,
       "name": "aaaa",
       "x": 2233,
@@ -6389,7 +6389,7 @@
       "level": 13,
       "playerId": 60886,
       "value": 236,
-      "alignment": 38.82,
+      "alignment": 39.07,
       "tribeId": 100293,
       "isNewbie": false,
       "name": "Eutropos",
@@ -6416,7 +6416,7 @@
       "playerId": 60376,
       "value": 112,
       "alignment": 50.0,
-      "tribeId": 100134,
+      "tribeId": 0,
       "isNewbie": false,
       "name": "bbbb",
       "x": 2201,
@@ -6935,7 +6935,7 @@
       "level": 15,
       "playerId": 57794,
       "value": 351,
-      "alignment": 5.125,
+      "alignment": 5.25,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Slaronia",
@@ -6974,7 +6974,7 @@
       "level": 13,
       "playerId": 57794,
       "value": 290,
-      "alignment": 4.625,
+      "alignment": 4.875,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Yellowtail",
@@ -7013,7 +7013,7 @@
       "level": 12,
       "playerId": 56450,
       "value": 217,
-      "alignment": 41.3472939,
+      "alignment": 41.5972939,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Crags Tel'naeír",
@@ -7064,7 +7064,7 @@
     {
       "level": 9,
       "playerId": 56233,
-      "value": 36,
+      "value": 38,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -7351,7 +7351,7 @@
       "level": 13,
       "playerId": 59272,
       "value": 232,
-      "alignment": 1.79776132,
+      "alignment": 2.04776144,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "CaneTopia",
@@ -7403,7 +7403,7 @@
       "level": 13,
       "playerId": 59272,
       "value": 100,
-      "alignment": 47.8,
+      "alignment": 48.05,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Bravetia",
@@ -7441,7 +7441,7 @@
     {
       "level": 12,
       "playerId": 60886,
-      "value": 230,
+      "value": 231,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -7572,7 +7572,7 @@
       "level": 11,
       "playerId": 61344,
       "value": 203,
-      "alignment": 50.0,
+      "alignment": 47.925,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Curiosity",
@@ -7727,7 +7727,7 @@
     {
       "level": 11,
       "playerId": 60784,
-      "value": 263,
+      "value": 264,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -8040,7 +8040,7 @@
       "level": 11,
       "playerId": 57437,
       "value": 317,
-      "alignment": 44.75,
+      "alignment": 45.0,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Machville",
@@ -8170,7 +8170,7 @@
       "level": 11,
       "playerId": 57437,
       "value": 274,
-      "alignment": 44.1606331,
+      "alignment": 44.4106331,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Mach City",
@@ -8260,7 +8260,7 @@
     {
       "level": 10,
       "playerId": 56687,
-      "value": 85,
+      "value": 86,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -8390,7 +8390,7 @@
     {
       "level": 7,
       "playerId": 55797,
-      "value": 43,
+      "value": 44,
       "alignment": 50.0,
       "tribeId": 100008,
       "isNewbie": false,
@@ -8417,7 +8417,7 @@
       "level": 11,
       "playerId": 58129,
       "value": 230,
-      "alignment": 48.76,
+      "alignment": 49.01,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Cool city",
@@ -8507,7 +8507,7 @@
     {
       "level": 12,
       "playerId": 58869,
-      "value": 112,
+      "value": 113,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -8806,7 +8806,7 @@
     {
       "level": 11,
       "playerId": 61172,
-      "value": 114,
+      "value": 115,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -8819,7 +8819,7 @@
     {
       "level": 11,
       "playerId": 61172,
-      "value": 53,
+      "value": 54,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -9054,7 +9054,7 @@
       "level": 14,
       "playerId": 58885,
       "value": 318,
-      "alignment": 3.0,
+      "alignment": 0.0,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Galagoan",
@@ -9314,7 +9314,7 @@
       "level": 11,
       "playerId": 57046,
       "value": 218,
-      "alignment": 47.68,
+      "alignment": 47.93,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Ciudad Sabroso",
@@ -9418,7 +9418,7 @@
       "level": 11,
       "playerId": 56160,
       "value": 65,
-      "alignment": 48.625,
+      "alignment": 48.875,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Leguminote",
@@ -9716,7 +9716,7 @@
     {
       "level": 9,
       "playerId": 56483,
-      "value": 70,
+      "value": 72,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -9834,7 +9834,7 @@
       "level": 11,
       "playerId": 57145,
       "value": 232,
-      "alignment": 49.5910378,
+      "alignment": 49.7160378,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Cleave Edge",
@@ -9911,7 +9911,7 @@
     {
       "level": 11,
       "playerId": 60886,
-      "value": 141,
+      "value": 142,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -10002,7 +10002,7 @@
     {
       "level": 4,
       "playerId": 60886,
-      "value": 15,
+      "value": 16,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -10132,7 +10132,7 @@
     {
       "level": 10,
       "playerId": 60538,
-      "value": 80,
+      "value": 81,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -10367,7 +10367,7 @@
       "level": 11,
       "playerId": 60070,
       "value": 201,
-      "alignment": 49.225,
+      "alignment": 49.475,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Fort_Kickass",
@@ -10549,7 +10549,7 @@
       "level": 11,
       "playerId": 56450,
       "value": 144,
-      "alignment": 37.495,
+      "alignment": 37.745,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Farthen Dûr",
@@ -10990,8 +10990,8 @@
     {
       "level": 11,
       "playerId": 61037,
-      "value": 171,
-      "alignment": 50.0,
+      "value": 170,
+      "alignment": 51.95,
       "tribeId": 100293,
       "isNewbie": false,
       "name": "Metru Nui",
@@ -11069,7 +11069,7 @@
       "level": 11,
       "playerId": 60575,
       "value": 212,
-      "alignment": 17.9294949,
+      "alignment": 18.0544949,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Rangerville",
@@ -11107,7 +11107,7 @@
     {
       "level": 10,
       "playerId": 57046,
-      "value": 118,
+      "value": 119,
       "alignment": 50.0,
       "tribeId": 100216,
       "isNewbie": false,
@@ -11121,7 +11121,7 @@
       "level": 14,
       "playerId": 61467,
       "value": 210,
-      "alignment": 42.93,
+      "alignment": 43.18,
       "tribeId": 100246,
       "isNewbie": false,
       "name": "Urin  Bjerget",
@@ -11276,7 +11276,7 @@
     {
       "level": 9,
       "playerId": 55826,
-      "value": 76,
+      "value": 77,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -11289,7 +11289,7 @@
     {
       "level": 5,
       "playerId": 60070,
-      "value": 24,
+      "value": 25,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -11329,7 +11329,7 @@
       "level": 11,
       "playerId": 60070,
       "value": 169,
-      "alignment": 48.125,
+      "alignment": 48.25,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Fort of Asses",
@@ -11524,7 +11524,7 @@
       "level": 12,
       "playerId": 56450,
       "value": 294,
-      "alignment": 49.025,
+      "alignment": 49.275,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Ellesméra",
@@ -11640,7 +11640,7 @@
     {
       "level": 15,
       "playerId": 56115,
-      "value": 212,
+      "value": 213,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -11836,7 +11836,7 @@
       "level": 14,
       "playerId": 54077,
       "value": 235,
-      "alignment": 39.64067,
+      "alignment": 39.89067,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Waldo",
@@ -11887,8 +11887,8 @@
     {
       "level": 12,
       "playerId": 53082,
-      "value": 225,
-      "alignment": 50.0,
+      "value": 227,
+      "alignment": 49.6844978,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Sitka",
@@ -11914,7 +11914,7 @@
       "level": 13,
       "playerId": 53082,
       "value": 376,
-      "alignment": 0.875,
+      "alignment": 0.3049296,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Fairbanks",
@@ -11966,7 +11966,7 @@
       "level": 12,
       "playerId": 53082,
       "value": 312,
-      "alignment": 50.0,
+      "alignment": 49.6844978,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Anchorage",
@@ -12017,8 +12017,8 @@
     {
       "level": 12,
       "playerId": 53082,
-      "value": 292,
-      "alignment": 10.9,
+      "value": 294,
+      "alignment": 9.309093,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Juneau",
@@ -12044,7 +12044,7 @@
       "level": 11,
       "playerId": 53082,
       "value": 79,
-      "alignment": 50.0,
+      "alignment": 49.9801254,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Kenai",
@@ -12095,7 +12095,7 @@
     {
       "level": 13,
       "playerId": 56813,
-      "value": 240,
+      "value": 242,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -12199,8 +12199,8 @@
     {
       "level": 8,
       "playerId": 56985,
-      "value": 59,
-      "alignment": 55.8,
+      "value": 60,
+      "alignment": 55.55,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Anal Leakage",
@@ -12395,7 +12395,7 @@
       "level": 13,
       "playerId": 59328,
       "value": 90,
-      "alignment": 49.75,
+      "alignment": 50.0,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Zone 66",
@@ -12980,7 +12980,7 @@
       "level": 15,
       "playerId": 55548,
       "value": 263,
-      "alignment": 41.7252121,
+      "alignment": 40.30099,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Altera",
@@ -12990,10 +12990,10 @@
       "groupId": 200609
     },
     {
-      "level": 5,
+      "level": 4,
       "playerId": 55647,
-      "value": 23,
-      "alignment": 51.075,
+      "value": 22,
+      "alignment": 52.825,
       "tribeId": 100104,
       "isNewbie": false,
       "name": "KoT",
@@ -13032,7 +13032,7 @@
       "level": 13,
       "playerId": 55548,
       "value": 190,
-      "alignment": 50.0,
+      "alignment": 49.79922,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Vatara",
@@ -13110,7 +13110,7 @@
       "level": 15,
       "playerId": 54077,
       "value": 289,
-      "alignment": 34.8082123,
+      "alignment": 35.0582123,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "NebLand",
@@ -13122,7 +13122,7 @@
     {
       "level": 12,
       "playerId": 55649,
-      "value": 158,
+      "value": 156,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -13149,7 +13149,7 @@
       "level": 13,
       "playerId": 54077,
       "value": 225,
-      "alignment": 35.31813,
+      "alignment": 35.56813,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "FooLand",
@@ -13227,7 +13227,7 @@
       "level": 12,
       "playerId": 53082,
       "value": 187,
-      "alignment": 0.125,
+      "alignment": 0.161033675,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Ketchikan",
@@ -13253,7 +13253,7 @@
       "level": 12,
       "playerId": 56724,
       "value": 259,
-      "alignment": 46.875,
+      "alignment": 47.125,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Hahn Nova",
@@ -13343,7 +13343,7 @@
     {
       "level": 12,
       "playerId": 57644,
-      "value": 201,
+      "value": 202,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -13357,7 +13357,7 @@
       "level": 13,
       "playerId": 56159,
       "value": 229,
-      "alignment": 0.625,
+      "alignment": 0.875,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Funtowntontown",
@@ -13486,7 +13486,7 @@
     {
       "level": 11,
       "playerId": 58449,
-      "value": 104,
+      "value": 105,
       "alignment": 50.0,
       "tribeId": 100216,
       "isNewbie": false,
@@ -13525,8 +13525,8 @@
     {
       "level": 15,
       "playerId": 59328,
-      "value": 215,
-      "alignment": 46.57277,
+      "value": 216,
+      "alignment": 46.82277,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Seyda Neen",
@@ -13617,7 +13617,7 @@
       "level": 11,
       "playerId": 60852,
       "value": 275,
-      "alignment": 49.5245247,
+      "alignment": 49.5662537,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "sokkistan",
@@ -13643,7 +13643,7 @@
       "level": 11,
       "playerId": 60852,
       "value": 248,
-      "alignment": 48.08849,
+      "alignment": 48.1553955,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "sokktropolis",
@@ -13656,7 +13656,7 @@
       "level": 11,
       "playerId": 60852,
       "value": 215,
-      "alignment": 39.2232,
+      "alignment": 39.3478966,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "sokkville",
@@ -13707,7 +13707,7 @@
     {
       "level": 11,
       "playerId": 61689,
-      "value": 255,
+      "value": 257,
       "alignment": 50.0,
       "tribeId": 100195,
       "isNewbie": false,
@@ -13746,7 +13746,7 @@
     {
       "level": 8,
       "playerId": 54727,
-      "value": 42,
+      "value": 44,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -13811,7 +13811,7 @@
     {
       "level": 10,
       "playerId": 61390,
-      "value": 100,
+      "value": 101,
       "alignment": 50.0,
       "tribeId": 100167,
       "isNewbie": false,
@@ -13838,7 +13838,7 @@
       "level": 11,
       "playerId": 60738,
       "value": 309,
-      "alignment": 9.25,
+      "alignment": 9.75,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Mirnith",
@@ -14033,7 +14033,7 @@
       "level": 12,
       "playerId": 57804,
       "value": 236,
-      "alignment": 7.672727,
+      "alignment": 6.52272749,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Cvicekdol",
@@ -14253,7 +14253,7 @@
     {
       "level": 11,
       "playerId": 55664,
-      "value": 100,
+      "value": 101,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -14319,7 +14319,7 @@
       "level": 11,
       "playerId": 54077,
       "value": 127,
-      "alignment": 42.4840965,
+      "alignment": 42.7340965,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Odlaw",
@@ -14540,7 +14540,7 @@
       "level": 12,
       "playerId": 58645,
       "value": 253,
-      "alignment": 28.87,
+      "alignment": 29.12,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Lewiston",
@@ -14553,7 +14553,7 @@
       "level": 12,
       "playerId": 58645,
       "value": 188,
-      "alignment": 29.56,
+      "alignment": 29.81,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Ashvale",
@@ -14721,7 +14721,7 @@
     {
       "level": 11,
       "playerId": 61471,
-      "value": 98,
+      "value": 99,
       "alignment": 50.0,
       "tribeId": 100216,
       "isNewbie": false,
@@ -14787,7 +14787,7 @@
       "level": 11,
       "playerId": 60857,
       "value": 126,
-      "alignment": 41.86,
+      "alignment": 43.11,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "PLEASE IGNORE",
@@ -14812,7 +14812,7 @@
     {
       "level": 10,
       "playerId": 60857,
-      "value": 47,
+      "value": 48,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -15215,7 +15215,7 @@
     {
       "level": 10,
       "playerId": 58800,
-      "value": 95,
+      "value": 96,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -15332,7 +15332,7 @@
     {
       "level": 3,
       "playerId": 57804,
-      "value": 12,
+      "value": 13,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -15761,8 +15761,8 @@
     {
       "level": 11,
       "playerId": 54077,
-      "value": 91,
-      "alignment": 40.32121,
+      "value": 92,
+      "alignment": 40.57121,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Aras",
@@ -15930,7 +15930,7 @@
     {
       "level": 11,
       "playerId": 57644,
-      "value": 96,
+      "value": 97,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -15983,7 +15983,7 @@
       "level": 13,
       "playerId": 56159,
       "value": 237,
-      "alignment": 0.625,
+      "alignment": 0.875,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Midtownslugtown",
@@ -15996,7 +15996,7 @@
       "level": 11,
       "playerId": 57664,
       "value": 202,
-      "alignment": 49.5870857,
+      "alignment": 49.8370857,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "DOCK NORD",
@@ -16035,7 +16035,7 @@
       "level": 12,
       "playerId": 57664,
       "value": 242,
-      "alignment": 47.9179153,
+      "alignment": 48.1679153,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "DOCK SUD",
@@ -16139,7 +16139,7 @@
       "level": 15,
       "playerId": 58785,
       "value": 170,
-      "alignment": 51.5594444,
+      "alignment": 51.82611,
       "tribeId": 0,
       "isNewbie": false,
       "name": "booya",
@@ -16256,7 +16256,7 @@
       "level": 12,
       "playerId": 59919,
       "value": 307,
-      "alignment": 8.919539,
+      "alignment": 9.169539,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Rocketland",
@@ -16268,7 +16268,7 @@
     {
       "level": 10,
       "playerId": 60421,
-      "value": 172,
+      "value": 173,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -16282,7 +16282,7 @@
       "level": 12,
       "playerId": 59919,
       "value": 278,
-      "alignment": 41.9,
+      "alignment": 42.15,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Raptor Village",
@@ -16295,7 +16295,7 @@
       "level": 12,
       "playerId": 59919,
       "value": 239,
-      "alignment": 48.20628,
+      "alignment": 48.45628,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Kaleland",
@@ -16308,7 +16308,7 @@
       "level": 12,
       "playerId": 59919,
       "value": 203,
-      "alignment": 28.8515244,
+      "alignment": 29.1015244,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Razors Edge",
@@ -16593,8 +16593,8 @@
     {
       "level": 11,
       "playerId": 59307,
-      "value": 93,
-      "alignment": 0.5,
+      "value": 94,
+      "alignment": 0.75,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Dumdum Dominion",
@@ -16776,7 +16776,7 @@
       "level": 14,
       "playerId": 55600,
       "value": 301,
-      "alignment": 48.375,
+      "alignment": 48.625,
       "tribeId": 100008,
       "isNewbie": false,
       "name": "Caltheuta",
@@ -16879,7 +16879,7 @@
     {
       "level": 15,
       "playerId": 55244,
-      "value": 207,
+      "value": 208,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -16919,7 +16919,7 @@
       "level": 11,
       "playerId": 55431,
       "value": 135,
-      "alignment": 0.25,
+      "alignment": 0.0,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Shuntafunt",
@@ -17127,7 +17127,7 @@
       "level": 14,
       "playerId": 57686,
       "value": 241,
-      "alignment": 47.675,
+      "alignment": 47.925,
       "tribeId": 100246,
       "isNewbie": false,
       "name": "frihash",
@@ -17672,7 +17672,7 @@
     {
       "level": 15,
       "playerId": 58397,
-      "value": 190,
+      "value": 191,
       "alignment": 50.0,
       "tribeId": 100174,
       "isNewbie": false,
@@ -17803,7 +17803,7 @@
       "level": 11,
       "playerId": 56455,
       "value": 316,
-      "alignment": 42.0,
+      "alignment": 42.375,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "uniquecityname",
@@ -17829,7 +17829,7 @@
       "level": 11,
       "playerId": 56455,
       "value": 230,
-      "alignment": 46.875,
+      "alignment": 47.25,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "notacity",
@@ -17842,7 +17842,7 @@
       "level": 8,
       "playerId": 56751,
       "value": 42,
-      "alignment": 54.125,
+      "alignment": 53.75,
       "tribeId": 100245,
       "isNewbie": false,
       "name": "Commieville USA",
@@ -18179,7 +18179,7 @@
     {
       "level": 8,
       "playerId": 53341,
-      "value": 32,
+      "value": 33,
       "alignment": 50.0,
       "tribeId": 100134,
       "isNewbie": false,
@@ -18635,7 +18635,7 @@
       "level": 12,
       "playerId": 59240,
       "value": 225,
-      "alignment": 48.75,
+      "alignment": 49.0,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Carnaville",
@@ -18764,7 +18764,7 @@
     {
       "level": 11,
       "playerId": 61114,
-      "value": 133,
+      "value": 134,
       "alignment": 50.0,
       "tribeId": 100386,
       "isNewbie": false,
@@ -18817,7 +18817,7 @@
       "level": 10,
       "playerId": 61867,
       "value": 83,
-      "alignment": 48.875,
+      "alignment": 49.125,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Infamous 2",
@@ -18843,7 +18843,7 @@
       "level": 11,
       "playerId": 61867,
       "value": 140,
-      "alignment": 25.755,
+      "alignment": 26.005,
       "tribeId": 100205,
       "isNewbie": false,
       "name": "Infamous",
@@ -18856,7 +18856,7 @@
       "level": 10,
       "playerId": 57046,
       "value": 82,
-      "alignment": 45.125,
+      "alignment": 45.375,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Viviendas Divino",
@@ -19064,7 +19064,7 @@
       "level": 14,
       "playerId": 59397,
       "value": 207,
-      "alignment": 49.655,
+      "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Murky Cess Pool",
@@ -19506,7 +19506,7 @@
       "level": 13,
       "playerId": 55431,
       "value": 334,
-      "alignment": 8.0,
+      "alignment": 8.25,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Mavericia",
@@ -19519,7 +19519,7 @@
       "level": 11,
       "playerId": 55431,
       "value": 211,
-      "alignment": 0.625,
+      "alignment": 0.875,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Festivus",
@@ -20103,7 +20103,7 @@
     {
       "level": 7,
       "playerId": 58486,
-      "value": 41,
+      "value": 42,
       "alignment": 50.0,
       "tribeId": 100205,
       "isNewbie": false,
@@ -20114,9 +20114,9 @@
       "groupId": 4001487
     },
     {
-      "level": 11,
+      "level": 12,
       "playerId": 59222,
-      "value": 276,
+      "value": 277,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -20182,7 +20182,7 @@
       "level": 13,
       "playerId": 59730,
       "value": 222,
-      "alignment": 50.575,
+      "alignment": 50.0,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Bourne",
@@ -20299,7 +20299,7 @@
       "level": 10,
       "playerId": 52196,
       "value": 178,
-      "alignment": 49.62935,
+      "alignment": 49.87935,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "Helstopia",
@@ -20325,7 +20325,7 @@
       "level": 11,
       "playerId": 61498,
       "value": 130,
-      "alignment": 0.75,
+      "alignment": 1.0,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Eek",
@@ -20598,7 +20598,7 @@
       "level": 11,
       "playerId": 55833,
       "value": 394,
-      "alignment": 73.89,
+      "alignment": 73.39,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "GeeWiz",
@@ -20610,8 +20610,8 @@
     {
       "level": 11,
       "playerId": 55833,
-      "value": 351,
-      "alignment": 73.48,
+      "value": 352,
+      "alignment": 72.98,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "BattleSchool",
@@ -20624,7 +20624,7 @@
       "level": 11,
       "playerId": 55833,
       "value": 340,
-      "alignment": 61.04,
+      "alignment": 60.54,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "CommandShcool",
@@ -20754,7 +20754,7 @@
       "level": 11,
       "playerId": 56084,
       "value": 164,
-      "alignment": 1.0,
+      "alignment": 1.25,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "CurioCity",
@@ -20868,9 +20868,9 @@
       "groupId": 200161
     },
     {
-      "level": 14,
+      "level": 15,
       "playerId": 52824,
-      "value": 370,
+      "value": 371,
       "alignment": 50.0,
       "tribeId": 100008,
       "isNewbie": false,
@@ -21157,7 +21157,7 @@
       "level": 12,
       "playerId": 58097,
       "value": 173,
-      "alignment": 1.90680969,
+      "alignment": 0.0,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Gust",
@@ -21170,7 +21170,7 @@
       "level": 11,
       "playerId": 58097,
       "value": 141,
-      "alignment": 0.225,
+      "alignment": 0.0,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Squall",
@@ -21260,7 +21260,7 @@
     {
       "level": 14,
       "playerId": 59587,
-      "value": 184,
+      "value": 185,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -21286,7 +21286,7 @@
     {
       "level": 11,
       "playerId": 59512,
-      "value": 126,
+      "value": 127,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -21391,7 +21391,7 @@
       "level": 13,
       "playerId": 61432,
       "value": 194,
-      "alignment": 43.25,
+      "alignment": 43.5,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Toast",
@@ -21404,7 +21404,7 @@
       "level": 5,
       "playerId": 61114,
       "value": 28,
-      "alignment": 49.775,
+      "alignment": 50.0,
       "tribeId": 100386,
       "isNewbie": false,
       "name": "The Miner",
@@ -21456,7 +21456,7 @@
       "level": 11,
       "playerId": 61498,
       "value": 192,
-      "alignment": 2.875,
+      "alignment": 3.125,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Never Never Land",
@@ -21481,7 +21481,7 @@
     {
       "level": 11,
       "playerId": 61498,
-      "value": 146,
+      "value": 147,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -21858,8 +21858,8 @@
     {
       "level": 14,
       "playerId": 57522,
-      "value": 285,
-      "alignment": 47.5,
+      "value": 286,
+      "alignment": 47.75,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Vicarious",
@@ -22041,7 +22041,7 @@
       "level": 13,
       "playerId": 51350,
       "value": 282,
-      "alignment": 50.0,
+      "alignment": 48.45,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Nugget",
@@ -22196,8 +22196,8 @@
     {
       "level": 14,
       "playerId": 55366,
-      "value": 265,
-      "alignment": 48.425,
+      "value": 266,
+      "alignment": 48.925,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Continuity",
@@ -22405,7 +22405,7 @@
       "level": 15,
       "playerId": 54276,
       "value": 383,
-      "alignment": 47.13,
+      "alignment": 47.38,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Arbalest",
@@ -22470,7 +22470,7 @@
       "level": 12,
       "playerId": 51574,
       "value": 290,
-      "alignment": 1.875,
+      "alignment": 2.125,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "St. Olga",
@@ -22717,7 +22717,7 @@
       "level": 11,
       "playerId": 51970,
       "value": 210,
-      "alignment": 47.75,
+      "alignment": 48.0,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Lofn",
@@ -22860,7 +22860,7 @@
       "level": 13,
       "playerId": 56159,
       "value": 334,
-      "alignment": 2.875,
+      "alignment": 3.125,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Downtownlbtown",
@@ -23132,7 +23132,7 @@
     {
       "level": 5,
       "playerId": 57867,
-      "value": 27,
+      "value": 26,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -23146,7 +23146,7 @@
       "level": 13,
       "playerId": 58097,
       "value": 222,
-      "alignment": 4.118759,
+      "alignment": 4.368759,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Gale",
@@ -23171,7 +23171,7 @@
     {
       "level": 5,
       "playerId": 57610,
-      "value": 19,
+      "value": 18,
       "alignment": 50.0,
       "tribeId": 100140,
       "isNewbie": false,
@@ -23263,7 +23263,7 @@
       "level": 11,
       "playerId": 58097,
       "value": 84,
-      "alignment": 48.7333336,
+      "alignment": 48.9833336,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Tempest",
@@ -23289,7 +23289,7 @@
       "level": 11,
       "playerId": 59512,
       "value": 296,
-      "alignment": 15.3238878,
+      "alignment": 15.5738878,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Jefferson Valley",
@@ -23301,8 +23301,8 @@
     {
       "level": 11,
       "playerId": 59512,
-      "value": 206,
-      "alignment": 24.94535,
+      "value": 207,
+      "alignment": 25.19535,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Putnam Valley",
@@ -23351,9 +23351,9 @@
       "groupId": 4001230
     },
     {
-      "level": 10,
+      "level": 11,
       "playerId": 59512,
-      "value": 52,
+      "value": 54,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -23379,7 +23379,7 @@
     {
       "level": 12,
       "playerId": 59527,
-      "value": 226,
+      "value": 227,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -23496,7 +23496,7 @@
     {
       "level": 12,
       "playerId": 60724,
-      "value": 227,
+      "value": 228,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -23665,7 +23665,7 @@
     {
       "level": 11,
       "playerId": 61067,
-      "value": 125,
+      "value": 126,
       "alignment": 50.0,
       "tribeId": 100167,
       "isNewbie": false,
@@ -23991,7 +23991,7 @@
       "level": 13,
       "playerId": 57574,
       "value": 301,
-      "alignment": 0.25,
+      "alignment": 0.0,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Kashyyyk",
@@ -24030,7 +24030,7 @@
       "level": 11,
       "playerId": 57574,
       "value": 171,
-      "alignment": 49.825,
+      "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Bespin",
@@ -24147,7 +24147,7 @@
       "level": 14,
       "playerId": 59307,
       "value": 181,
-      "alignment": 0.5,
+      "alignment": 0.75,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Peepee Party",
@@ -24263,7 +24263,7 @@
     {
       "level": 15,
       "playerId": 55668,
-      "value": 183,
+      "value": 182,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -24511,7 +24511,7 @@
       "level": 11,
       "playerId": 51970,
       "value": 314,
-      "alignment": 43.6,
+      "alignment": 43.85,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Thor",
@@ -24627,7 +24627,7 @@
     {
       "level": 13,
       "playerId": 54276,
-      "value": 245,
+      "value": 246,
       "alignment": 50.0,
       "tribeId": 100134,
       "isNewbie": false,
@@ -25108,7 +25108,7 @@
     {
       "level": 11,
       "playerId": 59527,
-      "value": 67,
+      "value": 68,
       "alignment": 50.0,
       "tribeId": 100375,
       "isNewbie": false,
@@ -25148,7 +25148,7 @@
       "level": 12,
       "playerId": 59643,
       "value": 229,
-      "alignment": 14.38,
+      "alignment": 14.63,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Strongbadia",
@@ -25629,7 +25629,7 @@
       "level": 11,
       "playerId": 57574,
       "value": 106,
-      "alignment": 38.08,
+      "alignment": 34.33,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Endor",
@@ -25745,8 +25745,8 @@
     {
       "level": 11,
       "playerId": 56211,
-      "value": 113,
-      "alignment": 52.15,
+      "value": 112,
+      "alignment": 53.3,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Xercentral",
@@ -25772,7 +25772,7 @@
       "level": 13,
       "playerId": 56211,
       "value": 177,
-      "alignment": 52.3209343,
+      "alignment": 52.1959343,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Xerural",
@@ -25785,7 +25785,7 @@
       "level": 9,
       "playerId": 56211,
       "value": 49,
-      "alignment": 51.575,
+      "alignment": 51.45,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Xeregal",
@@ -25798,7 +25798,7 @@
       "level": 11,
       "playerId": 55438,
       "value": 294,
-      "alignment": 46.33,
+      "alignment": 46.455,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Jamespoop",
@@ -25992,7 +25992,7 @@
     {
       "level": 13,
       "playerId": 54018,
-      "value": 165,
+      "value": 166,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -26107,9 +26107,9 @@
       "groupId": 200005
     },
     {
-      "level": 4,
+      "level": 3,
       "playerId": 55024,
-      "value": 26,
+      "value": 21,
       "alignment": 50.0,
       "tribeId": 100018,
       "isNewbie": false,
@@ -26187,8 +26187,8 @@
     {
       "level": 11,
       "playerId": 51970,
-      "value": 356,
-      "alignment": 45.8,
+      "value": 357,
+      "alignment": 46.05,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Odin",
@@ -26214,7 +26214,7 @@
       "level": 11,
       "playerId": 51656,
       "value": 272,
-      "alignment": 48.775,
+      "alignment": 49.025,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "D Town",
@@ -26291,7 +26291,7 @@
     {
       "level": 11,
       "playerId": 51656,
-      "value": 189,
+      "value": 190,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -26434,7 +26434,7 @@
     {
       "level": 15,
       "playerId": 55388,
-      "value": 424,
+      "value": 425,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -26513,7 +26513,7 @@
       "level": 13,
       "playerId": 55355,
       "value": 134,
-      "alignment": 50.0,
+      "alignment": 49.2533836,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Danaville",
@@ -26627,9 +26627,9 @@
       "groupId": 4000593
     },
     {
-      "level": 2,
+      "level": 3,
       "playerId": 58055,
-      "value": 8,
+      "value": 11,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -26942,7 +26942,7 @@
       "level": 12,
       "playerId": 61067,
       "value": 277,
-      "alignment": 3.63,
+      "alignment": 3.48,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "Juice",
@@ -26968,7 +26968,7 @@
       "level": 13,
       "playerId": 61328,
       "value": 284,
-      "alignment": 2.825,
+      "alignment": 3.075,
       "tribeId": 100213,
       "isNewbie": false,
       "name": "Exile",
@@ -27085,7 +27085,7 @@
       "level": 12,
       "playerId": 61328,
       "value": 151,
-      "alignment": 44.0022621,
+      "alignment": 44.1272621,
       "tribeId": 100213,
       "isNewbie": false,
       "name": "Vagabond",
@@ -27384,7 +27384,7 @@
       "level": 15,
       "playerId": 59307,
       "value": 243,
-      "alignment": 0.125,
+      "alignment": 0.375,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "CaaCaa County",
@@ -27514,7 +27514,7 @@
       "level": 11,
       "playerId": 56084,
       "value": 221,
-      "alignment": 0.5,
+      "alignment": 0.75,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "CarbombsCity",
@@ -27539,7 +27539,7 @@
     {
       "level": 15,
       "playerId": 55800,
-      "value": 231,
+      "value": 232,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -27605,7 +27605,7 @@
       "level": 11,
       "playerId": 56084,
       "value": 219,
-      "alignment": 0.0,
+      "alignment": 0.25,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "ChiCity",
@@ -27800,7 +27800,7 @@
       "level": 13,
       "playerId": 53061,
       "value": 445,
-      "alignment": 48.25,
+      "alignment": 48.5,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Yorkdale",
@@ -27813,7 +27813,7 @@
       "level": 15,
       "playerId": 53061,
       "value": 447,
-      "alignment": 0.0,
+      "alignment": 0.125,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Oasis",
@@ -27825,8 +27825,8 @@
     {
       "level": 12,
       "playerId": 51766,
-      "value": 286,
-      "alignment": 43.825,
+      "value": 287,
+      "alignment": 40.875,
       "tribeId": 1000020,
       "isNewbie": false,
       "name": "Terror",
@@ -27955,7 +27955,7 @@
     {
       "level": 11,
       "playerId": 51878,
-      "value": 394,
+      "value": 395,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -27969,7 +27969,7 @@
       "level": 12,
       "playerId": 51970,
       "value": 421,
-      "alignment": 36.1441231,
+      "alignment": 36.3941231,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Isis",
@@ -27995,7 +27995,7 @@
       "level": 13,
       "playerId": 51216,
       "value": 311,
-      "alignment": 48.12602,
+      "alignment": 47.9320259,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Eden",
@@ -28020,7 +28020,7 @@
     {
       "level": 13,
       "playerId": 51901,
-      "value": 252,
+      "value": 253,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -28086,7 +28086,7 @@
       "level": 11,
       "playerId": 51574,
       "value": 310,
-      "alignment": 1.5,
+      "alignment": 1.75,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Ravenholm",
@@ -28125,7 +28125,7 @@
       "level": 11,
       "playerId": 51970,
       "value": 291,
-      "alignment": 45.755,
+      "alignment": 46.005,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Loki",
@@ -28306,8 +28306,8 @@
     {
       "level": 15,
       "playerId": 55355,
-      "value": 241,
-      "alignment": 49.3975,
+      "value": 242,
+      "alignment": 48.4166145,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Anthonia",
@@ -28993,9 +28993,9 @@
       "groupId": 205004
     },
     {
-      "level": 4,
+      "level": 5,
       "playerId": 59774,
-      "value": 21,
+      "value": 22,
       "alignment": 50.0,
       "tribeId": 100195,
       "isNewbie": false,
@@ -29308,7 +29308,7 @@
       "level": 11,
       "playerId": 60291,
       "value": 138,
-      "alignment": 48.8966255,
+      "alignment": 49.1466255,
       "tribeId": 0,
       "isNewbie": false,
       "name": "avalonia",
@@ -29437,7 +29437,7 @@
     {
       "level": 1,
       "playerId": 58725,
-      "value": 1,
+      "value": 3,
       "alignment": 50.0,
       "tribeId": 100250,
       "isNewbie": false,
@@ -29789,7 +29789,7 @@
       "level": 12,
       "playerId": 51766,
       "value": 346,
-      "alignment": 37.84,
+      "alignment": 38.09,
       "tribeId": 1000020,
       "isNewbie": false,
       "name": "Blood",
@@ -29802,7 +29802,7 @@
       "level": 11,
       "playerId": 51766,
       "value": 244,
-      "alignment": 48.475,
+      "alignment": 46.525,
       "tribeId": 1000020,
       "isNewbie": false,
       "name": "Hate",
@@ -29828,7 +29828,7 @@
       "level": 12,
       "playerId": 51766,
       "value": 177,
-      "alignment": 47.763176,
+      "alignment": 48.013176,
       "tribeId": 1000020,
       "isNewbie": false,
       "name": "Dread",
@@ -29841,7 +29841,7 @@
       "level": 14,
       "playerId": 50516,
       "value": 397,
-      "alignment": 1.45,
+      "alignment": 1.7,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Dogfish Head",
@@ -29880,7 +29880,7 @@
       "level": 11,
       "playerId": 51878,
       "value": 314,
-      "alignment": 1.586824,
+      "alignment": 0.125,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Woongjin Stars",
@@ -29958,7 +29958,7 @@
       "level": 12,
       "playerId": 51878,
       "value": 337,
-      "alignment": 45.25,
+      "alignment": 45.5,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Team 8",
@@ -29971,7 +29971,7 @@
       "level": 13,
       "playerId": 51216,
       "value": 276,
-      "alignment": 49.398983,
+      "alignment": 49.0929756,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Axis Mundi ",
@@ -30022,7 +30022,7 @@
     {
       "level": 11,
       "playerId": 51094,
-      "value": 381,
+      "value": 382,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -30036,7 +30036,7 @@
       "level": 12,
       "playerId": 51216,
       "value": 223,
-      "alignment": 0.5,
+      "alignment": 0.75,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Dome Of The Rock",
@@ -30256,7 +30256,7 @@
     {
       "level": 13,
       "playerId": 56069,
-      "value": 120,
+      "value": 121,
       "alignment": 50.0,
       "tribeId": 100293,
       "isNewbie": false,
@@ -30371,9 +30371,9 @@
       "groupId": 4001141
     },
     {
-      "level": 10,
+      "level": 11,
       "playerId": 56814,
-      "value": 65,
+      "value": 66,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -30452,7 +30452,7 @@
       "level": 12,
       "playerId": 57812,
       "value": 271,
-      "alignment": 45.0,
+      "alignment": 45.25,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Untitled",
@@ -30737,7 +30737,7 @@
     {
       "level": 8,
       "playerId": 61067,
-      "value": 40,
+      "value": 41,
       "alignment": 50.0,
       "tribeId": 100167,
       "isNewbie": false,
@@ -30815,7 +30815,7 @@
     {
       "level": 8,
       "playerId": 60537,
-      "value": 91,
+      "value": 90,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -30907,7 +30907,7 @@
       "level": 12,
       "playerId": 61328,
       "value": 175,
-      "alignment": 47.75,
+      "alignment": 47.875,
       "tribeId": 100213,
       "isNewbie": false,
       "name": "Outcast",
@@ -31023,7 +31023,7 @@
     {
       "level": 12,
       "playerId": 54276,
-      "value": 226,
+      "value": 227,
       "alignment": 50.0,
       "tribeId": 100134,
       "isNewbie": false,
@@ -31166,7 +31166,7 @@
     {
       "level": 11,
       "playerId": 58654,
-      "value": 166,
+      "value": 167,
       "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
@@ -31284,7 +31284,7 @@
       "level": 15,
       "playerId": 57061,
       "value": 265,
-      "alignment": 35.375,
+      "alignment": 35.5,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Sharkville",
@@ -31310,7 +31310,7 @@
       "level": 11,
       "playerId": 57061,
       "value": 152,
-      "alignment": 43.5,
+      "alignment": 43.75,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Minnow Town",
@@ -31647,7 +31647,7 @@
     {
       "level": 12,
       "playerId": 51163,
-      "value": 205,
+      "value": 206,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -31674,7 +31674,7 @@
       "level": 5,
       "playerId": 51163,
       "value": 20,
-      "alignment": 55.125,
+      "alignment": 54.875,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Can'-Ka No Rey",
@@ -31684,9 +31684,9 @@
       "groupId": 4001585
     },
     {
-      "level": 9,
+      "level": 8,
       "playerId": 51067,
-      "value": 49,
+      "value": 46,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -31894,8 +31894,8 @@
     {
       "level": 15,
       "playerId": 51771,
-      "value": 411,
-      "alignment": 0.75,
+      "value": 412,
+      "alignment": 1.0,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "llllllllllllllll",
@@ -31934,7 +31934,7 @@
       "level": 11,
       "playerId": 51771,
       "value": 300,
-      "alignment": 2.375,
+      "alignment": 2.625,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "lllllllllllllll",
@@ -32011,7 +32011,7 @@
     {
       "level": 3,
       "playerId": 55263,
-      "value": 12,
+      "value": 13,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -32155,7 +32155,7 @@
       "level": 11,
       "playerId": 55845,
       "value": 214,
-      "alignment": 0.875,
+      "alignment": 1.125,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Beertopia",
@@ -32181,7 +32181,7 @@
       "level": 11,
       "playerId": 55845,
       "value": 130,
-      "alignment": 0.75,
+      "alignment": 1.0,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "North Pointe",
@@ -32531,7 +32531,7 @@
     {
       "level": 11,
       "playerId": 56814,
-      "value": 165,
+      "value": 167,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -33117,7 +33117,7 @@
       "level": 12,
       "playerId": 61487,
       "value": 226,
-      "alignment": 52.375,
+      "alignment": 52.125,
       "tribeId": 1000058,
       "isNewbie": false,
       "name": "Williamsburg",
@@ -33208,7 +33208,7 @@
       "level": 12,
       "playerId": 61209,
       "value": 181,
-      "alignment": 47.59,
+      "alignment": 47.84,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "theWdahls City 2",
@@ -33364,7 +33364,7 @@
       "level": 15,
       "playerId": 59307,
       "value": 363,
-      "alignment": 0.0,
+      "alignment": 0.125,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Doodoo District",
@@ -33754,7 +33754,7 @@
       "level": 11,
       "playerId": 56084,
       "value": 80,
-      "alignment": 0.25,
+      "alignment": 0.375,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Legen...",
@@ -34040,7 +34040,7 @@
       "level": 11,
       "playerId": 55845,
       "value": 235,
-      "alignment": 0.375,
+      "alignment": 0.875,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Pretoria",
@@ -34052,7 +34052,7 @@
     {
       "level": 12,
       "playerId": 56074,
-      "value": 217,
+      "value": 218,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -34339,7 +34339,7 @@
       "level": 11,
       "playerId": 57307,
       "value": 297,
-      "alignment": 7.15875,
+      "alignment": 7.40875,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Merkopolis",
@@ -34521,7 +34521,7 @@
       "level": 9,
       "playerId": 59280,
       "value": 113,
-      "alignment": 49.0,
+      "alignment": 49.25,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Khazad dum",
@@ -34832,8 +34832,8 @@
     {
       "level": 15,
       "playerId": 59307,
-      "value": 318,
-      "alignment": 0.07651515,
+      "value": 320,
+      "alignment": 0.326515138,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Poopoo Province",
@@ -35327,7 +35327,7 @@
       "level": 11,
       "playerId": 51771,
       "value": 297,
-      "alignment": 33.035,
+      "alignment": 33.285,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "llllllllllllll",
@@ -35353,7 +35353,7 @@
       "level": 12,
       "playerId": 51771,
       "value": 304,
-      "alignment": 0.375,
+      "alignment": 0.625,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "lllllllllllll",
@@ -35457,7 +35457,7 @@
       "level": 11,
       "playerId": 51771,
       "value": 238,
-      "alignment": 0.25,
+      "alignment": 0.5,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "llllllllllll",
@@ -35483,7 +35483,7 @@
       "level": 11,
       "playerId": 55845,
       "value": 310,
-      "alignment": 0.6405723,
+      "alignment": 0.8905723,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Asscrackistan",
@@ -35990,7 +35990,7 @@
       "level": 14,
       "playerId": 61209,
       "value": 238,
-      "alignment": 45.1233559,
+      "alignment": 45.3733559,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "theWdahls City",
@@ -36003,7 +36003,7 @@
       "level": 13,
       "playerId": 61447,
       "value": 246,
-      "alignment": 39.049263,
+      "alignment": 39.299263,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Panda'sDen",
@@ -36015,7 +36015,7 @@
     {
       "level": 11,
       "playerId": 61132,
-      "value": 85,
+      "value": 88,
       "alignment": 50.0,
       "tribeId": 100213,
       "isNewbie": false,
@@ -36054,7 +36054,7 @@
     {
       "level": 3,
       "playerId": 60794,
-      "value": 17,
+      "value": 18,
       "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
@@ -36341,7 +36341,7 @@
       "level": 12,
       "playerId": 56283,
       "value": 352,
-      "alignment": 3.375,
+      "alignment": 3.875,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "ColdWater",
@@ -36744,7 +36744,7 @@
       "level": 11,
       "playerId": 55845,
       "value": 203,
-      "alignment": 0.0,
+      "alignment": 0.25,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Tahawus",
@@ -36848,7 +36848,7 @@
       "level": 12,
       "playerId": 56449,
       "value": 364,
-      "alignment": 1.5,
+      "alignment": 1.75,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Doru Araeba",
@@ -36861,7 +36861,7 @@
       "level": 11,
       "playerId": 56449,
       "value": 231,
-      "alignment": 46.875,
+      "alignment": 47.125,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Urû'baen",
@@ -37445,7 +37445,7 @@
     {
       "level": 13,
       "playerId": 61043,
-      "value": 245,
+      "value": 248,
       "alignment": 50.0,
       "tribeId": 100213,
       "isNewbie": false,
@@ -37836,7 +37836,7 @@
       "level": 12,
       "playerId": 55444,
       "value": 323,
-      "alignment": 1.43581212,
+      "alignment": 1.68581212,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Ostoyae",
@@ -37862,7 +37862,7 @@
       "level": 11,
       "playerId": 55444,
       "value": 141,
-      "alignment": 47.5540161,
+      "alignment": 47.8040161,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Solidipes",
@@ -37874,8 +37874,8 @@
     {
       "level": 9,
       "playerId": 55444,
-      "value": 65,
-      "alignment": 47.125,
+      "value": 66,
+      "alignment": 47.375,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Mellea",
@@ -37914,7 +37914,7 @@
       "level": 12,
       "playerId": 55920,
       "value": 226,
-      "alignment": 44.77606,
+      "alignment": 45.02606,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "Dark",
@@ -37963,9 +37963,9 @@
       "groupId": 4001117
     },
     {
-      "level": 8,
+      "level": 9,
       "playerId": 55412,
-      "value": 91,
+      "value": 92,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -38368,8 +38368,8 @@
     {
       "level": 13,
       "playerId": 61561,
-      "value": 184,
-      "alignment": 31.36595,
+      "value": 185,
+      "alignment": 31.61595,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Weslandia",
@@ -38707,7 +38707,7 @@
       "level": 11,
       "playerId": 58331,
       "value": 100,
-      "alignment": 44.88801,
+      "alignment": 45.13801,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Rosenberg",
@@ -38759,7 +38759,7 @@
       "level": 12,
       "playerId": 58331,
       "value": 210,
-      "alignment": 34.0448532,
+      "alignment": 34.2948532,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Baltimoar",
@@ -38798,7 +38798,7 @@
       "level": 11,
       "playerId": 58331,
       "value": 149,
-      "alignment": 42.2157059,
+      "alignment": 42.4657059,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "DUNKERQUE",
@@ -38875,7 +38875,7 @@
     {
       "level": 11,
       "playerId": 56283,
-      "value": 133,
+      "value": 134,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -39058,7 +39058,7 @@
       "level": 15,
       "playerId": 55920,
       "value": 290,
-      "alignment": 2.75,
+      "alignment": 3.0,
       "tribeId": 100061,
       "isNewbie": false,
       "name": "The Shade",
@@ -39097,7 +39097,7 @@
       "level": 12,
       "playerId": 55447,
       "value": 222,
-      "alignment": 42.125,
+      "alignment": 41.375,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Phoenix",
@@ -39616,7 +39616,7 @@
     {
       "level": 11,
       "playerId": 59334,
-      "value": 240,
+      "value": 241,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -39786,7 +39786,7 @@
       "level": 12,
       "playerId": 61804,
       "value": 165,
-      "alignment": 58.23405,
+      "alignment": 57.98405,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Balegost",
@@ -40058,7 +40058,7 @@
     {
       "level": 13,
       "playerId": 60210,
-      "value": 189,
+      "value": 190,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -40176,7 +40176,7 @@
       "level": 11,
       "playerId": 58473,
       "value": 252,
-      "alignment": 37.77,
+      "alignment": 37.02,
       "tribeId": 100048,
       "isNewbie": false,
       "name": "Pandora",
@@ -40371,7 +40371,7 @@
       "level": 11,
       "playerId": 56610,
       "value": 312,
-      "alignment": 41.35,
+      "alignment": 40.0,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Salvern",
@@ -40422,7 +40422,7 @@
     {
       "level": 2,
       "playerId": 56610,
-      "value": 9,
+      "value": 10,
       "alignment": 50.0,
       "tribeId": 100249,
       "isNewbie": false,
@@ -40786,7 +40786,7 @@
     {
       "level": 12,
       "playerId": 56074,
-      "value": 127,
+      "value": 128,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -40903,7 +40903,7 @@
     {
       "level": 6,
       "playerId": 58475,
-      "value": 29,
+      "value": 28,
       "alignment": 50.0,
       "tribeId": 100396,
       "isNewbie": false,
@@ -41059,8 +41059,8 @@
     {
       "level": 12,
       "playerId": 60154,
-      "value": 212,
-      "alignment": 15.7991762,
+      "value": 213,
+      "alignment": 16.6741772,
       "tribeId": 1000069,
       "isNewbie": false,
       "name": "Nalecville",
@@ -41099,7 +41099,7 @@
       "level": 12,
       "playerId": 60154,
       "value": 190,
-      "alignment": 49.0813179,
+      "alignment": 49.9563179,
       "tribeId": 1000069,
       "isNewbie": false,
       "name": "Nalecopolis",
@@ -41138,7 +41138,7 @@
       "level": 12,
       "playerId": 61507,
       "value": 209,
-      "alignment": 43.7363777,
+      "alignment": 43.9863777,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Tapiocas",
@@ -41722,7 +41722,7 @@
     {
       "level": 11,
       "playerId": 55534,
-      "value": 84,
+      "value": 85,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -41969,7 +41969,7 @@
     {
       "level": 11,
       "playerId": 60785,
-      "value": 127,
+      "value": 128,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -42139,7 +42139,7 @@
       "level": 12,
       "playerId": 61657,
       "value": 167,
-      "alignment": 47.25,
+      "alignment": 47.5,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Ventormenta",
@@ -42217,7 +42217,7 @@
       "level": 14,
       "playerId": 60745,
       "value": 142,
-      "alignment": 51.106617,
+      "alignment": 50.856617,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Oakburn",
@@ -42242,8 +42242,8 @@
     {
       "level": 15,
       "playerId": 61245,
-      "value": 224,
-      "alignment": 55.725,
+      "value": 222,
+      "alignment": 59.275,
       "tribeId": 100174,
       "isNewbie": false,
       "name": "soot",
@@ -42360,7 +42360,7 @@
       "level": 13,
       "playerId": 59148,
       "value": 209,
-      "alignment": 46.19947,
+      "alignment": 43.04947,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Pannkaka",
@@ -42476,7 +42476,7 @@
     {
       "level": 11,
       "playerId": 58871,
-      "value": 140,
+      "value": 138,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -42802,7 +42802,7 @@
       "level": 14,
       "playerId": 55699,
       "value": 308,
-      "alignment": 0.75,
+      "alignment": 1.0,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Wong Kong",
@@ -42854,7 +42854,7 @@
       "level": 12,
       "playerId": 55699,
       "value": 267,
-      "alignment": 0.125,
+      "alignment": 0.375,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Wonghaven",
@@ -43009,7 +43009,7 @@
     {
       "level": 11,
       "playerId": 55972,
-      "value": 231,
+      "value": 232,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -43295,7 +43295,7 @@
     {
       "level": 10,
       "playerId": 57486,
-      "value": 32,
+      "value": 33,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -43334,7 +43334,7 @@
     {
       "level": 8,
       "playerId": 58445,
-      "value": 71,
+      "value": 67,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -43361,7 +43361,7 @@
       "level": 11,
       "playerId": 58724,
       "value": 300,
-      "alignment": 16.38,
+      "alignment": 16.63,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Trillville",
@@ -43374,7 +43374,7 @@
       "level": 11,
       "playerId": 58724,
       "value": 249,
-      "alignment": 16.885,
+      "alignment": 17.135,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Crunktown",
@@ -43387,7 +43387,7 @@
       "level": 11,
       "playerId": 58724,
       "value": 236,
-      "alignment": 18.87,
+      "alignment": 19.12,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Swisha House",
@@ -43556,7 +43556,7 @@
       "level": 11,
       "playerId": 58724,
       "value": 198,
-      "alignment": 20.38,
+      "alignment": 20.63,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "The Dirty South",
@@ -44258,7 +44258,7 @@
       "level": 12,
       "playerId": 55699,
       "value": 229,
-      "alignment": 0.5,
+      "alignment": 0.75,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Wongtopia",
@@ -44309,7 +44309,7 @@
     {
       "level": 11,
       "playerId": 56344,
-      "value": 333,
+      "value": 334,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -44557,7 +44557,7 @@
       "level": 14,
       "playerId": 58891,
       "value": 205,
-      "alignment": 43.4873,
+      "alignment": 43.7373,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Philo",
@@ -44661,7 +44661,7 @@
       "level": 12,
       "playerId": 60120,
       "value": 309,
-      "alignment": 0.125,
+      "alignment": 0.375,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Oolacile",
@@ -44674,7 +44674,7 @@
       "level": 11,
       "playerId": 60120,
       "value": 243,
-      "alignment": 28.402832,
+      "alignment": 28.652832,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Sen's Fortress",
@@ -44713,7 +44713,7 @@
       "level": 11,
       "playerId": 60120,
       "value": 277,
-      "alignment": 0.372271031,
+      "alignment": 0.0,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Firelink Shrine",
@@ -44726,7 +44726,7 @@
       "level": 11,
       "playerId": 60120,
       "value": 262,
-      "alignment": 0.0,
+      "alignment": 0.25,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Ash Lake",
@@ -44999,7 +44999,7 @@
       "level": 10,
       "playerId": 59662,
       "value": 52,
-      "alignment": 54.175,
+      "alignment": 53.675,
       "tribeId": 100272,
       "isNewbie": false,
       "name": "Older Golf Town",
@@ -45025,7 +45025,7 @@
       "level": 12,
       "playerId": 59245,
       "value": 190,
-      "alignment": 49.8590279,
+      "alignment": 48.4723549,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Awesome",
@@ -45064,7 +45064,7 @@
       "level": 11,
       "playerId": 59245,
       "value": 155,
-      "alignment": 49.776516,
+      "alignment": 47.86319,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Awesomest",
@@ -45115,7 +45115,7 @@
     {
       "level": 12,
       "playerId": 58600,
-      "value": 224,
+      "value": 225,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -45310,7 +45310,7 @@
     {
       "level": 11,
       "playerId": 50497,
-      "value": 86,
+      "value": 88,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -45739,7 +45739,7 @@
     {
       "level": 8,
       "playerId": 58131,
-      "value": 45,
+      "value": 42,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -45752,7 +45752,7 @@
     {
       "level": 15,
       "playerId": 59339,
-      "value": 184,
+      "value": 185,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -45792,7 +45792,7 @@
       "level": 15,
       "playerId": 58891,
       "value": 151,
-      "alignment": 43.1205025,
+      "alignment": 43.3705025,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Sophy",
@@ -45818,7 +45818,7 @@
       "level": 11,
       "playerId": 58891,
       "value": 93,
-      "alignment": 48.3421974,
+      "alignment": 48.5921974,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Eudaimonia",
@@ -45883,7 +45883,7 @@
       "level": 11,
       "playerId": 60120,
       "value": 166,
-      "alignment": 13.0422163,
+      "alignment": 13.2922163,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "The Kiln",
@@ -45896,7 +45896,7 @@
       "level": 11,
       "playerId": 60120,
       "value": 108,
-      "alignment": 19.1158943,
+      "alignment": 18.1658936,
       "tribeId": 100002,
       "isNewbie": false,
       "name": "Vinheim",
@@ -45997,9 +45997,9 @@
       "groupId": 4000590
     },
     {
-      "level": 11,
+      "level": 10,
       "playerId": 61302,
-      "value": 69,
+      "value": 68,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -46013,7 +46013,7 @@
       "level": 10,
       "playerId": 61939,
       "value": 149,
-      "alignment": 39.875,
+      "alignment": 40.625,
       "tribeId": 100048,
       "isNewbie": false,
       "name": "King'sLanding",
@@ -46025,8 +46025,8 @@
     {
       "level": 11,
       "playerId": 62033,
-      "value": 130,
-      "alignment": 42.4137955,
+      "value": 131,
+      "alignment": 43.1637955,
       "tribeId": 100216,
       "isNewbie": false,
       "name": "Singularity",
@@ -46077,7 +46077,7 @@
     {
       "level": 11,
       "playerId": 60414,
-      "value": 172,
+      "value": 173,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -46103,7 +46103,7 @@
     {
       "level": 10,
       "playerId": 60414,
-      "value": 101,
+      "value": 102,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -46143,7 +46143,7 @@
       "level": 8,
       "playerId": 61018,
       "value": 45,
-      "alignment": 52.25,
+      "alignment": 51.375,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Waset",
@@ -46168,7 +46168,7 @@
     {
       "level": 14,
       "playerId": 59594,
-      "value": 190,
+      "value": 191,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -46337,7 +46337,7 @@
     {
       "level": 8,
       "playerId": 59600,
-      "value": 47,
+      "value": 48,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -46454,7 +46454,7 @@
     {
       "level": 7,
       "playerId": 50497,
-      "value": 21,
+      "value": 22,
       "alignment": 50.0,
       "tribeId": 100025,
       "isNewbie": false,
@@ -46494,7 +46494,7 @@
       "level": 11,
       "playerId": 56344,
       "value": 178,
-      "alignment": 1.34677446,
+      "alignment": 1.84677446,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Yoko",
@@ -46585,7 +46585,7 @@
       "level": 11,
       "playerId": 56344,
       "value": 262,
-      "alignment": 49.6250763,
+      "alignment": 49.7500763,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Xolotl",
@@ -46676,7 +46676,7 @@
       "level": 11,
       "playerId": 59135,
       "value": 251,
-      "alignment": 5.78,
+      "alignment": 6.03,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Bakery",
@@ -46714,8 +46714,8 @@
     {
       "level": 11,
       "playerId": 59135,
-      "value": 192,
-      "alignment": 19.4788837,
+      "value": 194,
+      "alignment": 19.7288837,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Packaging",
@@ -46728,7 +46728,7 @@
       "level": 11,
       "playerId": 59601,
       "value": 231,
-      "alignment": 2.69816351,
+      "alignment": 2.94816351,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Beans",
@@ -46741,7 +46741,7 @@
       "level": 11,
       "playerId": 59135,
       "value": 253,
-      "alignment": 0.88,
+      "alignment": 1.13,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Blueberry Farm",
@@ -46754,7 +46754,7 @@
       "level": 11,
       "playerId": 59601,
       "value": 181,
-      "alignment": 1.0,
+      "alignment": 1.25,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "spud",
@@ -46767,7 +46767,7 @@
       "level": 10,
       "playerId": 59601,
       "value": 141,
-      "alignment": 1.375,
+      "alignment": 1.625,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Cheeseburg",
@@ -47001,7 +47001,7 @@
       "level": 6,
       "playerId": 60548,
       "value": 23,
-      "alignment": 53.35,
+      "alignment": 53.1,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "Mignone",
@@ -47414,10 +47414,10 @@
       "groupId": 4001170
     },
     {
-      "level": 10,
+      "level": 11,
       "playerId": 59601,
-      "value": 107,
-      "alignment": 1.0,
+      "value": 108,
+      "alignment": 1.25,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Cheeseville",
@@ -47468,7 +47468,7 @@
     {
       "level": 10,
       "playerId": 61428,
-      "value": 111,
+      "value": 109,
       "alignment": 50.0,
       "tribeId": 100288,
       "isNewbie": false,
@@ -47482,7 +47482,7 @@
       "level": 8,
       "playerId": 61742,
       "value": 68,
-      "alignment": 52.625,
+      "alignment": 52.375,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Kelriv'er",
@@ -47534,7 +47534,7 @@
       "level": 11,
       "playerId": 61886,
       "value": 146,
-      "alignment": 55.25,
+      "alignment": 55.0,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "No Fat Chicks",
@@ -47573,7 +47573,7 @@
       "level": 11,
       "playerId": 61575,
       "value": 178,
-      "alignment": 46.95,
+      "alignment": 45.0,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "harekrishnaVille",
@@ -47625,7 +47625,7 @@
       "level": 6,
       "playerId": 61312,
       "value": 43,
-      "alignment": 55.52416,
+      "alignment": 55.27416,
       "tribeId": 100195,
       "isNewbie": false,
       "name": "SeaPaddle",
@@ -47651,7 +47651,7 @@
       "level": 11,
       "playerId": 61388,
       "value": 277,
-      "alignment": 1.25,
+      "alignment": 1.5,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Aipimlândia",
@@ -47664,7 +47664,7 @@
       "level": 11,
       "playerId": 61575,
       "value": 291,
-      "alignment": 0.375,
+      "alignment": 0.625,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Thorland",
@@ -47677,7 +47677,7 @@
       "level": 11,
       "playerId": 61388,
       "value": 236,
-      "alignment": 49.04499,
+      "alignment": 49.29499,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "AipimCity",
@@ -47858,8 +47858,8 @@
     {
       "level": 8,
       "playerId": 58728,
-      "value": 44,
-      "alignment": 54.15,
+      "value": 45,
+      "alignment": 53.9,
       "tribeId": 100272,
       "isNewbie": false,
       "name": "New Barcusia",
@@ -48041,7 +48041,7 @@
       "level": 11,
       "playerId": 57097,
       "value": 225,
-      "alignment": 49.2788467,
+      "alignment": 49.5288467,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "giant vulva",
@@ -48196,7 +48196,7 @@
     {
       "level": 13,
       "playerId": 58003,
-      "value": 257,
+      "value": 258,
       "alignment": 50.0,
       "tribeId": 100061,
       "isNewbie": false,
@@ -48262,7 +48262,7 @@
       "level": 13,
       "playerId": 58494,
       "value": 317,
-      "alignment": 36.13624,
+      "alignment": 36.38624,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "nice town",
@@ -48418,7 +48418,7 @@
       "level": 12,
       "playerId": 59729,
       "value": 168,
-      "alignment": 49.51,
+      "alignment": 49.76,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Wildleaf",
@@ -48508,8 +48508,8 @@
     {
       "level": 11,
       "playerId": 61049,
-      "value": 296,
-      "alignment": 9.211787,
+      "value": 298,
+      "alignment": 9.461787,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "North Gustaburg",
@@ -48534,7 +48534,7 @@
     {
       "level": 10,
       "playerId": 59103,
-      "value": 156,
+      "value": 157,
       "alignment": 50.0,
       "tribeId": 100190,
       "isNewbie": false,
@@ -48548,7 +48548,7 @@
       "level": 11,
       "playerId": 61049,
       "value": 181,
-      "alignment": 1.125,
+      "alignment": 1.375,
       "tribeId": 100190,
       "isNewbie": false,
       "name": "Dandruf Wadi",
@@ -48561,7 +48561,7 @@
       "level": 9,
       "playerId": 61979,
       "value": 116,
-      "alignment": 50.8423538,
+      "alignment": 50.5923538,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Cabellas",
@@ -48574,7 +48574,7 @@
       "level": 6,
       "playerId": 62089,
       "value": 72,
-      "alignment": 54.2932129,
+      "alignment": 54.0432129,
       "tribeId": 1000076,
       "isNewbie": false,
       "name": "Skorpia",
@@ -48600,7 +48600,7 @@
       "level": 7,
       "playerId": 61979,
       "value": 57,
-      "alignment": 50.1,
+      "alignment": 50.0,
       "tribeId": 100134,
       "isNewbie": false,
       "name": "Sams CLub",
@@ -48652,7 +48652,7 @@
       "level": 8,
       "playerId": 61507,
       "value": 140,
-      "alignment": 48.16213,
+      "alignment": 48.41213,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Jackson",
@@ -48665,7 +48665,7 @@
       "level": 10,
       "playerId": 60447,
       "value": 72,
-      "alignment": 55.9433,
+      "alignment": 55.6933,
       "tribeId": 100272,
       "isNewbie": false,
       "name": "Barbant",
@@ -48717,7 +48717,7 @@
       "level": 13,
       "playerId": 59600,
       "value": 201,
-      "alignment": 10.7959347,
+      "alignment": 11.0459347,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Windfall",
@@ -48847,7 +48847,7 @@
       "level": 13,
       "playerId": 57118,
       "value": 209,
-      "alignment": 47.47253,
+      "alignment": 47.72253,
       "tribeId": 100213,
       "isNewbie": false,
       "name": "Straylight",
@@ -49028,7 +49028,7 @@
     {
       "level": 12,
       "playerId": 58494,
-      "value": 264,
+      "value": 267,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -49055,7 +49055,7 @@
       "level": 11,
       "playerId": 58307,
       "value": 159,
-      "alignment": 45.135,
+      "alignment": 45.385,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Hoang",
@@ -49068,7 +49068,7 @@
       "level": 11,
       "playerId": 58307,
       "value": 93,
-      "alignment": 43.375,
+      "alignment": 43.625,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Jasmin",
@@ -49250,7 +49250,7 @@
       "level": 11,
       "playerId": 61303,
       "value": 224,
-      "alignment": 21.645,
+      "alignment": 22.02,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Uganda",
@@ -49263,7 +49263,7 @@
       "level": 11,
       "playerId": 61303,
       "value": 167,
-      "alignment": 48.3548775,
+      "alignment": 48.7298775,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "Sudan",
@@ -49288,7 +49288,7 @@
     {
       "level": 11,
       "playerId": 61303,
-      "value": 92,
+      "value": 93,
       "alignment": 50.0,
       "tribeId": 100054,
       "isNewbie": false,
@@ -49379,7 +49379,7 @@
     {
       "level": 14,
       "playerId": 60594,
-      "value": 273,
+      "value": 274,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -49458,7 +49458,7 @@
       "level": 14,
       "playerId": 60460,
       "value": 257,
-      "alignment": 0.125,
+      "alignment": 0.375,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Tastyville",
@@ -49520,9 +49520,9 @@
       "groupId": 4001160
     },
     {
-      "level": 5,
+      "level": 6,
       "playerId": 58833,
-      "value": 22,
+      "value": 24,
       "alignment": 50.0,
       "tribeId": 100280,
       "isNewbie": false,
@@ -49653,7 +49653,7 @@
       "level": 10,
       "playerId": 57926,
       "value": 95,
-      "alignment": 42.5891953,
+      "alignment": 42.8391953,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Gerbil",
@@ -49679,7 +49679,7 @@
       "level": 12,
       "playerId": 56939,
       "value": 113,
-      "alignment": 52.52747,
+      "alignment": 52.27747,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "New Holy Land",
@@ -49795,7 +49795,7 @@
     {
       "level": 5,
       "playerId": 58013,
-      "value": 19,
+      "value": 20,
       "alignment": 50.0,
       "tribeId": 100123,
       "isNewbie": false,
@@ -50004,7 +50004,7 @@
       "level": 12,
       "playerId": 60956,
       "value": 194,
-      "alignment": 47.0,
+      "alignment": 47.25,
       "tribeId": 100375,
       "isNewbie": false,
       "name": "Florianopolis II",
@@ -50498,7 +50498,7 @@
       "level": 13,
       "playerId": 57926,
       "value": 207,
-      "alignment": 6.11340237,
+      "alignment": 6.36340237,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Bobcat",
@@ -50589,7 +50589,7 @@
       "level": 13,
       "playerId": 58625,
       "value": 331,
-      "alignment": 4.0,
+      "alignment": 4.25,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Clarona",
@@ -50862,7 +50862,7 @@
       "level": 11,
       "playerId": 62002,
       "value": 117,
-      "alignment": 7.915,
+      "alignment": 8.165,
       "tribeId": 100054,
       "isNewbie": false,
       "name": "OnAHill",
@@ -50926,8 +50926,8 @@
     {
       "level": 15,
       "playerId": 59241,
-      "value": 240,
-      "alignment": 34.0607,
+      "value": 241,
+      "alignment": 34.5607,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Priopolis",
@@ -51005,7 +51005,7 @@
       "level": 12,
       "playerId": 60460,
       "value": 156,
-      "alignment": 0.125,
+      "alignment": 0.375,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Savory City",
@@ -51018,7 +51018,7 @@
       "level": 12,
       "playerId": 59241,
       "value": 65,
-      "alignment": 47.6609764,
+      "alignment": 47.9109764,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Easterly Watch",
@@ -51109,7 +51109,7 @@
       "level": 11,
       "playerId": 58625,
       "value": 258,
-      "alignment": 9.0,
+      "alignment": 9.125,
       "tribeId": 100058,
       "isNewbie": false,
       "name": "Aldbourne",
@@ -51147,7 +51147,7 @@
     {
       "level": 11,
       "playerId": 58625,
-      "value": 150,
+      "value": 151,
       "alignment": 50.0,
       "tribeId": 100058,
       "isNewbie": false,
@@ -51485,7 +51485,7 @@
     {
       "level": 11,
       "playerId": 60063,
-      "value": 203,
+      "value": 204,
       "alignment": 50.0,
       "tribeId": 100002,
       "isNewbie": false,
@@ -51589,8 +51589,8 @@
     {
       "level": 14,
       "playerId": 58163,
-      "value": 279,
-      "alignment": 44.625,
+      "value": 280,
+      "alignment": 44.875,
       "tribeId": 100048,
       "isNewbie": false,
       "name": "Primus",
@@ -51785,7 +51785,7 @@
       "level": 14,
       "playerId": 59735,
       "value": 190,
-      "alignment": 38.11,
+      "alignment": 38.36,
       "tribeId": 100209,
       "isNewbie": false,
       "name": "Gonzoberg",
@@ -52032,7 +52032,7 @@
       "level": 11,
       "playerId": 56610,
       "value": 83,
-      "alignment": 46.75,
+      "alignment": 47.0,
       "tribeId": 100249,
       "isNewbie": false,
       "name": "Moltara",
@@ -52421,7 +52421,7 @@
     {
       "level": 10,
       "playerId": 62065,
-      "value": 116,
+      "value": 117,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -52435,7 +52435,7 @@
       "level": 5,
       "playerId": 62065,
       "value": 21,
-      "alignment": 53.125,
+      "alignment": 52.375,
       "tribeId": 0,
       "isNewbie": false,
       "name": "Farm me please",
@@ -52460,7 +52460,7 @@
     {
       "level": 11,
       "playerId": 60434,
-      "value": 194,
+      "value": 195,
       "alignment": 50.0,
       "tribeId": 100280,
       "isNewbie": false,
@@ -52487,7 +52487,7 @@
       "level": 14,
       "playerId": 60940,
       "value": 278,
-      "alignment": 0.125,
+      "alignment": 0.25,
       "tribeId": 100280,
       "isNewbie": false,
       "name": "Phantaminum",
@@ -53201,7 +53201,7 @@
     {
       "level": 11,
       "playerId": 61735,
-      "value": 135,
+      "value": 136,
       "alignment": 50.0,
       "tribeId": 100250,
       "isNewbie": false,
@@ -53215,7 +53215,7 @@
       "level": 11,
       "playerId": 61881,
       "value": 103,
-      "alignment": 29.344,
+      "alignment": 29.594,
       "tribeId": 1000062,
       "isNewbie": false,
       "name": "navojoa",
@@ -53293,7 +53293,7 @@
       "level": 11,
       "playerId": 61197,
       "value": 126,
-      "alignment": 44.64,
+      "alignment": 45.39,
       "tribeId": 100280,
       "isNewbie": false,
       "name": "Protected Town",
@@ -53318,7 +53318,7 @@
     {
       "level": 10,
       "playerId": 61376,
-      "value": 50,
+      "value": 51,
       "alignment": 50.0,
       "tribeId": 100280,
       "isNewbie": false,
@@ -53436,7 +53436,7 @@
       "level": 11,
       "playerId": 59660,
       "value": 239,
-      "alignment": 47.875,
+      "alignment": 48.125,
       "tribeId": 100048,
       "isNewbie": false,
       "name": "Don",
@@ -53695,7 +53695,7 @@
     {
       "level": 14,
       "playerId": 60899,
-      "value": 219,
+      "value": 220,
       "alignment": 50.0,
       "tribeId": 100357,
       "isNewbie": false,
@@ -53708,7 +53708,7 @@
     {
       "level": 15,
       "playerId": 61071,
-      "value": 199,
+      "value": 200,
       "alignment": 50.0,
       "tribeId": 100213,
       "isNewbie": false,
@@ -53773,7 +53773,7 @@
     {
       "level": 8,
       "playerId": 61675,
-      "value": 84,
+      "value": 85,
       "alignment": 50.0,
       "tribeId": 100213,
       "isNewbie": false,
@@ -53916,7 +53916,7 @@
     {
       "level": 11,
       "playerId": 60914,
-      "value": 245,
+      "value": 246,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -53982,7 +53982,7 @@
       "level": 10,
       "playerId": 61253,
       "value": 121,
-      "alignment": 48.6095161,
+      "alignment": 48.8595161,
       "tribeId": 100167,
       "isNewbie": false,
       "name": "Derphelm",
@@ -54540,7 +54540,7 @@
     {
       "level": 11,
       "playerId": 60914,
-      "value": 124,
+      "value": 125,
       "alignment": 50.0,
       "tribeId": 0,
       "isNewbie": false,
@@ -54592,7 +54592,7 @@
     {
       "level": 11,
       "playerId": 52466,
-      "value": 151,
+      "value": 152,
       "alignment": 50.0,
       "tribeId": 100487,
       "isNewbie": false,
@@ -54632,7 +54632,7 @@
       "level": 12,
       "playerId": 60460,
       "value": 207,
-      "alignment": 0.625,
+      "alignment": 0.875,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Scrumptious Town",
@@ -54645,7 +54645,7 @@
       "level": 11,
       "playerId": 59600,
       "value": 116,
-      "alignment": 36.5527763,
+      "alignment": 36.8027763,
       "tribeId": 100025,
       "isNewbie": false,
       "name": "Skyloft",
@@ -55300,6 +55300,13 @@
       "groupId": 10000002
     },
     {
+      "level": 1,
+      "x": 2263,
+      "y": 78,
+      "id": 4048489,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 2383,
       "y": 73,
@@ -55391,6 +55398,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 3138,
+      "y": 17,
+      "id": 4048486,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 3364,
       "y": 98,
@@ -55441,6 +55455,13 @@
     },
     {
       "level": 3,
+      "x": 276,
+      "y": 100,
+      "id": 4048464,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
       "x": 312,
       "y": 144,
       "id": 4032336,
@@ -55451,6 +55472,13 @@
       "x": 339,
       "y": 156,
       "id": 4046708,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
+      "x": 329,
+      "y": 101,
+      "id": 4048494,
       "groupId": 10000002
     },
     {
@@ -55647,13 +55675,6 @@
       "x": 1883,
       "y": 178,
       "id": 4047550,
-      "groupId": 10000002
-    },
-    {
-      "level": 2,
-      "x": 1970,
-      "y": 174,
-      "id": 4026711,
       "groupId": 10000002
     },
     {
@@ -56483,6 +56504,13 @@
       "groupId": 10000002
     },
     {
+      "level": 2,
+      "x": 2398,
+      "y": 310,
+      "id": 4048506,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 2470,
       "y": 304,
@@ -57120,13 +57148,6 @@
       "groupId": 10000002
     },
     {
-      "level": 2,
-      "x": 3216,
-      "y": 485,
-      "id": 4046407,
-      "groupId": 10000002
-    },
-    {
       "level": 1,
       "x": 3232,
       "y": 456,
@@ -57145,13 +57166,6 @@
       "x": 3347,
       "y": 480,
       "id": 4047700,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 12,
-      "y": 583,
-      "id": 4046417,
       "groupId": 10000002
     },
     {
@@ -57457,6 +57471,13 @@
     },
     {
       "level": 3,
+      "x": 2664,
+      "y": 503,
+      "id": 4048478,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
       "x": 2724,
       "y": 511,
       "id": 4035986,
@@ -57681,6 +57702,13 @@
     },
     {
       "level": 3,
+      "x": 1087,
+      "y": 697,
+      "id": 4048471,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
       "x": 1272,
       "y": 688,
       "id": 4046694,
@@ -57838,6 +57866,13 @@
       "x": 2280,
       "y": 663,
       "id": 4046666,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 2251,
+      "y": 637,
+      "id": 4048480,
       "groupId": 10000002
     },
     {
@@ -58324,6 +58359,13 @@
       "groupId": 10000002
     },
     {
+      "level": 1,
+      "x": 2488,
+      "y": 729,
+      "id": 4048490,
+      "groupId": 10000002
+    },
+    {
       "level": 4,
       "x": 2555,
       "y": 757,
@@ -58450,13 +58492,6 @@
       "groupId": 10000002
     },
     {
-      "level": 4,
-      "x": 10,
-      "y": 893,
-      "id": 4046193,
-      "groupId": 10000002
-    },
-    {
       "level": 1,
       "x": 7,
       "y": 850,
@@ -58479,6 +58514,13 @@
     },
     {
       "level": 2,
+      "x": 148,
+      "y": 813,
+      "id": 4048503,
+      "groupId": 10000002
+    },
+    {
+      "level": 2,
       "x": 219,
       "y": 870,
       "id": 4047386,
@@ -58489,6 +58531,13 @@
       "x": 279,
       "y": 893,
       "id": 4048194,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 217,
+      "y": 879,
+      "id": 4048470,
       "groupId": 10000002
     },
     {
@@ -58531,13 +58580,6 @@
       "x": 745,
       "y": 883,
       "id": 4044652,
-      "groupId": 10000002
-    },
-    {
-      "level": 2,
-      "x": 772,
-      "y": 852,
-      "id": 4046149,
       "groupId": 10000002
     },
     {
@@ -58650,6 +58692,13 @@
       "x": 1437,
       "y": 828,
       "id": 4043539,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
+      "x": 1454,
+      "y": 852,
+      "id": 4048493,
       "groupId": 10000002
     },
     {
@@ -58898,13 +58947,6 @@
       "groupId": 10000002
     },
     {
-      "level": 4,
-      "x": 3283,
-      "y": 878,
-      "id": 4045755,
-      "groupId": 10000002
-    },
-    {
       "level": 3,
       "x": 3235,
       "y": 851,
@@ -59049,13 +59091,6 @@
       "x": 1564,
       "y": 959,
       "id": 4043395,
-      "groupId": 10000002
-    },
-    {
-      "level": 2,
-      "x": 1573,
-      "y": 971,
-      "id": 4045709,
       "groupId": 10000002
     },
     {
@@ -59234,10 +59269,10 @@
       "groupId": 10000002
     },
     {
-      "level": 1,
-      "x": 3281,
-      "y": 968,
-      "id": 4045994,
+      "level": 2,
+      "x": 3125,
+      "y": 943,
+      "id": 4048472,
       "groupId": 10000002
     },
     {
@@ -59543,13 +59578,6 @@
     },
     {
       "level": 4,
-      "x": 1988,
-      "y": 1098,
-      "id": 4045707,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
       "x": 1949,
       "y": 1074,
       "id": 4046602,
@@ -59784,13 +59812,6 @@
       "x": 601,
       "y": 1170,
       "id": 4047970,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
-      "x": 770,
-      "y": 1107,
-      "id": 4045600,
       "groupId": 10000002
     },
     {
@@ -60137,6 +60158,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 2704,
+      "y": 1183,
+      "id": 4048500,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 2863,
       "y": 1136,
@@ -60169,6 +60197,13 @@
       "x": 2941,
       "y": 1105,
       "id": 4046135,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
+      "x": 2911,
+      "y": 1172,
+      "id": 4048505,
       "groupId": 10000002
     },
     {
@@ -60277,17 +60312,17 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 380,
+      "y": 1288,
+      "id": 4048487,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 486,
       "y": 1258,
       "id": 4047585,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 561,
-      "y": 1207,
-      "id": 4046513,
       "groupId": 10000002
     },
     {
@@ -60974,6 +61009,13 @@
       "x": 1600,
       "y": 1347,
       "id": 4047660,
+      "groupId": 10000002
+    },
+    {
+      "level": 2,
+      "x": 1650,
+      "y": 1348,
+      "id": 4048488,
       "groupId": 10000002
     },
     {
@@ -61824,6 +61866,13 @@
       "groupId": 10000002
     },
     {
+      "level": 1,
+      "x": 936,
+      "y": 1555,
+      "id": 4048491,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 1088,
       "y": 1517,
@@ -61863,13 +61912,6 @@
       "x": 1234,
       "y": 1585,
       "id": 4046338,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 1292,
-      "y": 1534,
-      "id": 4046429,
       "groupId": 10000002
     },
     {
@@ -62255,6 +62297,13 @@
       "x": 607,
       "y": 1626,
       "id": 4047676,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
+      "x": 641,
+      "y": 1694,
+      "id": 4048492,
       "groupId": 10000002
     },
     {
@@ -63028,13 +63077,6 @@
       "groupId": 10000002
     },
     {
-      "level": 1,
-      "x": 827,
-      "y": 1878,
-      "id": 4045705,
-      "groupId": 10000002
-    },
-    {
       "level": 2,
       "x": 1075,
       "y": 1837,
@@ -63371,13 +63413,6 @@
       "groupId": 10000002
     },
     {
-      "level": 1,
-      "x": 28,
-      "y": 1902,
-      "id": 4046009,
-      "groupId": 10000002
-    },
-    {
       "level": 4,
       "x": 87,
       "y": 1976,
@@ -63560,6 +63595,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 1501,
+      "y": 1938,
+      "id": 4048482,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 1684,
       "y": 1962,
@@ -63634,6 +63676,13 @@
       "x": 2262,
       "y": 1977,
       "id": 4047114,
+      "groupId": 10000002
+    },
+    {
+      "level": 2,
+      "x": 2284,
+      "y": 1934,
+      "id": 4048499,
       "groupId": 10000002
     },
     {
@@ -64638,13 +64687,6 @@
       "groupId": 10000002
     },
     {
-      "level": 2,
-      "x": 540,
-      "y": 2245,
-      "id": 4025775,
-      "groupId": 10000002
-    },
-    {
       "level": 1,
       "x": 543,
       "y": 2254,
@@ -64869,6 +64911,13 @@
       "groupId": 10000002
     },
     {
+      "level": 1,
+      "x": 1817,
+      "y": 2263,
+      "id": 4048484,
+      "groupId": 10000002
+    },
+    {
       "level": 4,
       "x": 1906,
       "y": 2277,
@@ -64880,13 +64929,6 @@
       "x": 1921,
       "y": 2208,
       "id": 4043863,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
-      "x": 1975,
-      "y": 2214,
-      "id": 4045153,
       "groupId": 10000002
     },
     {
@@ -66164,6 +66206,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 1267,
+      "y": 2555,
+      "id": 4048481,
+      "groupId": 10000002
+    },
+    {
       "level": 1,
       "x": 1318,
       "y": 2515,
@@ -67235,6 +67284,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 2595,
+      "y": 2747,
+      "id": 4048475,
+      "groupId": 10000002
+    },
+    {
       "level": 2,
       "x": 2629,
       "y": 2752,
@@ -67561,13 +67617,6 @@
       "x": 1348,
       "y": 2840,
       "id": 4047258,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 1407,
-      "y": 2870,
-      "id": 4045228,
       "groupId": 10000002
     },
     {
@@ -67960,13 +68009,6 @@
       "x": 1168,
       "y": 2942,
       "id": 4044797,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
-      "x": 1180,
-      "y": 2960,
-      "id": 4045842,
       "groupId": 10000002
     },
     {
@@ -68887,13 +68929,6 @@
       "groupId": 10000002
     },
     {
-      "level": 2,
-      "x": 956,
-      "y": 3172,
-      "id": 4045687,
-      "groupId": 10000002
-    },
-    {
       "level": 4,
       "x": 961,
       "y": 3181,
@@ -69367,6 +69402,13 @@
       "x": 899,
       "y": 3217,
       "id": 4046631,
+      "groupId": 10000002
+    },
+    {
+      "level": 2,
+      "x": 866,
+      "y": 3230,
+      "id": 4048476,
       "groupId": 10000002
     },
     {
@@ -70302,6 +70344,13 @@
     },
     {
       "level": 2,
+      "x": 462,
+      "y": 3462,
+      "id": 4048504,
+      "groupId": 10000002
+    },
+    {
+      "level": 2,
       "x": 729,
       "y": 3474,
       "id": 4047673,
@@ -70606,13 +70655,6 @@
       "x": 3286,
       "y": 3466,
       "id": 4047788,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 3373,
-      "y": 3485,
-      "id": 4046189,
       "groupId": 10000002
     },
     {
@@ -71639,13 +71681,6 @@
     },
     {
       "level": 3,
-      "x": 3225,
-      "y": 3682,
-      "id": 4046080,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
       "x": 73,
       "y": 3737,
       "id": 4046488,
@@ -72261,13 +72296,6 @@
       "groupId": 10000002
     },
     {
-      "level": 1,
-      "x": 219,
-      "y": 3863,
-      "id": 4045814,
-      "groupId": 10000002
-    },
-    {
       "level": 2,
       "x": 276,
       "y": 3894,
@@ -72836,13 +72864,6 @@
     },
     {
       "level": 2,
-      "x": 1163,
-      "y": 3920,
-      "id": 4046036,
-      "groupId": 10000002
-    },
-    {
-      "level": 2,
       "x": 1140,
       "y": 3903,
       "id": 4046759,
@@ -73308,13 +73329,6 @@
       "x": 1161,
       "y": 4020,
       "id": 4038499,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 1137,
-      "y": 4005,
-      "id": 4044386,
       "groupId": 10000002
     },
     {
@@ -74172,13 +74186,6 @@
       "groupId": 10000002
     },
     {
-      "level": 3,
-      "x": 561,
-      "y": 4288,
-      "id": 4045656,
-      "groupId": 10000002
-    },
-    {
       "level": 2,
       "x": 664,
       "y": 4287,
@@ -74691,6 +74698,13 @@
     },
     {
       "level": 3,
+      "x": 694,
+      "y": 4383,
+      "id": 4048477,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
       "x": 798,
       "y": 4374,
       "id": 4042255,
@@ -74802,13 +74816,6 @@
       "groupId": 10000002
     },
     {
-      "level": 1,
-      "x": 1310,
-      "y": 4331,
-      "id": 4045648,
-      "groupId": 10000002
-    },
-    {
       "level": 2,
       "x": 1431,
       "y": 4363,
@@ -74897,13 +74904,6 @@
       "x": 1876,
       "y": 4356,
       "id": 4043021,
-      "groupId": 10000002
-    },
-    {
-      "level": 2,
-      "x": 1875,
-      "y": 4383,
-      "id": 4046236,
       "groupId": 10000002
     },
     {
@@ -75156,13 +75156,6 @@
       "x": 294,
       "y": 4452,
       "id": 4047489,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 305,
-      "y": 4479,
-      "id": 4045921,
       "groupId": 10000002
     },
     {
@@ -75838,13 +75831,6 @@
       "groupId": 10000002
     },
     {
-      "level": 3,
-      "x": 1829,
-      "y": 4550,
-      "id": 4036428,
-      "groupId": 10000002
-    },
-    {
       "level": 4,
       "x": 1832,
       "y": 4502,
@@ -76363,6 +76349,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 2361,
+      "y": 4666,
+      "id": 4048474,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 2494,
       "y": 4694,
@@ -76479,6 +76472,13 @@
       "x": 2983,
       "y": 4619,
       "id": 4048215,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 2987,
+      "y": 4630,
+      "id": 4048473,
       "groupId": 10000002
     },
     {
@@ -76958,13 +76958,6 @@
       "groupId": 10000002
     },
     {
-      "level": 3,
-      "x": 3174,
-      "y": 4715,
-      "id": 4045925,
-      "groupId": 10000002
-    },
-    {
       "level": 2,
       "x": 3199,
       "y": 4797,
@@ -76987,6 +76980,13 @@
     },
     {
       "level": 4,
+      "x": 3213,
+      "y": 4707,
+      "id": 4048501,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
       "x": 69,
       "y": 4807,
       "id": 4038835,
@@ -76997,6 +76997,13 @@
       "x": 48,
       "y": 4888,
       "id": 4046798,
+      "groupId": 10000002
+    },
+    {
+      "level": 1,
+      "x": 18,
+      "y": 4808,
+      "id": 4048497,
       "groupId": 10000002
     },
     {
@@ -77144,6 +77151,13 @@
       "x": 1265,
       "y": 4878,
       "id": 4046985,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 1279,
+      "y": 4883,
+      "id": 4048485,
       "groupId": 10000002
     },
     {
@@ -77442,13 +77456,6 @@
     },
     {
       "level": 3,
-      "x": 766,
-      "y": 4972,
-      "id": 4032701,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
       "x": 754,
       "y": 4947,
       "id": 4043273,
@@ -77480,6 +77487,13 @@
       "x": 899,
       "y": 4963,
       "id": 4046826,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 858,
+      "y": 4993,
+      "id": 4048496,
       "groupId": 10000002
     },
     {
@@ -77641,6 +77655,13 @@
       "x": 1678,
       "y": 4994,
       "id": 4048084,
+      "groupId": 10000002
+    },
+    {
+      "level": 1,
+      "x": 1653,
+      "y": 4949,
+      "id": 4048498,
       "groupId": 10000002
     },
     {
@@ -77893,13 +77914,6 @@
       "x": 3312,
       "y": 4906,
       "id": 4042696,
-      "groupId": 10000002
-    },
-    {
-      "level": 1,
-      "x": 3310,
-      "y": 4926,
-      "id": 4046475,
       "groupId": 10000002
     },
     {
@@ -78873,13 +78887,6 @@
       "x": 2521,
       "y": 5191,
       "id": 4039785,
-      "groupId": 10000002
-    },
-    {
-      "level": 1,
-      "x": 2558,
-      "y": 5100,
-      "id": 4045896,
       "groupId": 10000002
     },
     {
@@ -80305,13 +80312,6 @@
     },
     {
       "level": 4,
-      "x": 3109,
-      "y": 5456,
-      "id": 4046458,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
       "x": 3134,
       "y": 5404,
       "id": 4046677,
@@ -80864,13 +80864,6 @@
       "groupId": 10000002
     },
     {
-      "level": 4,
-      "x": 319,
-      "y": 5656,
-      "id": 4045958,
-      "groupId": 10000002
-    },
-    {
       "level": 3,
       "x": 312,
       "y": 5660,
@@ -80882,6 +80875,13 @@
       "x": 399,
       "y": 5626,
       "id": 4046891,
+      "groupId": 10000002
+    },
+    {
+      "level": 4,
+      "x": 300,
+      "y": 5674,
+      "id": 4048479,
       "groupId": 10000002
     },
     {
@@ -81620,6 +81620,13 @@
       "groupId": 10000002
     },
     {
+      "level": 1,
+      "x": 1988,
+      "y": 5757,
+      "id": 4048483,
+      "groupId": 10000002
+    },
+    {
       "level": 4,
       "x": 2020,
       "y": 5769,
@@ -81823,13 +81830,6 @@
       "groupId": 10000002
     },
     {
-      "level": 4,
-      "x": 74,
-      "y": 5874,
-      "id": 4046359,
-      "groupId": 10000002
-    },
-    {
       "level": 3,
       "x": 322,
       "y": 5893,
@@ -81897,13 +81897,6 @@
       "x": 732,
       "y": 5836,
       "id": 4046280,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
-      "x": 720,
-      "y": 5872,
-      "id": 4046414,
       "groupId": 10000002
     },
     {
@@ -82356,6 +82349,13 @@
     },
     {
       "level": 3,
+      "x": 143,
+      "y": 5984,
+      "id": 4048495,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
       "x": 255,
       "y": 5965,
       "id": 4047699,
@@ -82684,6 +82684,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 2025,
+      "y": 5937,
+      "id": 4048469,
+      "groupId": 10000002
+    },
+    {
       "level": 3,
       "x": 2151,
       "y": 5988,
@@ -82737,6 +82744,13 @@
       "x": 2501,
       "y": 5948,
       "id": 4046932,
+      "groupId": 10000002
+    },
+    {
+      "level": 3,
+      "x": 2520,
+      "y": 5986,
+      "id": 4048468,
       "groupId": 10000002
     },
     {
@@ -82849,13 +82863,6 @@
       "x": 61,
       "y": 6050,
       "id": 4041823,
-      "groupId": 10000002
-    },
-    {
-      "level": 3,
-      "x": 69,
-      "y": 6053,
-      "id": 4045664,
       "groupId": 10000002
     },
     {
@@ -83262,13 +83269,6 @@
       "x": 3034,
       "y": 6092,
       "id": 4038593,
-      "groupId": 10000002
-    },
-    {
-      "level": 4,
-      "x": 3043,
-      "y": 6075,
-      "id": 4045629,
       "groupId": 10000002
     },
     {
@@ -83951,6 +83951,13 @@
       "groupId": 10000002
     },
     {
+      "level": 4,
+      "x": 3249,
+      "y": 6130,
+      "id": 4048502,
+      "groupId": 10000002
+    },
+    {
       "level": 2,
       "x": 3368,
       "y": 6112,
@@ -83976,136 +83983,80 @@
     {
       "troopId": 8,
       "tribeId": 100025,
-      "x": 1613,
-      "y": 4809,
+      "x": 1581,
+      "y": 4926,
       "id": 249,
       "groupId": 4000950
     },
     {
-      "troopId": 5,
-      "tribeId": 100205,
-      "x": 2301,
-      "y": 2795,
-      "id": 72,
-      "groupId": 4001408
-    },
-    {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 1773,
-      "y": 562,
+      "x": 1835,
+      "y": 687,
       "id": 862,
       "groupId": 205176
     },
     {
-      "troopId": 5,
-      "tribeId": 100061,
-      "x": 1720,
-      "y": 651,
-      "id": 859,
-      "groupId": 205176
+      "troopId": 3,
+      "tribeId": 100054,
+      "x": 1125,
+      "y": 2946,
+      "id": 11,
+      "groupId": 4001605
     },
     {
-      "troopId": 7,
-      "tribeId": 100061,
-      "x": 1875,
-      "y": 690,
-      "id": 78,
-      "groupId": 4001203
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2402,
+      "y": 2421,
+      "id": 102,
+      "groupId": 206770
     },
     {
       "troopId": 2,
       "tribeId": 100190,
-      "x": 2694,
+      "x": 2652,
       "y": 3435,
       "id": 129,
       "groupId": 204986
     },
     {
       "troopId": 2,
-      "tribeId": 0,
-      "x": 2044,
-      "y": 663,
-      "id": 9,
-      "groupId": 4001718
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2452,
-      "y": 2521,
-      "id": 102,
-      "groupId": 206770
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100249,
-      "x": 1488,
-      "y": 759,
-      "id": 774,
-      "groupId": 206228
-    },
-    {
-      "troopId": 2,
-      "tribeId": 1000066,
-      "x": 1516,
-      "y": 776,
+      "tribeId": 100134,
+      "x": 1927,
+      "y": 1484,
       "id": 641,
-      "groupId": 4000079
+      "groupId": 204024
+    },
+    {
+      "troopId": 7,
+      "tribeId": 100205,
+      "x": 2039,
+      "y": 1989,
+      "id": 78,
+      "groupId": 4001125
     },
     {
       "troopId": 4,
       "tribeId": 100134,
-      "x": 1664,
+      "x": 1724,
       "y": 5230,
       "id": 101,
       "groupId": 4001195
     },
     {
       "troopId": 2,
-      "tribeId": 100249,
-      "x": 1447,
-      "y": 895,
-      "id": 480,
-      "groupId": 4000182
-    },
-    {
-      "troopId": 2,
-      "tribeId": 1000066,
-      "x": 1455,
-      "y": 860,
-      "id": 1122,
-      "groupId": 205353
-    },
-    {
-      "troopId": 19,
-      "tribeId": 0,
-      "x": 2337,
-      "y": 1324,
-      "id": 169,
-      "groupId": 4000389
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1825,
-      "y": 854,
-      "id": 60,
-      "groupId": 4000363
-    },
-    {
-      "troopId": 2,
       "tribeId": 100205,
-      "x": 2418,
-      "y": 2219,
+      "x": 2457,
+      "y": 2296,
       "id": 320,
       "groupId": 4000287
     },
     {
       "troopId": 2,
       "tribeId": 100025,
-      "x": 1573,
-      "y": 5343,
+      "x": 1581,
+      "y": 5176,
       "id": 251,
       "groupId": 4000950
     },
@@ -84119,11 +84070,11 @@
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
+      "tribeId": 100134,
+      "x": 948,
+      "y": 4270,
       "id": 281,
-      "groupId": 205715
+      "groupId": 4000426
     },
     {
       "troopId": 2,
@@ -84167,33 +84118,25 @@
     },
     {
       "troopId": 2,
-      "tribeId": 100328,
-      "x": 1476,
-      "y": 960,
-      "id": 1098,
-      "groupId": 203886
+      "tribeId": 1000066,
+      "x": 1403,
+      "y": 964,
+      "id": 1122,
+      "groupId": 205353
     },
     {
-      "troopId": 3,
-      "tribeId": 100002,
-      "x": 1800,
-      "y": 2387,
-      "id": 587,
-      "groupId": 201526
-    },
-    {
-      "troopId": 21,
-      "tribeId": 0,
-      "x": 1211,
-      "y": 1096,
-      "id": 171,
-      "groupId": 4000389
+      "troopId": 2,
+      "tribeId": 100249,
+      "x": 1432,
+      "y": 978,
+      "id": 480,
+      "groupId": 4000182
     },
     {
       "troopId": 4,
       "tribeId": 100061,
-      "x": 1763,
-      "y": 1097,
+      "x": 1726,
+      "y": 917,
       "id": 125,
       "groupId": 4000719
     },
@@ -84201,182 +84144,150 @@
       "troopId": 3,
       "tribeId": 100061,
       "x": 1853,
-      "y": 1036,
+      "y": 906,
       "id": 35,
       "groupId": 4001525
     },
     {
+      "troopId": 19,
+      "tribeId": 0,
+      "x": 2385,
+      "y": 1420,
+      "id": 169,
+      "groupId": 4000389
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100328,
+      "x": 1499,
+      "y": 1006,
+      "id": 1098,
+      "groupId": 203886
+    },
+    {
       "troopId": 3,
-      "tribeId": 100134,
-      "x": 1384,
-      "y": 1193,
-      "id": 100,
-      "groupId": 4001195
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100134,
-      "x": 1537,
-      "y": 1155,
-      "id": 1109,
-      "groupId": 201711
-    },
-    {
-      "troopId": 7,
-      "tribeId": 100025,
-      "x": 1073,
-      "y": 4046,
-      "id": 159,
-      "groupId": 4001369
+      "tribeId": 100002,
+      "x": 1788,
+      "y": 2531,
+      "id": 587,
+      "groupId": 201526
     },
     {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
-      "id": 282,
-      "groupId": 4000335
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100048,
-      "x": 1760,
-      "y": 2440,
-      "id": 415,
-      "groupId": 201053
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1826,
-      "y": 1146,
+      "x": 1853,
+      "y": 1070,
       "id": 34,
       "groupId": 4001525
     },
     {
-      "troopId": 4,
-      "tribeId": 100025,
-      "x": 997,
-      "y": 4053,
-      "id": 156,
-      "groupId": 4001369
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 2171,
-      "y": 1158,
-      "id": 177,
-      "groupId": 206014
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100375,
-      "x": 2261,
-      "y": 2742,
-      "id": 172,
-      "groupId": 201262
-    },
-    {
-      "troopId": 23,
-      "tribeId": 0,
-      "x": 1259,
-      "y": 1265,
-      "id": 173,
-      "groupId": 4000389
-    },
-    {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2536,
-      "y": 2663,
+      "x": 2566,
+      "y": 2723,
       "id": 74,
       "groupId": 4001408
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100375,
-      "x": 2341,
-      "y": 4416,
-      "id": 323,
-      "groupId": 205872
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100134,
-      "x": 1666,
-      "y": 1362,
-      "id": 560,
-      "groupId": 202407
     },
     {
       "troopId": 2,
       "tribeId": 100190,
       "x": 1794,
-      "y": 1350,
+      "y": 1126,
       "id": 109,
       "groupId": 4001058
     },
     {
       "troopId": 3,
+      "tribeId": 100375,
+      "x": 2341,
+      "y": 4316,
+      "id": 323,
+      "groupId": 205872
+    },
+    {
+      "troopId": 3,
       "tribeId": 100134,
-      "x": 1933,
-      "y": 1338,
+      "x": 1908,
+      "y": 1174,
       "id": 146,
       "groupId": 4001172
     },
     {
-      "troopId": 7,
-      "tribeId": 100205,
-      "x": 2146,
-      "y": 1891,
-      "id": 546,
-      "groupId": 204454
-    },
-    {
       "troopId": 3,
-      "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
-      "id": 311,
-      "groupId": 206175
+      "tribeId": 100134,
+      "x": 1354,
+      "y": 1253,
+      "id": 100,
+      "groupId": 4001195
     },
     {
-      "troopId": 8,
-      "tribeId": 100025,
-      "x": 1046,
-      "y": 4001,
-      "id": 160,
-      "groupId": 4001369
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 1691,
+      "y": 1266,
+      "id": 70,
+      "groupId": 4000716
     },
     {
-      "troopId": 11,
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1722,
+      "y": 1260,
+      "id": 560,
+      "groupId": 202407
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100054,
+      "x": 1772,
+      "y": 4110,
+      "id": 319,
+      "groupId": 201014
+    },
+    {
+      "troopId": 23,
       "tribeId": 0,
-      "x": 2319,
-      "y": 1361,
-      "id": 161,
+      "x": 1232,
+      "y": 1395,
+      "id": 173,
       "groupId": 4000389
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 1899,
-      "y": 3756,
-      "id": 168,
-      "groupId": 4001001
+      "tribeId": 100375,
+      "x": 2206,
+      "y": 2633,
+      "id": 172,
+      "groupId": 201262
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100134,
+      "x": 1537,
+      "y": 1321,
+      "id": 1109,
+      "groupId": 201711
+    },
+    {
+      "troopId": 7,
+      "tribeId": 0,
+      "x": 1275,
+      "y": 2256,
+      "id": 156,
+      "groupId": 4000389
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 1179,
-      "y": 1490,
-      "id": 739,
-      "groupId": 203726
+      "tribeId": 100190,
+      "x": 2242,
+      "y": 1301,
+      "id": 177,
+      "groupId": 206014
     },
     {
       "troopId": 3,
       "tribeId": 100167,
-      "x": 1370,
+      "x": 1430,
       "y": 1419,
       "id": 17,
       "groupId": 4001387
@@ -84384,8 +84295,8 @@
     {
       "troopId": 2,
       "tribeId": 100025,
-      "x": 1226,
-      "y": 5068,
+      "x": 1203,
+      "y": 5023,
       "id": 183,
       "groupId": 4000650
     },
@@ -84409,14 +84320,14 @@
       "troopId": 2,
       "tribeId": 100216,
       "x": 2694,
-      "y": 3071,
+      "y": 2873,
       "id": 75,
       "groupId": 4001233
     },
     {
       "troopId": 3,
       "tribeId": 100216,
-      "x": 2647,
+      "x": 2548,
       "y": 3254,
       "id": 317,
       "groupId": 206530
@@ -84440,32 +84351,32 @@
     {
       "troopId": 3,
       "tribeId": 100190,
-      "x": 2121,
+      "x": 2221,
       "y": 3511,
       "id": 404,
       "groupId": 202809
     },
     {
-      "troopId": 3,
-      "tribeId": 100002,
-      "x": 2363,
-      "y": 4252,
+      "troopId": 5,
+      "tribeId": 100061,
+      "x": 1661,
+      "y": 1476,
       "id": 667,
-      "groupId": 4000171
+      "groupId": 201122
     },
     {
       "troopId": 3,
       "tribeId": 100061,
-      "x": 1043,
-      "y": 3057,
+      "x": 1102,
+      "y": 3174,
       "id": 631,
       "groupId": 206244
     },
     {
       "troopId": 4,
       "tribeId": 100054,
-      "x": 1620,
-      "y": 4029,
+      "x": 1658,
+      "y": 4104,
       "id": 76,
       "groupId": 4000723
     },
@@ -84497,7 +84408,7 @@
       "troopId": 2,
       "tribeId": 100061,
       "x": 2027,
-      "y": 4182,
+      "y": 3848,
       "id": 121,
       "groupId": 4000453
     },
@@ -84512,7 +84423,7 @@
     {
       "troopId": 2,
       "tribeId": 100058,
-      "x": 2117,
+      "x": 1917,
       "y": 4990,
       "id": 145,
       "groupId": 4001078
@@ -84534,20 +84445,20 @@
       "groupId": 4000775
     },
     {
-      "troopId": 4,
-      "tribeId": 100205,
-      "x": 2304,
-      "y": 2790,
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 945,
+      "y": 4265,
       "id": 73,
-      "groupId": 4001408
+      "groupId": 4000834
     },
     {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1842,
-      "y": 3024,
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 1661,
+      "y": 1476,
       "id": 382,
-      "groupId": 206606
+      "groupId": 206194
     },
     {
       "troopId": 2,
@@ -84582,34 +84493,42 @@
       "groupId": 200407
     },
     {
-      "troopId": 2,
-      "tribeId": 100054,
-      "x": 1691,
-      "y": 1416,
-      "id": 70,
-      "groupId": 4000716
+      "troopId": 4,
+      "tribeId": 100061,
+      "x": 1661,
+      "y": 1476,
+      "id": 882,
+      "groupId": 200994
     },
     {
       "troopId": 4,
       "tribeId": 100375,
       "x": 2564,
-      "y": 4170,
+      "y": 4070,
       "id": 322,
       "groupId": 205872
     },
     {
-      "troopId": 4,
-      "tribeId": 100054,
-      "x": 1687,
-      "y": 4110,
-      "id": 319,
-      "groupId": 201014
+      "troopId": 2,
+      "tribeId": 100002,
+      "x": 1783,
+      "y": 2970,
+      "id": 642,
+      "groupId": 201403
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1919,
+      "y": 1404,
+      "id": 204,
+      "groupId": 4000691
     },
     {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 1618,
-      "y": 4283,
+      "x": 1641,
+      "y": 4237,
       "id": 278,
       "groupId": 202986
     },
@@ -84632,8 +84551,8 @@
     {
       "troopId": 8,
       "tribeId": 100205,
-      "x": 2268,
-      "y": 2755,
+      "x": 2302,
+      "y": 2823,
       "id": 247,
       "groupId": 4000708
     },
@@ -84641,7 +84560,7 @@
       "troopId": 4,
       "tribeId": 100205,
       "x": 2286,
-      "y": 2269,
+      "y": 2421,
       "id": 321,
       "groupId": 4000287
     },
@@ -84654,170 +84573,242 @@
       "groupId": 203012
     },
     {
-      "troopId": 12,
-      "tribeId": 0,
-      "x": 1443,
-      "y": 1584,
-      "id": 162,
-      "groupId": 4000389
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
+      "id": 311,
+      "groupId": 206175
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
+      "id": 168,
+      "groupId": 4001001
+    },
+    {
+      "troopId": 8,
+      "tribeId": 100025,
+      "x": 1015,
+      "y": 4064,
+      "id": 160,
+      "groupId": 4001369
+    },
+    {
+      "troopId": 7,
+      "tribeId": 100205,
+      "x": 2399,
+      "y": 2368,
+      "id": 151,
+      "groupId": 4000332
     },
     {
       "troopId": 4,
       "tribeId": 100061,
-      "x": 1661,
-      "y": 1510,
-      "id": 882,
-      "groupId": 200994
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100061,
-      "x": 1933,
-      "y": 1545,
+      "x": 1942,
+      "y": 1551,
       "id": 283,
       "groupId": 202986
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 1952,
-      "y": 1580,
-      "id": 413,
-      "groupId": 202787
+      "tribeId": 0,
+      "x": 2030,
+      "y": 1506,
+      "id": 340,
+      "groupId": 205090
     },
     {
-      "troopId": 8,
+      "troopId": 7,
       "tribeId": 100205,
-      "x": 2286,
-      "y": 2163,
-      "id": 545,
+      "x": 2146,
+      "y": 2051,
+      "id": 546,
       "groupId": 204454
     },
     {
       "troopId": 5,
       "tribeId": 100190,
       "x": 1783,
-      "y": 3720,
+      "y": 4080,
       "id": 260,
       "groupId": 4000157
     },
     {
+      "troopId": 9,
+      "tribeId": 100205,
+      "x": 2134,
+      "y": 1566,
+      "id": 274,
+      "groupId": 206692
+    },
+    {
+      "troopId": 11,
+      "tribeId": 0,
+      "x": 2319,
+      "y": 1553,
+      "id": 161,
+      "groupId": 4000389
+    },
+    {
       "troopId": 5,
       "tribeId": 100054,
-      "x": 2429,
+      "x": 2504,
       "y": 1527,
       "id": 30,
       "groupId": 4000960
     },
     {
-      "troopId": 5,
+      "troopId": 2,
       "tribeId": 100061,
-      "x": 1659,
-      "y": 1660,
-      "id": 279,
-      "groupId": 4000335
-    },
-    {
-      "troopId": 7,
-      "tribeId": 100205,
-      "x": 2357,
-      "y": 2284,
-      "id": 151,
-      "groupId": 4000332
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100061,
-      "x": 1885,
-      "y": 1689,
-      "id": 519,
-      "groupId": 201683
+      "x": 1179,
+      "y": 1698,
+      "id": 739,
+      "groupId": 203726
     },
     {
       "troopId": 10,
       "tribeId": 100002,
-      "x": 2310,
-      "y": 4019,
+      "x": 2344,
+      "y": 4087,
       "id": 665,
       "groupId": 4000171
     },
     {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 1924,
-      "y": 1612,
-      "id": 402,
-      "groupId": 206100
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100061,
-      "x": 1915,
-      "y": 1629,
-      "id": 517,
-      "groupId": 201683
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100061,
-      "x": 1919,
-      "y": 1621,
-      "id": 516,
-      "groupId": 201683
-    },
-    {
-      "troopId": 9,
-      "tribeId": 100205,
-      "x": 2159,
-      "y": 1616,
-      "id": 274,
-      "groupId": 206692
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100061,
-      "x": 1499,
-      "y": 1799,
-      "id": 414,
+      "x": 1898,
+      "y": 1687,
+      "id": 413,
       "groupId": 202787
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100061,
-      "x": 1854,
-      "y": 1767,
-      "id": 881,
-      "groupId": 200994
     },
     {
       "troopId": 5,
       "tribeId": 100061,
-      "x": 1846,
-      "y": 1784,
+      "x": 1897,
+      "y": 1682,
       "id": 883,
       "groupId": 200994
     },
     {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 1906,
+      "y": 1663,
+      "id": 881,
+      "groupId": 200994
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2093,
+      "y": 1688,
+      "id": 426,
+      "groupId": 203524
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2151,
+      "y": 1684,
+      "id": 648,
+      "groupId": 204267
+    },
+    {
+      "troopId": 8,
+      "tribeId": 100205,
+      "x": 2286,
+      "y": 2323,
+      "id": 545,
+      "groupId": 204454
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2226,
+      "y": 1826,
+      "id": 181,
+      "groupId": 4000768
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 1011,
+      "y": 1762,
+      "id": 410,
+      "groupId": 205503
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 1005,
+      "y": 1762,
+      "id": 242,
+      "groupId": 206676
+    },
+    {
+      "troopId": 12,
+      "tribeId": 0,
+      "x": 1443,
+      "y": 1762,
+      "id": 162,
+      "groupId": 4000389
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100375,
+      "x": 1524,
+      "y": 1796,
+      "id": 21,
+      "groupId": 4001647
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100061,
+      "x": 1689,
+      "y": 1720,
+      "id": 279,
+      "groupId": 4000335
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100375,
+      "x": 1604,
+      "y": 1790,
+      "id": 32,
+      "groupId": 206704
+    },
+    {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 1946,
-      "y": 1729,
-      "id": 854,
-      "groupId": 200407
+      "x": 1873,
+      "y": 1714,
+      "id": 402,
+      "groupId": 206100
     },
     {
       "troopId": 3,
       "tribeId": 100061,
-      "x": 1948,
-      "y": 1705,
-      "id": 836,
-      "groupId": 201135
+      "x": 1862,
+      "y": 1736,
+      "id": 516,
+      "groupId": 201683
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100061,
+      "x": 1847,
+      "y": 1766,
+      "id": 517,
+      "groupId": 201683
     },
     {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 1850,
-      "y": 2648,
+      "x": 1810,
+      "y": 2498,
       "id": 277,
       "groupId": 4000209
     },
@@ -84830,12 +84821,116 @@
       "groupId": 203701
     },
     {
-      "troopId": 2,
+      "troopId": 8,
       "tribeId": 100205,
-      "x": 2118,
-      "y": 1739,
-      "id": 426,
-      "groupId": 203524
+      "x": 2035,
+      "y": 1763,
+      "id": 445,
+      "groupId": 202952
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2076,
+      "y": 2520,
+      "id": 446,
+      "groupId": 201271
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100205,
+      "x": 2191,
+      "y": 1715,
+      "id": 850,
+      "groupId": 204056
+    },
+    {
+      "troopId": 11,
+      "tribeId": 100205,
+      "x": 2191,
+      "y": 1715,
+      "id": 851,
+      "groupId": 204056
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100213,
+      "x": 432,
+      "y": 3339,
+      "id": 312,
+      "groupId": 206820
+    },
+    {
+      "troopId": 9,
+      "tribeId": 100205,
+      "x": 2268,
+      "y": 1782,
+      "id": 259,
+      "groupId": 4000105
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 1168,
+      "y": 1830,
+      "id": 740,
+      "groupId": 203726
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 1451,
+      "y": 1896,
+      "id": 414,
+      "groupId": 202787
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100061,
+      "x": 1707,
+      "y": 1821,
+      "id": 519,
+      "groupId": 201683
+    },
+    {
+      "troopId": 7,
+      "tribeId": 100002,
+      "x": 1898,
+      "y": 1896,
+      "id": 652,
+      "groupId": 206658
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 1946,
+      "y": 1877,
+      "id": 854,
+      "groupId": 200407
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1906,
+      "y": 1863,
+      "id": 189,
+      "groupId": 4001186
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2154,
+      "y": 1846,
+      "id": 267,
+      "groupId": 203417
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2256,
+      "y": 1826,
+      "id": 40,
+      "groupId": 4001494
     },
     {
       "troopId": 2,
@@ -84846,291 +84941,163 @@
       "groupId": 206175
     },
     {
-      "troopId": 9,
-      "tribeId": 100205,
-      "x": 2243,
-      "y": 1732,
-      "id": 259,
-      "groupId": 4000105
-    },
-    {
       "troopId": 3,
       "tribeId": 100190,
-      "x": 1306,
-      "y": 3400,
+      "x": 1342,
+      "y": 3473,
       "id": 604,
       "groupId": 4000230
     },
     {
-      "troopId": 2,
-      "tribeId": 100054,
-      "x": 956,
-      "y": 1836,
-      "id": 179,
-      "groupId": 4000527
-    },
-    {
       "troopId": 4,
       "tribeId": 100061,
-      "x": 1185,
-      "y": 1891,
+      "x": 1208,
+      "y": 1946,
       "id": 741,
       "groupId": 203726
     },
     {
-      "troopId": 3,
-      "tribeId": 100061,
-      "x": 1173,
-      "y": 1866,
-      "id": 740,
-      "groupId": 203726
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100375,
-      "x": 1486,
-      "y": 1871,
-      "id": 21,
-      "groupId": 4001647
-    },
-    {
-      "troopId": 12,
-      "tribeId": 100205,
-      "x": 2087,
-      "y": 1866,
-      "id": 444,
-      "groupId": 202952
-    },
-    {
-      "troopId": 17,
-      "tribeId": 100205,
-      "x": 2101,
-      "y": 1894,
-      "id": 440,
-      "groupId": 202952
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 2117,
-      "y": 1805,
-      "id": 154,
-      "groupId": 4000332
-    },
-    {
-      "troopId": 18,
-      "tribeId": 100205,
-      "x": 2101,
-      "y": 1894,
-      "id": 441,
-      "groupId": 202952
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2240,
-      "y": 1852,
-      "id": 49,
-      "groupId": 4001271
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 2474,
-      "y": 1847,
-      "id": 301,
-      "groupId": 206108
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100025,
-      "x": 1013,
-      "y": 3994,
-      "id": 157,
-      "groupId": 4001369
-    },
-    {
       "troopId": 2,
       "tribeId": 100386,
-      "x": 2898,
-      "y": 2573,
+      "x": 2928,
+      "y": 2633,
       "id": 20,
       "groupId": 4001006
     },
     {
       "troopId": 3,
       "tribeId": 100216,
-      "x": 1524,
-      "y": 1905,
+      "x": 1563,
+      "y": 1982,
       "id": 535,
       "groupId": 202168
     },
     {
-      "troopId": 4,
+      "troopId": 7,
       "tribeId": 100205,
-      "x": 2184,
-      "y": 1907,
-      "id": 267,
-      "groupId": 203417
-    },
-    {
-      "troopId": 15,
-      "tribeId": 100205,
-      "x": 2108,
-      "y": 1909,
-      "id": 438,
-      "groupId": 202952
-    },
-    {
-      "troopId": 16,
-      "tribeId": 100205,
-      "x": 2130,
-      "y": 1953,
-      "id": 443,
-      "groupId": 202952
+      "x": 1779,
+      "y": 1932,
+      "id": 376,
+      "groupId": 201258
     },
     {
       "troopId": 6,
       "tribeId": 100205,
-      "x": 2130,
-      "y": 1953,
-      "id": 442,
+      "x": 2146,
+      "y": 2879,
+      "id": 541,
+      "groupId": 204454
+    },
+    {
+      "troopId": 17,
+      "tribeId": 100205,
+      "x": 2126,
+      "y": 1944,
+      "id": 440,
+      "groupId": 202952
+    },
+    {
+      "troopId": 15,
+      "tribeId": 100205,
+      "x": 2133,
+      "y": 1959,
+      "id": 438,
+      "groupId": 202952
+    },
+    {
+      "troopId": 18,
+      "tribeId": 100205,
+      "x": 2126,
+      "y": 1944,
+      "id": 441,
+      "groupId": 202952
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100205,
+      "x": 2146,
+      "y": 1917,
+      "id": 154,
+      "groupId": 4000332
+    },
+    {
+      "troopId": 12,
+      "tribeId": 100205,
+      "x": 2129,
+      "y": 1951,
+      "id": 444,
       "groupId": 202952
     },
     {
       "troopId": 2,
       "tribeId": 100205,
-      "x": 2236,
-      "y": 1913,
+      "x": 2279,
+      "y": 1998,
       "id": 305,
       "groupId": 203710
     },
     {
       "troopId": 6,
       "tribeId": 100205,
-      "x": 2236,
-      "y": 1912,
+      "x": 2278,
+      "y": 1997,
       "id": 309,
       "groupId": 203710
     },
     {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1948,
-      "y": 2613,
-      "id": 39,
-      "groupId": 4001126
-    },
-    {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2003,
-      "y": 2290,
+      "x": 2054,
+      "y": 2392,
       "id": 306,
       "groupId": 4000029
     },
     {
-      "troopId": 5,
+      "troopId": 2,
       "tribeId": 100205,
-      "x": 2255,
-      "y": 1951,
-      "id": 308,
-      "groupId": 203710
-    },
-    {
-      "troopId": 9,
-      "tribeId": 100205,
-      "x": 2482,
-      "y": 2178,
-      "id": 542,
-      "groupId": 204454
+      "x": 2287,
+      "y": 1947,
+      "id": 49,
+      "groupId": 4001271
     },
     {
       "troopId": 4,
       "tribeId": 100205,
-      "x": 2236,
-      "y": 1913,
+      "x": 2279,
+      "y": 1998,
       "id": 307,
       "groupId": 203710
     },
     {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
-      "id": 324,
-      "groupId": 202723
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2274,
-      "y": 1932,
-      "id": 180,
-      "groupId": 4000768
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2339,
-      "y": 1944,
-      "id": 647,
-      "groupId": 204267
-    },
-    {
-      "troopId": 12,
-      "tribeId": 100205,
-      "x": 2314,
+      "x": 2474,
       "y": 1953,
-      "id": 543,
-      "groupId": 204454
+      "id": 301,
+      "groupId": 206108
     },
     {
       "troopId": 3,
-      "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
-      "id": 149,
-      "groupId": 4000329
+      "tribeId": 100025,
+      "x": 1102,
+      "y": 4167,
+      "id": 500,
+      "groupId": 203948
     },
     {
       "troopId": 2,
-      "tribeId": 100054,
-      "x": 1009,
-      "y": 2066,
-      "id": 113,
-      "groupId": 4001274
+      "tribeId": 100048,
+      "x": 1608,
+      "y": 5637,
+      "id": 220,
+      "groupId": 4000750
     },
     {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1234,
-      "y": 2008,
-      "id": 227,
-      "groupId": 4000923
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1746,
-      "y": 2099,
-      "id": 386,
-      "groupId": 4000146
-    },
-    {
-      "troopId": 7,
-      "tribeId": 100002,
-      "x": 1880,
-      "y": 2030,
-      "id": 652,
-      "groupId": 206658
-    },
-    {
-      "troopId": 4,
+      "troopId": 5,
       "tribeId": 100205,
-      "x": 2646,
-      "y": 2544,
-      "id": 539,
+      "x": 2286,
+      "y": 3151,
+      "id": 540,
       "groupId": 204454
     },
     {
@@ -85142,100 +85109,132 @@
       "groupId": 206134
     },
     {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 2027,
-      "y": 4206,
-      "id": 48,
-      "groupId": 4001345
+      "troopId": 10,
+      "tribeId": 100205,
+      "x": 2474,
+      "y": 2162,
+      "id": 544,
+      "groupId": 204454
     },
     {
-      "troopId": 5,
+      "troopId": 6,
       "tribeId": 100205,
-      "x": 2146,
-      "y": 2039,
-      "id": 55,
-      "groupId": 4001514
+      "x": 2183,
+      "y": 2058,
+      "id": 442,
+      "groupId": 202952
     },
     {
-      "troopId": 5,
+      "troopId": 16,
       "tribeId": 100205,
-      "x": 2494,
-      "y": 4534,
-      "id": 439,
-      "groupId": 4000101
+      "x": 2183,
+      "y": 2058,
+      "id": 443,
+      "groupId": 202952
     },
     {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 1776,
-      "y": 2912,
+      "x": 1826,
+      "y": 3012,
       "id": 427,
       "groupId": 206274
     },
     {
-      "troopId": 2,
+      "troopId": 4,
       "tribeId": 100205,
-      "x": 2286,
-      "y": 2017,
-      "id": 37,
-      "groupId": 4001098
+      "x": 2258,
+      "y": 2043,
+      "id": 558,
+      "groupId": 203450
     },
     {
       "troopId": 2,
       "tribeId": 100205,
-      "x": 2217,
-      "y": 2005,
+      "x": 2262,
+      "y": 2095,
       "id": 153,
       "groupId": 4000332
     },
     {
-      "troopId": 5,
+      "troopId": 9,
       "tribeId": 100205,
-      "x": 2256,
-      "y": 2039,
-      "id": 557,
-      "groupId": 203450
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 2387,
-      "y": 2040,
-      "id": 646,
-      "groupId": 204267
-    },
-    {
-      "troopId": 10,
-      "tribeId": 100205,
-      "x": 2184,
-      "y": 2158,
-      "id": 544,
-      "groupId": 202671
-    },
-    {
-      "troopId": 2,
-      "tribeId": 0,
-      "x": 1231,
-      "y": 2147,
-      "id": 476,
-      "groupId": 202772
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100054,
-      "x": 1399,
-      "y": 2120,
-      "id": 186,
-      "groupId": 205623
+      "x": 2522,
+      "y": 2258,
+      "id": 542,
+      "groupId": 204454
     },
     {
       "troopId": 2,
       "tribeId": 100061,
-      "x": 1587,
-      "y": 2156,
-      "id": 84,
-      "groupId": 4000518
+      "x": 1948,
+      "y": 2471,
+      "id": 39,
+      "groupId": 4001126
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2305,
+      "y": 2051,
+      "id": 308,
+      "groupId": 203710
+    },
+    {
+      "troopId": 12,
+      "tribeId": 100205,
+      "x": 2314,
+      "y": 2053,
+      "id": 543,
+      "groupId": 204454
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2315,
+      "y": 2014,
+      "id": 180,
+      "groupId": 4000768
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2385,
+      "y": 2036,
+      "id": 647,
+      "groupId": 204267
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100025,
+      "x": 1009,
+      "y": 4154,
+      "id": 157,
+      "groupId": 4001369
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100375,
+      "x": 2429,
+      "y": 2876,
+      "id": 476,
+      "groupId": 202037
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1307,
+      "y": 2154,
+      "id": 227,
+      "groupId": 4000923
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100054,
+      "x": 1429,
+      "y": 2180,
+      "id": 186,
+      "groupId": 205623
     },
     {
       "troopId": 4,
@@ -85247,16 +85246,24 @@
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 2027,
-      "y": 3756,
-      "id": 656,
-      "groupId": 202991
+      "tribeId": 100002,
+      "x": 1739,
+      "y": 2160,
+      "id": 386,
+      "groupId": 4000146
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100002,
+      "x": 1739,
+      "y": 2160,
+      "id": 808,
+      "groupId": 201166
     },
     {
       "troopId": 3,
       "tribeId": 100002,
-      "x": 1759,
+      "x": 1739,
       "y": 2160,
       "id": 807,
       "groupId": 201166
@@ -85264,23 +85271,31 @@
     {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 1768,
+      "x": 1739,
+      "y": 2160,
+      "id": 51,
+      "groupId": 4001590
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100002,
+      "x": 1739,
+      "y": 2160,
+      "id": 651,
+      "groupId": 201729
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100002,
+      "x": 1739,
       "y": 2160,
       "id": 649,
       "groupId": 206658
     },
     {
-      "troopId": 2,
-      "tribeId": 100213,
-      "x": 488,
-      "y": 3451,
-      "id": 312,
-      "groupId": 206820
-    },
-    {
       "troopId": 5,
       "tribeId": 100002,
-      "x": 1768,
+      "x": 1739,
       "y": 2160,
       "id": 650,
       "groupId": 206658
@@ -85288,90 +85303,66 @@
     {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 1762,
+      "x": 1739,
       "y": 2160,
-      "id": 51,
-      "groupId": 4001590
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1792,
-      "y": 2138,
-      "id": 808,
-      "groupId": 201166
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100002,
-      "x": 1775,
-      "y": 2160,
-      "id": 651,
-      "groupId": 201729
-    },
-    {
-      "troopId": 16,
-      "tribeId": 0,
-      "x": 1861,
-      "y": 2182,
-      "id": 166,
-      "groupId": 4000389
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100205,
-      "x": 1893,
-      "y": 2161,
-      "id": 375,
-      "groupId": 201258
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1845,
-      "y": 2171,
       "id": 293,
       "groupId": 4001014
     },
     {
       "troopId": 2,
       "tribeId": 100048,
-      "x": 1561,
-      "y": 5732,
-      "id": 220,
-      "groupId": 4000750
+      "x": 1760,
+      "y": 2114,
+      "id": 415,
+      "groupId": 201053
     },
     {
-      "troopId": 2,
+      "troopId": 4,
       "tribeId": 100205,
-      "x": 2029,
-      "y": 2143,
-      "id": 199,
+      "x": 2646,
+      "y": 2644,
+      "id": 539,
+      "groupId": 204454
+    },
+    {
+      "troopId": 9,
+      "tribeId": 100205,
+      "x": 2042,
+      "y": 2168,
+      "id": 201,
       "groupId": 201957
     },
     {
-      "troopId": 3,
+      "troopId": 5,
       "tribeId": 100205,
-      "x": 2029,
-      "y": 2143,
-      "id": 200,
-      "groupId": 201957
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 2061,
+      "x": 2032,
       "y": 2149,
-      "id": 68,
-      "groupId": 4000354
+      "id": 202,
+      "groupId": 201957
     },
     {
       "troopId": 2,
-      "tribeId": 100249,
-      "x": 837,
-      "y": 3026,
-      "id": 77,
-      "groupId": 4001482
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3864,
+      "id": 48,
+      "groupId": 4001345
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2146,
+      "y": 2189,
+      "id": 55,
+      "groupId": 4001514
+    },
+    {
+      "troopId": 5,
+      "tribeId": 0,
+      "x": 380,
+      "y": 4590,
+      "id": 152,
+      "groupId": 4000389
     },
     {
       "troopId": 2,
@@ -85382,28 +85373,28 @@
       "groupId": 201698
     },
     {
-      "troopId": 11,
-      "tribeId": 100205,
-      "x": 2224,
-      "y": 2141,
-      "id": 437,
-      "groupId": 202952
-    },
-    {
-      "troopId": 5,
-      "tribeId": 0,
-      "x": 380,
-      "y": 4332,
-      "id": 152,
-      "groupId": 4000389
-    },
-    {
-      "troopId": 6,
+      "troopId": 2,
       "tribeId": 100061,
       "x": 2027,
       "y": 3756,
-      "id": 325,
-      "groupId": 204455
+      "id": 324,
+      "groupId": 202723
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2538,
+      "y": 4446,
+      "id": 439,
+      "groupId": 4000101
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2286,
+      "y": 2187,
+      "id": 37,
+      "groupId": 4001098
     },
     {
       "troopId": 2,
@@ -85414,52 +85405,36 @@
       "groupId": 201491
     },
     {
-      "troopId": 4,
+      "troopId": 6,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
+      "id": 325,
+      "groupId": 204455
+    },
+    {
+      "troopId": 5,
       "tribeId": 100205,
-      "x": 2413,
-      "y": 2125,
-      "id": 273,
-      "groupId": 206692
+      "x": 2306,
+      "y": 2139,
+      "id": 557,
+      "groupId": 203450
     },
     {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2441,
-      "y": 2173,
-      "id": 53,
-      "groupId": 4001514
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2441,
-      "y": 2173,
-      "id": 52,
-      "groupId": 4001514
+      "x": 2432,
+      "y": 2131,
+      "id": 646,
+      "groupId": 204267
     },
     {
       "troopId": 3,
       "tribeId": 0,
-      "x": 586,
-      "y": 2212,
+      "x": 615,
+      "y": 2271,
       "id": 27,
       "groupId": 4001614
-    },
-    {
-      "troopId": 2,
-      "tribeId": 0,
-      "x": 620,
-      "y": 2280,
-      "id": 26,
-      "groupId": 4001614
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100061,
-      "x": 1058,
-      "y": 2252,
-      "id": 95,
-      "groupId": 4000669
     },
     {
       "troopId": 6,
@@ -85471,163 +85446,203 @@
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 1334,
-      "y": 2247,
-      "id": 61,
-      "groupId": 206787
+      "tribeId": 0,
+      "x": 2274,
+      "y": 4510,
+      "id": 31,
+      "groupId": 4001515
     },
     {
-      "troopId": 15,
-      "tribeId": 0,
-      "x": 1794,
-      "y": 2283,
-      "id": 165,
-      "groupId": 4000389
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 1937,
+      "y": 2249,
+      "id": 375,
+      "groupId": 201258
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100205,
+      "x": 2082,
+      "y": 2248,
+      "id": 200,
+      "groupId": 201957
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2082,
+      "y": 2249,
+      "id": 199,
+      "groupId": 201957
     },
     {
       "troopId": 6,
       "tribeId": 100205,
-      "x": 1933,
-      "y": 2234,
+      "x": 2177,
+      "y": 2265,
+      "id": 77,
+      "groupId": 4001125
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 2111,
+      "y": 2249,
+      "id": 68,
+      "groupId": 4000354
+    },
+    {
+      "troopId": 11,
+      "tribeId": 100205,
+      "x": 2267,
+      "y": 2226,
+      "id": 437,
+      "groupId": 202952
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1791,
+      "y": 4138,
+      "id": 313,
+      "groupId": 203547
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2453,
+      "y": 2205,
+      "id": 273,
+      "groupId": 206692
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100205,
+      "x": 2479,
+      "y": 2248,
+      "id": 53,
+      "groupId": 4001514
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2479,
+      "y": 2248,
+      "id": 52,
+      "groupId": 4001514
+    },
+    {
+      "troopId": 2,
+      "tribeId": 0,
+      "x": 649,
+      "y": 2339,
+      "id": 26,
+      "groupId": 4001614
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 1058,
+      "y": 2374,
+      "id": 95,
+      "groupId": 4000669
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 1334,
+      "y": 2347,
+      "id": 61,
+      "groupId": 206787
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 1587,
+      "y": 2386,
+      "id": 84,
+      "groupId": 4000518
+    },
+    {
+      "troopId": 16,
+      "tribeId": 0,
+      "x": 1861,
+      "y": 2368,
+      "id": 166,
+      "groupId": 4000389
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100058,
+      "x": 1820,
+      "y": 2399,
+      "id": 208,
+      "groupId": 205990
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100205,
+      "x": 1983,
+      "y": 2335,
       "id": 450,
       "groupId": 201271
     },
     {
       "troopId": 7,
       "tribeId": 100205,
-      "x": 1933,
-      "y": 2234,
+      "x": 1983,
+      "y": 2335,
       "id": 451,
       "groupId": 201271
     },
     {
+      "troopId": 2,
+      "tribeId": 1000020,
+      "x": 1547,
+      "y": 3368,
+      "id": 221,
+      "groupId": 206348
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2051,
+      "y": 2337,
+      "id": 534,
+      "groupId": 201575
+    },
+    {
       "troopId": 4,
       "tribeId": 100205,
-      "x": 2032,
-      "y": 2212,
+      "x": 2080,
+      "y": 2308,
       "id": 211,
       "groupId": 201830
     },
     {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1774,
-      "y": 4360,
-      "id": 436,
-      "groupId": 202199
-    },
-    {
       "troopId": 4,
       "tribeId": 100205,
       "x": 2286,
-      "y": 2231,
+      "y": 2335,
       "id": 645,
       "groupId": 204267
     },
     {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 2513,
-      "y": 2272,
-      "id": 255,
-      "groupId": 4000105
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2513,
-      "y": 2273,
-      "id": 254,
-      "groupId": 4000105
-    },
-    {
-      "troopId": 2,
-      "tribeId": 0,
-      "x": 2212,
-      "y": 4510,
-      "id": 31,
-      "groupId": 4001515
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100025,
-      "x": 1112,
-      "y": 4186,
-      "id": 500,
-      "groupId": 203948
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 1981,
-      "y": 2331,
-      "id": 448,
-      "groupId": 201271
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 1981,
-      "y": 2331,
-      "id": 449,
-      "groupId": 201271
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2083,
-      "y": 2314,
-      "id": 210,
-      "groupId": 201830
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100025,
-      "x": 2070,
-      "y": 3064,
-      "id": 71,
-      "groupId": 206521
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100205,
-      "x": 2286,
-      "y": 2311,
-      "id": 54,
-      "groupId": 4001514
-    },
-    {
       "troopId": 10,
       "tribeId": 100205,
-      "x": 2287,
-      "y": 2324,
+      "x": 2321,
+      "y": 2393,
       "id": 191,
       "groupId": 4000815
     },
     {
       "troopId": 2,
-      "tribeId": 100190,
-      "x": 1671,
-      "y": 4130,
-      "id": 313,
-      "groupId": 203547
-    },
-    {
-      "troopId": 10,
       "tribeId": 100205,
-      "x": 2326,
-      "y": 2345,
-      "id": 433,
+      "x": 2321,
+      "y": 2334,
+      "id": 436,
       "groupId": 202952
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 2310,
-      "y": 2376,
-      "id": 916,
-      "groupId": 203509
     },
     {
       "troopId": 2,
@@ -85654,188 +85669,188 @@
       "groupId": 206682
     },
     {
-      "troopId": 2,
+      "troopId": 3,
       "tribeId": 100205,
-      "x": 2410,
-      "y": 2327,
-      "id": 917,
-      "groupId": 203509
+      "x": 2538,
+      "y": 2322,
+      "id": 255,
+      "groupId": 4000105
     },
     {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2518,
-      "y": 2335,
+      "x": 2543,
+      "y": 2385,
       "id": 269,
       "groupId": 206692
     },
     {
       "troopId": 2,
       "tribeId": 100058,
-      "x": 1628,
+      "x": 1515,
       "y": 4200,
       "id": 270,
       "groupId": 204817
     },
     {
       "troopId": 2,
+      "tribeId": 100205,
+      "x": 2538,
+      "y": 2323,
+      "id": 254,
+      "groupId": 4000105
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100061,
+      "x": 1661,
+      "y": 2406,
+      "id": 698,
+      "groupId": 200476
+    },
+    {
+      "troopId": 2,
       "tribeId": 100134,
-      "x": 1692,
-      "y": 2487,
+      "x": 1683,
+      "y": 2478,
       "id": 568,
       "groupId": 4000600
     },
     {
-      "troopId": 3,
+      "troopId": 4,
       "tribeId": 100134,
-      "x": 1673,
-      "y": 2485,
-      "id": 569,
+      "x": 1692,
+      "y": 2444,
+      "id": 571,
       "groupId": 4000600
     },
     {
-      "troopId": 4,
-      "tribeId": 100134,
-      "x": 1665,
-      "y": 2498,
-      "id": 570,
-      "groupId": 4000600
+      "troopId": 15,
+      "tribeId": 0,
+      "x": 1794,
+      "y": 2465,
+      "id": 165,
+      "groupId": 4000389
     },
     {
       "troopId": 2,
-      "tribeId": 100058,
-      "x": 1797,
-      "y": 2446,
-      "id": 208,
-      "groupId": 205990
+      "tribeId": 100205,
+      "x": 2032,
+      "y": 2433,
+      "id": 448,
+      "groupId": 201271
     },
     {
-      "troopId": 4,
+      "troopId": 3,
       "tribeId": 100205,
-      "x": 2024,
-      "y": 2417,
-      "id": 446,
+      "x": 2032,
+      "y": 2433,
+      "id": 449,
       "groupId": 201271
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100025,
+      "x": 2047,
+      "y": 3064,
+      "id": 71,
+      "groupId": 206521
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2131,
+      "y": 2410,
+      "id": 210,
+      "groupId": 201830
     },
     {
       "troopId": 5,
       "tribeId": 100205,
-      "x": 2024,
-      "y": 2417,
-      "id": 447,
-      "groupId": 201271
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2087,
-      "y": 2409,
-      "id": 534,
-      "groupId": 201575
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 2051,
-      "y": 2445,
-      "id": 758,
-      "groupId": 204391
+      "x": 2271,
+      "y": 2855,
+      "id": 72,
+      "groupId": 4001408
     },
     {
       "troopId": 4,
       "tribeId": 100205,
-      "x": 2031,
-      "y": 2437,
+      "x": 2286,
+      "y": 3151,
+      "id": 392,
+      "groupId": 4000037
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100205,
+      "x": 2286,
+      "y": 2477,
+      "id": 916,
+      "groupId": 203509
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2286,
+      "y": 2461,
+      "id": 54,
+      "groupId": 4001514
+    },
+    {
+      "troopId": 10,
+      "tribeId": 100205,
+      "x": 2368,
+      "y": 2429,
+      "id": 433,
+      "groupId": 202952
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2447,
+      "y": 2400,
+      "id": 917,
+      "groupId": 203509
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100134,
+      "x": 1677,
+      "y": 2568,
+      "id": 569,
+      "groupId": 4000600
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2076,
+      "y": 2520,
+      "id": 447,
+      "groupId": 201271
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2075,
+      "y": 2525,
       "id": 374,
       "groupId": 201258
     },
     {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2128,
-      "y": 2405,
+      "x": 2176,
+      "y": 2501,
       "id": 209,
       "groupId": 201830
     },
     {
-      "troopId": 2,
-      "tribeId": 100246,
-      "x": 2332,
-      "y": 2463,
-      "id": 340,
-      "groupId": 202707
-    },
-    {
-      "troopId": 8,
+      "troopId": 7,
       "tribeId": 100205,
-      "x": 2983,
-      "y": 2490,
-      "id": 459,
-      "groupId": 4000101
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 2196,
-      "y": 4265,
-      "id": 182,
-      "groupId": 4000866
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100134,
-      "x": 1537,
-      "y": 2517,
-      "id": 1114,
-      "groupId": 201711
-    },
-    {
-      "troopId": 6,
-      "tribeId": 100025,
-      "x": 1026,
-      "y": 3952,
-      "id": 158,
-      "groupId": 4001369
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100134,
-      "x": 1691,
-      "y": 2517,
-      "id": 228,
-      "groupId": 206263
-    },
-    {
-      "troopId": 6,
-      "tribeId": 100061,
-      "x": 1661,
-      "y": 2572,
-      "id": 698,
-      "groupId": 200476
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2010,
-      "y": 2561,
-      "id": 217,
-      "groupId": 200954
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100205,
-      "x": 2085,
-      "y": 2544,
-      "id": 373,
-      "groupId": 201258
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100205,
-      "x": 2013,
-      "y": 2566,
-      "id": 219,
-      "groupId": 200954
+      "x": 2115,
+      "y": 2526,
+      "id": 195,
+      "groupId": 4000921
     },
     {
       "troopId": 2,
@@ -85846,108 +85861,188 @@
       "groupId": 4001048
     },
     {
-      "troopId": 4,
+      "troopId": 8,
       "tribeId": 100205,
-      "x": 2286,
-      "y": 3051,
-      "id": 392,
-      "groupId": 4000037
+      "x": 2976,
+      "y": 2515,
+      "id": 459,
+      "groupId": 4000101
+    },
+    {
+      "troopId": 7,
+      "tribeId": 100205,
+      "x": 3071,
+      "y": 2540,
+      "id": 458,
+      "groupId": 4000101
     },
     {
       "troopId": 3,
-      "tribeId": 100205,
-      "x": 2869,
-      "y": 2522,
-      "id": 123,
-      "groupId": 4001181
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100216,
-      "x": 2867,
-      "y": 3805,
-      "id": 458,
-      "groupId": 206384
-    },
-    {
-      "troopId": 9,
       "tribeId": 100134,
-      "x": 577,
-      "y": 2657,
-      "id": 104,
-      "groupId": 4001195
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1040,
-      "y": 2673,
-      "id": 38,
-      "groupId": 4001385
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100375,
-      "x": 2229,
-      "y": 4792,
-      "id": 164,
-      "groupId": 4000196
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100134,
-      "x": 1540,
-      "y": 2651,
-      "id": 1124,
+      "x": 1537,
+      "y": 2617,
+      "id": 1114,
       "groupId": 201711
     },
     {
       "troopId": 2,
+      "tribeId": 100205,
+      "x": 2035,
+      "y": 2611,
+      "id": 217,
+      "groupId": 200954
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2055,
+      "y": 2651,
+      "id": 219,
+      "groupId": 200954
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100205,
+      "x": 2129,
+      "y": 2632,
+      "id": 373,
+      "groupId": 201258
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 2169,
+      "y": 2680,
+      "id": 758,
+      "groupId": 204391
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100048,
+      "x": 1582,
+      "y": 5690,
+      "id": 96,
+      "groupId": 4001083
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100205,
+      "x": 2795,
+      "y": 2697,
+      "id": 124,
+      "groupId": 4001181
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100025,
+      "x": 386,
+      "y": 2789,
+      "id": 930,
+      "groupId": 206294
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100025,
+      "x": 384,
+      "y": 2793,
+      "id": 933,
+      "groupId": 206294
+    },
+    {
+      "troopId": 9,
       "tribeId": 100134,
-      "x": 1534,
-      "y": 2647,
+      "x": 549,
+      "y": 2720,
+      "id": 104,
+      "groupId": 4001195
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100205,
+      "x": 1222,
+      "y": 2785,
+      "id": 164,
+      "groupId": 4001321
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 2226,
+      "y": 4205,
+      "id": 182,
+      "groupId": 4000866
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1537,
+      "y": 2729,
+      "id": 1124,
+      "groupId": 201711
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100025,
+      "x": 1026,
+      "y": 3808,
+      "id": 158,
+      "groupId": 4001369
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1530,
+      "y": 2735,
       "id": 1561,
       "groupId": 200496
     },
     {
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 1739,
+      "y": 2742,
+      "id": 29,
+      "groupId": 4000960
+    },
+    {
       "troopId": 7,
       "tribeId": 100205,
-      "x": 2066,
-      "y": 2673,
+      "x": 2109,
+      "y": 2758,
       "id": 218,
       "groupId": 200954
     },
     {
-      "troopId": 7,
-      "tribeId": 100205,
-      "x": 2157,
-      "y": 2610,
-      "id": 195,
-      "groupId": 4000921
-    },
-    {
       "troopId": 4,
       "tribeId": 100190,
-      "x": 1127,
-      "y": 3043,
+      "x": 1204,
+      "y": 3197,
       "id": 425,
       "groupId": 203022
     },
     {
       "troopId": 3,
+      "tribeId": 100205,
+      "x": 2207,
+      "y": 2788,
+      "id": 372,
+      "groupId": 201258
+    },
+    {
+      "troopId": 3,
       "tribeId": 100002,
-      "x": 1659,
-      "y": 3121,
+      "x": 1647,
+      "y": 3102,
       "id": 316,
       "groupId": 206303
     },
     {
-      "troopId": 5,
+      "troopId": 2,
       "tribeId": 100205,
-      "x": 2805,
-      "y": 2648,
-      "id": 124,
-      "groupId": 4001181
+      "x": 2585,
+      "y": 2768,
+      "id": 396,
+      "groupId": 4000037
     },
     {
       "troopId": 2,
@@ -85960,58 +86055,74 @@
     {
       "troopId": 6,
       "tribeId": 100205,
-      "x": 2905,
-      "y": 2643,
+      "x": 2861,
+      "y": 2732,
       "id": 457,
       "groupId": 4000101
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1870,
+      "y": 4444,
+      "id": 931,
+      "groupId": 203938
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100025,
+      "x": 371,
+      "y": 2819,
+      "id": 932,
+      "groupId": 206294
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 1040,
+      "y": 2827,
+      "id": 38,
+      "groupId": 4001385
     },
     {
       "troopId": 8,
       "tribeId": 100205,
       "x": 2146,
-      "y": 2747,
+      "y": 2847,
       "id": 272,
       "groupId": 206692
-    },
-    {
-      "troopId": 6,
-      "tribeId": 100205,
-      "x": 2146,
-      "y": 2779,
-      "id": 541,
-      "groupId": 204454
     },
     {
       "troopId": 5,
       "tribeId": 100205,
       "x": 2146,
-      "y": 2779,
+      "y": 2879,
       "id": 257,
       "groupId": 4000105
     },
     {
       "troopId": 6,
       "tribeId": 100205,
-      "x": 2114,
-      "y": 2769,
+      "x": 2157,
+      "y": 2854,
       "id": 216,
       "groupId": 200954
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100205,
-      "x": 2165,
-      "y": 2705,
-      "id": 372,
-      "groupId": 201258
     },
     {
       "troopId": 4,
       "tribeId": 100205,
       "x": 2286,
-      "y": 2725,
+      "y": 2825,
       "id": 256,
       "groupId": 4000105
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2286,
+      "y": 2869,
+      "id": 194,
+      "groupId": 4000921
     },
     {
       "troopId": 2,
@@ -86022,50 +86133,18 @@
       "groupId": 4000442
     },
     {
-      "troopId": 4,
-      "tribeId": 100205,
-      "x": 2249,
-      "y": 2794,
-      "id": 194,
-      "groupId": 4000921
-    },
-    {
       "troopId": 7,
       "tribeId": 100205,
-      "x": 2211,
-      "y": 2740,
+      "x": 2247,
+      "y": 2813,
       "id": 799,
       "groupId": 201367
     },
     {
       "troopId": 2,
-      "tribeId": 100205,
-      "x": 2560,
-      "y": 2718,
-      "id": 396,
-      "groupId": 4000037
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100054,
-      "x": 1701,
-      "y": 2817,
-      "id": 29,
-      "groupId": 4000960
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1783,
-      "y": 2854,
-      "id": 642,
-      "groupId": 201403
-    },
-    {
-      "troopId": 2,
       "tribeId": 100190,
-      "x": 2457,
-      "y": 2824,
+      "x": 2432,
+      "y": 2874,
       "id": 231,
       "groupId": 203517
     },
@@ -86080,34 +86159,26 @@
     {
       "troopId": 3,
       "tribeId": 100205,
-      "x": 2608,
-      "y": 2814,
+      "x": 2633,
+      "y": 2864,
       "id": 393,
       "groupId": 4000037
     },
     {
-      "troopId": 3,
-      "tribeId": 100280,
-      "x": 1401,
-      "y": 5273,
-      "id": 620,
-      "groupId": 205665
-    },
-    {
       "troopId": 2,
       "tribeId": 100249,
-      "x": 821,
+      "x": 807,
       "y": 2956,
       "id": 891,
       "groupId": 202623
     },
     {
       "troopId": 2,
-      "tribeId": 100249,
-      "x": 808,
+      "tribeId": 100054,
+      "x": 1125,
       "y": 2946,
-      "id": 563,
-      "groupId": 206628
+      "id": 10,
+      "groupId": 4001605
     },
     {
       "troopId": 3,
@@ -86118,60 +86189,36 @@
       "groupId": 200985
     },
     {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1671,
-      "y": 2932,
-      "id": 567,
-      "groupId": 201656
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1653,
-      "y": 2997,
-      "id": 768,
-      "groupId": 200008
-    },
-    {
       "troopId": 5,
       "tribeId": 100205,
-      "x": 2208,
-      "y": 2905,
+      "x": 2183,
+      "y": 2955,
       "id": 391,
       "groupId": 4000037
     },
     {
       "troopId": 2,
       "tribeId": 100167,
-      "x": 269,
-      "y": 3079,
+      "x": 224,
+      "y": 3066,
       "id": 927,
       "groupId": 205809
     },
     {
-      "troopId": 3,
-      "tribeId": 100054,
-      "x": 1155,
-      "y": 3006,
-      "id": 11,
-      "groupId": 4001605
+      "troopId": 2,
+      "tribeId": 100249,
+      "x": 835,
+      "y": 3082,
+      "id": 563,
+      "groupId": 206628
     },
     {
-      "troopId": 2,
-      "tribeId": 100054,
-      "x": 1155,
-      "y": 3006,
-      "id": 10,
-      "groupId": 4001605
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1693,
-      "y": 3756,
-      "id": 205,
-      "groupId": 206678
+      "troopId": 7,
+      "tribeId": 100025,
+      "x": 1080,
+      "y": 3882,
+      "id": 159,
+      "groupId": 4001369
     },
     {
       "troopId": 2,
@@ -86184,127 +86231,63 @@
     {
       "troopId": 2,
       "tribeId": 100025,
-      "x": 2046,
-      "y": 3065,
+      "x": 2051,
+      "y": 3075,
       "id": 176,
       "groupId": 200417
     },
     {
-      "troopId": 5,
-      "tribeId": 100205,
-      "x": 2286,
-      "y": 3051,
-      "id": 540,
-      "groupId": 204454
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100375,
-      "x": 2538,
-      "y": 3076,
-      "id": 936,
-      "groupId": 202797
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1519,
-      "y": 3358,
-      "id": 106,
-      "groupId": 4000962
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 2035,
-      "y": 4297,
-      "id": 619,
-      "groupId": 203741
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1197,
-      "y": 3182,
-      "id": 497,
-      "groupId": 4000139
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1420,
-      "y": 3162,
-      "id": 1391,
-      "groupId": 201273
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 2582,
-      "y": 3105,
-      "id": 7,
-      "groupId": 4001710
-    },
-    {
       "troopId": 2,
       "tribeId": 0,
-      "x": 440,
-      "y": 3220,
+      "x": 424,
+      "y": 3188,
       "id": 388,
       "groupId": 205021
     },
     {
       "troopId": 2,
-      "tribeId": 100054,
-      "x": 500,
-      "y": 3242,
-      "id": 1865,
-      "groupId": 204088
+      "tribeId": 100061,
+      "x": 1519,
+      "y": 3478,
+      "id": 106,
+      "groupId": 4000962
     },
     {
       "troopId": 7,
       "tribeId": 100054,
-      "x": 797,
-      "y": 3210,
-      "id": 353,
-      "groupId": 4000570
+      "x": 807,
+      "y": 3128,
+      "id": 620,
+      "groupId": 4000545
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 808,
+      "y": 3166,
+      "id": 622,
+      "groupId": 4000545
     },
     {
       "troopId": 3,
-      "tribeId": 100054,
-      "x": 774,
-      "y": 3229,
-      "id": 112,
-      "groupId": 4001143
+      "tribeId": 100134,
+      "x": 2345,
+      "y": 3142,
+      "id": 822,
+      "groupId": 205737
     },
     {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1605,
-      "y": 3261,
-      "id": 315,
-      "groupId": 206303
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1624,
-      "y": 3285,
-      "id": 235,
-      "groupId": 200235
-    },
-    {
-      "troopId": 2,
-      "tribeId": 1000020,
-      "x": 1603,
-      "y": 3260,
-      "id": 126,
-      "groupId": 4000237
+      "troopId": 9,
+      "tribeId": 100025,
+      "x": 1675,
+      "y": 4762,
+      "id": 250,
+      "groupId": 4000950
     },
     {
       "troopId": 3,
       "tribeId": 100190,
-      "x": 1782,
+      "x": 1876,
       "y": 3266,
       "id": 239,
       "groupId": 201847
@@ -86312,63 +86295,47 @@
     {
       "troopId": 2,
       "tribeId": 100190,
-      "x": 2081,
+      "x": 2200,
       "y": 3254,
       "id": 874,
       "groupId": 201949
     },
     {
-      "troopId": 6,
-      "tribeId": 100054,
-      "x": 479,
-      "y": 3367,
-      "id": 1869,
-      "groupId": 204088
-    },
-    {
       "troopId": 5,
-      "tribeId": 100054,
-      "x": 500,
-      "y": 3375,
-      "id": 1868,
-      "groupId": 204088
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100054,
-      "x": 503,
-      "y": 3334,
-      "id": 1866,
-      "groupId": 204088
+      "tribeId": 100134,
+      "x": 2345,
+      "y": 3223,
+      "id": 824,
+      "groupId": 205737
     },
     {
       "troopId": 4,
-      "tribeId": 100054,
-      "x": 537,
-      "y": 3373,
-      "id": 1867,
-      "groupId": 204088
+      "tribeId": 100134,
+      "x": 2345,
+      "y": 3224,
+      "id": 823,
+      "groupId": 205737
     },
     {
       "troopId": 2,
-      "tribeId": 100174,
-      "x": 808,
+      "tribeId": 100054,
+      "x": 540,
       "y": 3323,
-      "id": 845,
-      "groupId": 203320
+      "id": 1865,
+      "groupId": 204088
     },
     {
-      "troopId": 5,
-      "tribeId": 0,
-      "x": 927,
-      "y": 3309,
-      "id": 285,
-      "groupId": 202224
+      "troopId": 7,
+      "tribeId": 100054,
+      "x": 797,
+      "y": 3324,
+      "id": 353,
+      "groupId": 4000570
     },
     {
       "troopId": 2,
       "tribeId": 100190,
-      "x": 1354,
+      "x": 1437,
       "y": 3304,
       "id": 131,
       "groupId": 202596
@@ -86376,242 +86343,250 @@
     {
       "troopId": 3,
       "tribeId": 100002,
-      "x": 1417,
-      "y": 3371,
+      "x": 1437,
+      "y": 3331,
       "id": 1392,
       "groupId": 201273
     },
     {
       "troopId": 2,
-      "tribeId": 1000020,
-      "x": 1547,
-      "y": 3368,
-      "id": 221,
-      "groupId": 206348
+      "tribeId": 100134,
+      "x": 2408,
+      "y": 3339,
+      "id": 821,
+      "groupId": 205737
     },
     {
-      "troopId": 9,
-      "tribeId": 100025,
-      "x": 1720,
-      "y": 4671,
-      "id": 250,
-      "groupId": 4000950
+      "troopId": 5,
+      "tribeId": 100054,
+      "x": 556,
+      "y": 3486,
+      "id": 1868,
+      "groupId": 204088
     },
     {
       "troopId": 3,
-      "tribeId": 100025,
-      "x": 993,
-      "y": 4025,
-      "id": 155,
-      "groupId": 4001369
+      "tribeId": 100054,
+      "x": 572,
+      "y": 3473,
+      "id": 1866,
+      "groupId": 204088
     },
     {
-      "troopId": 7,
+      "troopId": 6,
       "tribeId": 100054,
-      "x": 654,
-      "y": 3420,
-      "id": 1870,
+      "x": 535,
+      "y": 3478,
+      "id": 1869,
       "groupId": 204088
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100054,
+      "x": 609,
+      "y": 3490,
+      "id": 1867,
+      "groupId": 204088
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1334,
+      "y": 3456,
+      "id": 497,
+      "groupId": 4000139
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100048,
+      "x": 1774,
+      "y": 3484,
+      "id": 128,
+      "groupId": 4000066
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100054,
+      "x": 1176,
+      "y": 3867,
+      "id": 184,
+      "groupId": 4000704
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100249,
+      "x": 630,
+      "y": 3568,
+      "id": 400,
+      "groupId": 205641
     },
     {
       "troopId": 2,
       "tribeId": 100174,
       "x": 808,
-      "y": 3441,
-      "id": 412,
-      "groupId": 4000677
+      "y": 3539,
+      "id": 845,
+      "groupId": 203320
     },
     {
-      "troopId": 4,
-      "tribeId": 100061,
-      "x": 1488,
-      "y": 3496,
-      "id": 86,
-      "groupId": 4001447
+      "troopId": 2,
+      "tribeId": 100054,
+      "x": 815,
+      "y": 3558,
+      "id": 964,
+      "groupId": 206634
     },
     {
       "troopId": 2,
       "tribeId": 100061,
       "x": 1547,
-      "y": 3414,
+      "y": 3534,
       "id": 92,
       "groupId": 4001443
     },
     {
       "troopId": 2,
-      "tribeId": 100134,
-      "x": 2150,
-      "y": 3456,
-      "id": 1217,
-      "groupId": 200883
-    },
-    {
-      "troopId": 3,
-      "tribeId": 100054,
-      "x": 1206,
-      "y": 3807,
-      "id": 184,
-      "groupId": 4000704
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100190,
-      "x": 2402,
-      "y": 3437,
-      "id": 754,
-      "groupId": 202418
-    },
-    {
-      "troopId": 8,
-      "tribeId": 100054,
-      "x": 698,
-      "y": 3509,
-      "id": 1871,
-      "groupId": 204088
+      "tribeId": 100002,
+      "x": 1753,
+      "y": 3546,
+      "id": 1547,
+      "groupId": 200188
     },
     {
       "troopId": 4,
       "tribeId": 100134,
-      "x": 1696,
+      "x": 1859,
       "y": 3576,
       "id": 1209,
       "groupId": 200883
     },
     {
       "troopId": 2,
+      "tribeId": 100134,
+      "x": 2095,
+      "y": 3565,
+      "id": 1217,
+      "groupId": 200883
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 2159,
+      "y": 3582,
+      "id": 1319,
+      "groupId": 201507
+    },
+    {
+      "troopId": 6,
+      "tribeId": 0,
+      "x": 2134,
+      "y": 3571,
+      "id": 155,
+      "groupId": 4000389
+    },
+    {
+      "troopId": 2,
       "tribeId": 100002,
-      "x": 1875,
-      "y": 3554,
+      "x": 1784,
+      "y": 3672,
+      "id": 777,
+      "groupId": 206712
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100002,
+      "x": 1789,
+      "y": 3672,
       "id": 1039,
       "groupId": 206031
     },
     {
-      "troopId": 4,
-      "tribeId": 100054,
-      "x": 824,
-      "y": 3655,
-      "id": 969,
-      "groupId": 206634
-    },
-    {
-      "troopId": 6,
-      "tribeId": 100054,
-      "x": 836,
-      "y": 3678,
-      "id": 971,
-      "groupId": 206634
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100054,
-      "x": 883,
-      "y": 3694,
-      "id": 964,
-      "groupId": 206634
-    },
-    {
-      "troopId": 5,
-      "tribeId": 100054,
-      "x": 824,
-      "y": 3655,
-      "id": 970,
-      "groupId": 206634
-    },
-    {
-      "troopId": 7,
-      "tribeId": 100054,
-      "x": 846,
-      "y": 3698,
-      "id": 972,
-      "groupId": 206634
-    },
-    {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 1887,
-      "y": 3622,
+      "x": 1784,
+      "y": 3672,
       "id": 617,
       "groupId": 4000244
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100002,
-      "x": 1872,
-      "y": 3602,
-      "id": 777,
-      "groupId": 206712
     },
     {
       "troopId": 17,
       "tribeId": 0,
       "x": 1987,
-      "y": 4050,
+      "y": 4420,
       "id": 167,
       "groupId": 4000389
     },
     {
+      "troopId": 4,
+      "tribeId": 100134,
+      "x": 2170,
+      "y": 3637,
+      "id": 1321,
+      "groupId": 201507
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100025,
+      "x": 1050,
+      "y": 4263,
+      "id": 423,
+      "groupId": 204362
+    },
+    {
       "troopId": 2,
       "tribeId": 100134,
-      "x": 2161,
-      "y": 3660,
-      "id": 421,
-      "groupId": 206489
+      "x": 2152,
+      "y": 3691,
+      "id": 300,
+      "groupId": 4000215
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100134,
+      "x": 2178,
+      "y": 3624,
+      "id": 1320,
+      "groupId": 201507
     },
     {
       "troopId": 2,
       "tribeId": 100190,
-      "x": 2349,
+      "x": 2482,
       "y": 3638,
       "id": 461,
       "groupId": 203337
     },
     {
       "troopId": 2,
-      "tribeId": 100249,
-      "x": 630,
-      "y": 3742,
-      "id": 400,
-      "groupId": 205641
+      "tribeId": 100174,
+      "x": 808,
+      "y": 3747,
+      "id": 412,
+      "groupId": 4000677
     },
     {
-      "troopId": 3,
+      "troopId": 5,
       "tribeId": 100054,
-      "x": 798,
-      "y": 3710,
-      "id": 968,
+      "x": 880,
+      "y": 3767,
+      "id": 970,
       "groupId": 206634
     },
     {
       "troopId": 2,
-      "tribeId": 100190,
-      "x": 1493,
-      "y": 3775,
-      "id": 673,
-      "groupId": 204109
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100134,
-      "x": 1686,
-      "y": 3750,
-      "id": 580,
-      "groupId": 200512
-    },
-    {
-      "troopId": 2,
       "tribeId": 100048,
-      "x": 1774,
-      "y": 3700,
-      "id": 128,
-      "groupId": 4000066
+      "x": 1647,
+      "y": 3718,
+      "id": 79,
+      "groupId": 206364
     },
     {
-      "troopId": 3,
+      "troopId": 2,
       "tribeId": 100061,
-      "x": 1919,
+      "x": 1991,
       "y": 3756,
-      "id": 865,
-      "groupId": 200541
+      "id": 205,
+      "groupId": 206678
     },
     {
       "troopId": 2,
@@ -86644,14 +86619,6 @@
       "y": 3756,
       "id": 690,
       "groupId": 201106
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100048,
-      "x": 1557,
-      "y": 5740,
-      "id": 96,
-      "groupId": 4001083
     },
     {
       "troopId": 7,
@@ -86738,6 +86705,14 @@
       "tribeId": 100061,
       "x": 2027,
       "y": 3756,
+      "id": 282,
+      "groupId": 4000335
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
       "id": 591,
       "groupId": 202548
     },
@@ -86756,6 +86731,14 @@
       "y": 3756,
       "id": 893,
       "groupId": 201005
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
+      "id": 149,
+      "groupId": 4000329
     },
     {
       "troopId": 4,
@@ -86783,9 +86766,17 @@
     },
     {
       "troopId": 2,
+      "tribeId": 100061,
+      "x": 2027,
+      "y": 3756,
+      "id": 656,
+      "groupId": 202991
+    },
+    {
+      "troopId": 2,
       "tribeId": 100058,
-      "x": 2429,
-      "y": 4579,
+      "x": 2461,
+      "y": 4515,
       "id": 303,
       "groupId": 206268
     },
@@ -86832,8 +86823,8 @@
     {
       "troopId": 2,
       "tribeId": 100190,
-      "x": 2291,
-      "y": 4408,
+      "x": 2314,
+      "y": 4341,
       "id": 586,
       "groupId": 204471
     },
@@ -86864,7 +86855,15 @@
     {
       "troopId": 3,
       "tribeId": 100061,
-      "x": 2013,
+      "x": 2027,
+      "y": 3756,
+      "id": 699,
+      "groupId": 200476
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100061,
+      "x": 2027,
       "y": 3756,
       "id": 455,
       "groupId": 201597
@@ -86872,7 +86871,7 @@
     {
       "troopId": 3,
       "tribeId": 100061,
-      "x": 2001,
+      "x": 2027,
       "y": 3756,
       "id": 65,
       "groupId": 4001485
@@ -86880,90 +86879,114 @@
     {
       "troopId": 3,
       "tribeId": 100061,
-      "x": 2024,
+      "x": 2027,
       "y": 3756,
-      "id": 699,
-      "groupId": 200476
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100061,
-      "x": 1760,
-      "y": 3804,
-      "id": 696,
-      "groupId": 200476
+      "id": 865,
+      "groupId": 200541
     },
     {
       "troopId": 3,
       "tribeId": 100134,
-      "x": 2064,
-      "y": 3816,
+      "x": 2027,
+      "y": 3743,
       "id": 334,
       "groupId": 4000511
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100054,
+      "x": 828,
+      "y": 3872,
+      "id": 969,
+      "groupId": 206634
+    },
+    {
+      "troopId": 6,
+      "tribeId": 100054,
+      "x": 905,
+      "y": 3817,
+      "id": 971,
+      "groupId": 206634
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1648,
+      "y": 3801,
+      "id": 580,
+      "groupId": 200512
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 1663,
+      "y": 3886,
+      "id": 673,
+      "groupId": 204109
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100061,
+      "x": 1773,
+      "y": 3890,
+      "id": 452,
+      "groupId": 201597
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100054,
+      "x": 798,
+      "y": 3934,
+      "id": 968,
+      "groupId": 206634
+    },
+    {
+      "troopId": 7,
+      "tribeId": 100054,
+      "x": 894,
+      "y": 3925,
+      "id": 972,
+      "groupId": 206634
+    },
+    {
+      "troopId": 2,
+      "tribeId": 100249,
+      "x": 1380,
+      "y": 3980,
+      "id": 658,
+      "groupId": 201763
+    },
+    {
+      "troopId": 5,
+      "tribeId": 100058,
+      "x": 1810,
+      "y": 3959,
+      "id": 726,
+      "groupId": 200380
     },
     {
       "troopId": 3,
       "tribeId": 100048,
       "x": 1046,
-      "y": 3977,
+      "y": 4007,
       "id": 435,
       "groupId": 203373
     },
     {
-      "troopId": 2,
-      "tribeId": 100249,
-      "x": 1383,
-      "y": 3986,
-      "id": 658,
-      "groupId": 201763
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100048,
-      "x": 1647,
-      "y": 3910,
-      "id": 79,
-      "groupId": 206364
-    },
-    {
       "troopId": 7,
       "tribeId": 100134,
-      "x": 1747,
-      "y": 3977,
+      "x": 1722,
+      "y": 4028,
       "id": 1034,
       "groupId": 201724
     },
     {
-      "troopId": 4,
-      "tribeId": 100061,
-      "x": 1760,
-      "y": 3999,
-      "id": 452,
-      "groupId": 201597
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100209,
-      "x": 1946,
-      "y": 5263,
-      "id": 94,
-      "groupId": 4000972
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100058,
-      "x": 1945,
-      "y": 4680,
+      "troopId": 12,
+      "tribeId": 100002,
+      "x": 2362,
+      "y": 4046,
       "id": 663,
-      "groupId": 203388
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100054,
-      "x": 1147,
-      "y": 4050,
-      "id": 185,
-      "groupId": 4000704
+      "groupId": 4000171
     },
     {
       "troopId": 2,
@@ -86974,124 +86997,156 @@
       "groupId": 204035
     },
     {
-      "troopId": 5,
-      "tribeId": 100058,
-      "x": 1810,
-      "y": 4129,
-      "id": 726,
-      "groupId": 200380
+      "troopId": 2,
+      "tribeId": 100134,
+      "x": 1075,
+      "y": 4196,
+      "id": 1383,
+      "groupId": 201697
     },
     {
       "troopId": 15,
       "tribeId": 100002,
-      "x": 2248,
-      "y": 4185,
+      "x": 2236,
+      "y": 4192,
       "id": 670,
       "groupId": 4000171
     },
     {
       "troopId": 2,
       "tribeId": 100002,
-      "x": 2257,
-      "y": 4279,
-      "id": 292,
-      "groupId": 4000454
+      "x": 2382,
+      "y": 4102,
+      "id": 94,
+      "groupId": 4001507
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100134,
+      "x": 958,
+      "y": 4291,
+      "id": 794,
+      "groupId": 206456
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100054,
+      "x": 1147,
+      "y": 4220,
+      "id": 185,
+      "groupId": 4000704
+    },
+    {
+      "troopId": 3,
+      "tribeId": 100134,
+      "x": 1615,
+      "y": 4212,
+      "id": 1384,
+      "groupId": 201697
     },
     {
       "troopId": 2,
-      "tribeId": 100002,
-      "x": 2475,
-      "y": 4298,
-      "id": 756,
-      "groupId": 204855
+      "tribeId": 100190,
+      "x": 2174,
+      "y": 4297,
+      "id": 619,
+      "groupId": 203741
     },
     {
       "troopId": 4,
       "tribeId": 100002,
-      "x": 2556,
+      "x": 2488,
       "y": 4252,
       "id": 661,
       "groupId": 4000171
     },
     {
-      "troopId": 2,
-      "tribeId": 100025,
-      "x": 1104,
-      "y": 4370,
-      "id": 423,
-      "groupId": 204362
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1795,
-      "y": 4379,
-      "id": 931,
-      "groupId": 203938
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100190,
-      "x": 1867,
-      "y": 4386,
-      "id": 326,
-      "groupId": 204111
-    },
-    {
       "troopId": 6,
       "tribeId": 100002,
-      "x": 2460,
-      "y": 4305,
+      "x": 2419,
+      "y": 4252,
       "id": 666,
       "groupId": 4000171
     },
     {
+      "troopId": 2,
+      "tribeId": 100002,
+      "x": 2431,
+      "y": 4296,
+      "id": 292,
+      "groupId": 4000454
+    },
+    {
       "troopId": 5,
       "tribeId": 100002,
-      "x": 2556,
-      "y": 4300,
+      "x": 2517,
+      "y": 4252,
       "id": 668,
       "groupId": 4000171
     },
     {
       "troopId": 2,
+      "tribeId": 100134,
+      "x": 967,
+      "y": 4309,
+      "id": 1648,
+      "groupId": 201477
+    },
+    {
+      "troopId": 2,
       "tribeId": 100190,
-      "x": 1893,
-      "y": 4473,
+      "x": 1946,
+      "y": 4368,
       "id": 263,
       "groupId": 202304
     },
     {
+      "troopId": 2,
+      "tribeId": 100190,
+      "x": 2018,
+      "y": 4386,
+      "id": 326,
+      "groupId": 204111
+    },
+    {
       "troopId": 3,
       "tribeId": 100190,
-      "x": 2320,
-      "y": 4469,
+      "x": 2314,
+      "y": 4365,
       "id": 140,
       "groupId": 4001301
     },
     {
       "troopId": 11,
       "tribeId": 100002,
-      "x": 2513,
-      "y": 4424,
+      "x": 2479,
+      "y": 4356,
       "id": 662,
       "groupId": 4000171
     },
     {
-      "troopId": 8,
-      "tribeId": 100025,
-      "x": 712,
-      "y": 4565,
-      "id": 1180,
-      "groupId": 205191
+      "troopId": 3,
+      "tribeId": 100190,
+      "x": 2201,
+      "y": 4478,
+      "id": 475,
+      "groupId": 4000772
     },
     {
-      "troopId": 2,
-      "tribeId": 100025,
-      "x": 981,
-      "y": 4535,
-      "id": 830,
-      "groupId": 206402
+      "troopId": 13,
+      "tribeId": 100002,
+      "x": 2409,
+      "y": 4498,
+      "id": 669,
+      "groupId": 4000171
+    },
+    {
+      "troopId": 4,
+      "tribeId": 100205,
+      "x": 2531,
+      "y": 4459,
+      "id": 117,
+      "groupId": 4001181
     },
     {
       "troopId": 4,
@@ -87110,41 +87165,9 @@
       "groupId": 201005
     },
     {
-      "troopId": 13,
-      "tribeId": 100002,
-      "x": 2438,
-      "y": 4557,
-      "id": 669,
-      "groupId": 4000171
-    },
-    {
-      "troopId": 4,
-      "tribeId": 100205,
-      "x": 2490,
-      "y": 4541,
-      "id": 117,
-      "groupId": 4001181
-    },
-    {
-      "troopId": 6,
-      "tribeId": 100025,
-      "x": 1302,
-      "y": 4696,
-      "id": 1181,
-      "groupId": 205191
-    },
-    {
       "troopId": 2,
       "tribeId": 100058,
-      "x": 1930,
-      "y": 4692,
-      "id": 299,
-      "groupId": 203237
-    },
-    {
-      "troopId": 2,
-      "tribeId": 100058,
-      "x": 1956,
+      "x": 2040,
       "y": 4611,
       "id": 107,
       "groupId": 4000517
@@ -87152,105 +87175,65 @@
     {
       "troopId": 2,
       "tribeId": 100048,
-      "x": 1064,
-      "y": 4770,
+      "x": 1040,
+      "y": 4701,
       "id": 434,
       "groupId": 203373
     },
     {
       "troopId": 3,
-      "tribeId": 100025,
-      "x": 1232,
-      "y": 4775,
-      "id": 1171,
-      "groupId": 205191
-    },
-    {
-      "troopId": 9,
-      "tribeId": 100025,
-      "x": 1232,
-      "y": 4773,
-      "id": 1178,
-      "groupId": 205191
-    },
-    {
-      "troopId": 3,
       "tribeId": 100048,
       "x": 1624,
-      "y": 4835,
+      "y": 4735,
       "id": 252,
       "groupId": 200128
     },
     {
-      "troopId": 3,
-      "tribeId": 100058,
-      "x": 1945,
-      "y": 4845,
-      "id": 80,
-      "groupId": 4001300
-    },
-    {
-      "troopId": 7,
+      "troopId": 6,
       "tribeId": 100025,
-      "x": 1655,
-      "y": 5064,
-      "id": 248,
-      "groupId": 4000950
+      "x": 1242,
+      "y": 4815,
+      "id": 1181,
+      "groupId": 205191
     },
     {
       "troopId": 2,
       "tribeId": 100209,
-      "x": 1927,
-      "y": 5148,
+      "x": 1937,
+      "y": 5127,
       "id": 564,
       "groupId": 204480
     },
     {
       "troopId": 2,
       "tribeId": 100048,
-      "x": 1646,
-      "y": 5562,
+      "x": 1716,
+      "y": 5422,
       "id": 141,
       "groupId": 202781
     },
     {
       "troopId": 2,
-      "tribeId": 100061,
-      "x": 1205,
-      "y": 5789,
-      "id": 178,
-      "groupId": 4000742
-    },
-    {
-      "troopId": 2,
       "tribeId": 100048,
-      "x": 1566,
-      "y": 5722,
+      "x": 1640,
+      "y": 5573,
       "id": 614,
       "groupId": 201634
     },
     {
       "troopId": 2,
       "tribeId": 100048,
-      "x": 1561,
-      "y": 5731,
+      "x": 1610,
+      "y": 5634,
       "id": 686,
       "groupId": 200685
     },
     {
       "troopId": 8,
       "tribeId": 100025,
-      "x": 1568,
-      "y": 5918,
+      "x": 1642,
+      "y": 5979,
       "id": 429,
-      "groupId": 4000409
-    },
-    {
-      "troopId": 7,
-      "tribeId": 100025,
-      "x": 1654,
-      "y": 5963,
-      "id": 428,
       "groupId": 4000409
     }
   ],
@@ -87329,7 +87312,7 @@
     },
     {
       "level": 2,
-      "tribeId": 100134,
+      "tribeId": 100061,
       "name": "Ordovices",
       "x": 1884,
       "y": 1148,
@@ -88595,6 +88578,14 @@
       "groupId": 10000004
     },
     {
+      "level": 10,
+      "count": 10,
+      "x": 1175,
+      "y": 200,
+      "id": 3515467,
+      "groupId": 10000004
+    },
+    {
       "level": 7,
       "count": 10,
       "x": 1269,
@@ -89443,6 +89434,14 @@
       "groupId": 10000004
     },
     {
+      "level": 2,
+      "count": 10,
+      "x": 1471,
+      "y": 724,
+      "id": 3515472,
+      "groupId": 10000004
+    },
+    {
       "level": 3,
       "count": 2,
       "x": 1524,
@@ -89632,6 +89631,14 @@
       "x": 987,
       "y": 803,
       "id": 3515218,
+      "groupId": 10000004
+    },
+    {
+      "level": 1,
+      "count": 10,
+      "x": 1065,
+      "y": 845,
+      "id": 3515468,
       "groupId": 10000004
     },
     {
@@ -90280,6 +90287,14 @@
       "x": 2358,
       "y": 1072,
       "id": 3515300,
+      "groupId": 10000004
+    },
+    {
+      "level": 3,
+      "count": 10,
+      "x": 2319,
+      "y": 1092,
+      "id": 3515474,
       "groupId": 10000004
     },
     {
@@ -91795,6 +91810,14 @@
       "groupId": 10000004
     },
     {
+      "level": 9,
+      "count": 10,
+      "x": 2138,
+      "y": 1636,
+      "id": 3515469,
+      "groupId": 10000004
+    },
+    {
       "level": 10,
       "count": 10,
       "x": 2215,
@@ -92416,14 +92439,6 @@
       "x": 2855,
       "y": 1863,
       "id": 3503412,
-      "groupId": 10000004
-    },
-    {
-      "level": 8,
-      "count": 10,
-      "x": 2929,
-      "y": 1868,
-      "id": 3514668,
       "groupId": 10000004
     },
     {
@@ -93108,7 +93123,7 @@
     },
     {
       "level": 4,
-      "count": 3,
+      "count": 2,
       "x": 1234,
       "y": 2147,
       "id": 3511340,
@@ -93236,7 +93251,7 @@
     },
     {
       "level": 6,
-      "count": 10,
+      "count": 9,
       "x": 1868,
       "y": 2195,
       "id": 3514684,
@@ -94516,7 +94531,7 @@
     },
     {
       "level": 6,
-      "count": 10,
+      "count": 9,
       "x": 2993,
       "y": 2481,
       "id": 3515213,
@@ -94764,7 +94779,7 @@
     },
     {
       "level": 4,
-      "count": 2,
+      "count": 1,
       "x": 1662,
       "y": 2546,
       "id": 19630,
@@ -94864,14 +94879,6 @@
       "x": 2561,
       "y": 2539,
       "id": 3514945,
-      "groupId": 10000004
-    },
-    {
-      "level": 3,
-      "count": 1,
-      "x": 2869,
-      "y": 2522,
-      "id": 24476,
       "groupId": 10000004
     },
     {
@@ -95523,14 +95530,6 @@
       "groupId": 10000004
     },
     {
-      "level": 6,
-      "count": 1,
-      "x": 1540,
-      "y": 2755,
-      "id": 3509204,
-      "groupId": 10000004
-    },
-    {
       "level": 4,
       "count": 9,
       "x": 1580,
@@ -95732,7 +95731,7 @@
     },
     {
       "level": 5,
-      "count": 5,
+      "count": 4,
       "x": 2793,
       "y": 2701,
       "id": 3514427,
@@ -96000,14 +95999,6 @@
       "x": 2275,
       "y": 2868,
       "id": 20374,
-      "groupId": 10000004
-    },
-    {
-      "level": 2,
-      "count": 10,
-      "x": 2245,
-      "y": 2815,
-      "id": 3514667,
       "groupId": 10000004
     },
     {
@@ -97132,7 +97123,7 @@
     },
     {
       "level": 3,
-      "count": 3,
+      "count": 2,
       "x": 808,
       "y": 3136,
       "id": 3509607,
@@ -97372,7 +97363,7 @@
     },
     {
       "level": 4,
-      "count": 5,
+      "count": 4,
       "x": 2552,
       "y": 3128,
       "id": 3502978,
@@ -100188,7 +100179,7 @@
     },
     {
       "level": 5,
-      "count": 6,
+      "count": 5,
       "x": 2867,
       "y": 3805,
       "id": 3512131,
@@ -100416,6 +100407,14 @@
       "x": 2411,
       "y": 3947,
       "id": 3505806,
+      "groupId": 10000004
+    },
+    {
+      "level": 5,
+      "count": 10,
+      "x": 2437,
+      "y": 3953,
+      "id": 3515471,
       "groupId": 10000004
     },
     {
@@ -100840,14 +100839,6 @@
       "x": 3090,
       "y": 4003,
       "id": 3515174,
-      "groupId": 10000004
-    },
-    {
-      "level": 3,
-      "count": 10,
-      "x": 3226,
-      "y": 4011,
-      "id": 3514671,
       "groupId": 10000004
     },
     {
@@ -101456,6 +101447,14 @@
       "x": 2106,
       "y": 4293,
       "id": 3514895,
+      "groupId": 10000004
+    },
+    {
+      "level": 6,
+      "count": 10,
+      "x": 2188,
+      "y": 4288,
+      "id": 3515473,
       "groupId": 10000004
     },
     {
@@ -102352,14 +102351,6 @@
       "x": 3251,
       "y": 4593,
       "id": 3514833,
-      "groupId": 10000004
-    },
-    {
-      "level": 1,
-      "count": 10,
-      "x": 133,
-      "y": 4662,
-      "id": 3514670,
       "groupId": 10000004
     },
     {
@@ -103924,7 +103915,7 @@
     },
     {
       "level": 7,
-      "count": 2,
+      "count": 1,
       "x": 1927,
       "y": 5148,
       "id": 17911,
@@ -104499,14 +104490,6 @@
       "groupId": 10000004
     },
     {
-      "level": 4,
-      "count": 10,
-      "x": 414,
-      "y": 5412,
-      "id": 3514669,
-      "groupId": 10000004
-    },
-    {
       "level": 3,
       "count": 10,
       "x": 551,
@@ -104648,14 +104631,6 @@
       "x": 2267,
       "y": 5421,
       "id": 3514741,
-      "groupId": 10000004
-    },
-    {
-      "level": 3,
-      "count": 10,
-      "x": 2727,
-      "y": 5464,
-      "id": 3514666,
       "groupId": 10000004
     },
     {
@@ -105064,6 +105039,14 @@
       "x": 219,
       "y": 5737,
       "id": 3515450,
+      "groupId": 10000004
+    },
+    {
+      "level": 4,
+      "count": 10,
+      "x": 230,
+      "y": 5769,
+      "id": 3515470,
       "groupId": 10000004
     },
     {
