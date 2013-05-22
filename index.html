@@ -2,8 +2,69 @@
 <html>
 <head>
 	<title>TH Map Browser</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="mapviewer.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="mapviewer.js"></script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-38848286-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 </head>
 <body>
-An update for the world is being worked on, please be patient.
+	<div id="layout">
+		<div id="header">
+			<h1>Tribal Hero Map Browser</h1>
+			<div style="position: absolute; bottom: 2px; right: 2px; text-align: right">
+				<span id="snapshot_timestamp"></span>
+			</div>
+		</div>
+		<div id="main">
+			<div id="right">
+				<div id="content">
+					<canvas tabindex="2" id="map"></canvas>
+					<span id="cursor_text"></span>
+					<span id="info_text"></span>
+					<span id="info_text_2"></span>
+					<div id="changes_text"></div>
+					<div id="changes_button"></div>
+				</div>
+			</div>
+			<div id="left-sidebar">
+				<div style="height: 100%">
+					<div id="filters">
+						<span style="white-space: nowrap"><input id="filter_cities" type="checkbox"><label for="filter_cities">Cities</label></span>
+						<span style="white-space: nowrap"><input id="filter_strongholds" type="checkbox"><label for="filter_strongholds">Strongholds</label></span>
+						<span style="white-space: nowrap"><input id="filter_troops" type="checkbox"><label for="filter_troops">Troops</label></span>
+						<span style="white-space: nowrap"><input id="filter_troop_trails" type="checkbox"><label for="filter_troop_trails">Troop trails</label></span>
+						<span style="white-space: nowrap"><input id="filter_forests" type="checkbox"><label for="filter_forests">Forests</label></span>
+						<span style="white-space: nowrap"><input id="filter_barbarians" type="checkbox"><label for="filter_barbarians">Barbarians</label></span>
+						<span style="white-space: nowrap"><input id="filter_foundations" type="checkbox"><label for="filter_foundations">New city foundations</label></span>
+						<span style="white-space: nowrap"><input id="filter_influence" type="checkbox"><label for="filter_influence">Influence background</label></span>
+					</div>
+					<input tabindex="1" id="search" autocomplete="off" style="width: 190px;" type="text" placeholder="Search...">
+					<div id="search_results"></div>
+				</div>
+				<div id="left-sidebar-bottom-text">
+						<a href="http://www.tribalhero.com/">Tribal Hero</a>
+						-
+						<a href="http://slaren.github.com/th-sim/">Sim</a>
+						-
+						<a href="http://www.tribalrank.com/">Rankings</a>
+						-
+						<a href="mailto:ddevesa@gmail.com">Contact</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
